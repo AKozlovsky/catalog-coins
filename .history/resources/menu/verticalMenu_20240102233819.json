@@ -1,0 +1,9 @@
+{
+    "menu": [
+        {
+            "name": "Dashboard",
+            "icon": "menu-icon tf-icons mdi mdi-home-outline",
+            "slug": "dashboard"
+        }
+    ]
+}

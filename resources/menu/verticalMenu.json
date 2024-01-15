@@ -10,10 +10,10 @@
             "menuHeader": "Catalog"
         },
         {
-            "url": "continents",
-            "icon": "menu-icon tf-icons mdi mdi-table",
             "name": "Continents",
-            "slug": "continents"
+            "icon": "menu-icon tf-icons mdi mdi-table",
+            "slug": "continents",
+            "url": "continents"
         }
     ]
 }

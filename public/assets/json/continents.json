@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Africa",
+        "path": "assets/img/continents/africa-map.svg",
+        "url": "continents/africa"
+    },
+    {
+        "name": "Asia",
+        "path": "assets/img/continents/asia-map.svg",
+        "url": "continents/asia"
+    },
+    {
+        "name": "Europe",
+        "path": "assets/img/continents/europe-map.svg",
+        "url": "continents/europe"
+    },
+    {
+        "name": "North America",
+        "path": "assets/img/continents/north-america-map.svg",
+        "url": "continents/north-america"
+    },
+    {
+        "name": "Oceania",
+        "path": "assets/img/continents/oceania-map.svg",
+        "url": "continents/oceania"
+    },
+    {
+        "name": "South America",
+        "path": "assets/img/continents/south-america-map.svg",
+        "url": "continents/south-america"
+    }
+]

@@ -20,15 +20,16 @@ class Continents extends Controller
         $dir = $request->input('order.0.dir');
 
         if (empty($request->input('search.value'))) {
-            $data = Collection::getCollection($continent, $limit);
+            $data = Collection::getCollection($continent, $limit, $start, $order, $dir);
         }
 
-        $totalFiltered = count($data);
+        $totalData = Collection::getTotalCollections($continent, $limit, $start, $order, $dir);
+        $totalFiltered = $totalData;
 
         if ($data) {
             return response()->json([
                 'draw' => intval($request->input('draw')),
-                'recordsTotal' => intval(count($data)),
+                'recordsTotal' => intval($totalData),
                 'recordsFiltered' => intval($totalFiltered),
                 'code' => 200,
                 'data' => $data,

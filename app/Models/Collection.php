@@ -26,17 +26,25 @@ class Collection extends Model
         return $this->belongsTo('App\Models\Items');
     }
 
-    public static function getCollection($continent, $limit = null)
+    public static function getCollection($continent, $limit = null, $start = 0, $order = null, $dir = "asc")
     {
-        $result = Collection::join('continents', 'collections.continent', '=', 'continents.code')
+        $result = Collection::select('countries.code AS country_code', 'countries.country_name AS country', 'currencies.name AS currency', 'currencies.symbol AS symbol', 'numerical_values.value as numerical_value')
+            ->join('continents', 'collections.continent', '=', 'continents.code')
             ->join('countries', 'collections.country', '=', 'countries.code')
             ->join('items', 'collections.item', '=', 'items.id')
             ->join('currencies', 'items.currency', '=', 'currencies.id')
             ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.id')
-            ->select('countries.code AS country_code', 'countries.country_name AS country', 'currencies.name AS currency', 'currencies.symbol AS symbol', 'numerical_values.value as numerical_value')
             ->where('continents.continent_name', '=', $continent)
+            ->offset($start)
+            ->limit($limit)
+            ->orderBy($order, $dir)
             ->get();
 
         return $result;
+    }
+
+    public static function getTotalCollections($continent, $limit, $start, $order, $dir)
+    {
+        return Collection::getCollection($continent, $limit, $start, $order, $dir)->count();
     }
 }

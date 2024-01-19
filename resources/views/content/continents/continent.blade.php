@@ -62,7 +62,7 @@ $configData = Helper::appClasses();
       </table>
    </div>
 </div>
-<div class="offcanvas offcanvas-end" id="add-new-record">
+{{-- <div class="offcanvas offcanvas-end" id="add-new-record">
    <div class="offcanvas-header border-bottom">
       <h5 class="offcanvas-title" id="exampleModalLabel">New Record</h5>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -123,6 +123,6 @@ $configData = Helper::appClasses();
          </div>
       </form>
    </div>
-</div>
+</div> --}}
 <input type="hidden" id="continent" value="{{ strtolower($continent) }}">
 @endsection

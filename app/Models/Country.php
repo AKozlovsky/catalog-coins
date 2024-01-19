@@ -15,4 +15,11 @@ class Country extends Model
     {
         return $this->hasMany('App\Models\Collections');
     }
+
+    public static function getCountriesByContinent($continentCode)
+    {
+        $result = Country::select("code", "country_name")->where("continent_code", $continentCode)->get();
+
+        return $result;
+    }
 }

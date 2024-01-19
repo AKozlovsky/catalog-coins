@@ -15,4 +15,11 @@ class Continent extends Model
     {
         return $this->hasMany('App\Models\Collections');
     }
+
+    public static function getCode($continent)
+    {
+        $result = Continent::where("continent_name", $continent)->pluck("code");
+
+        return $result[0];
+    }
 }

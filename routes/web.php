@@ -3,6 +3,7 @@
 use App\Http\Controllers\language\LanguageController;
 use App\Http\Controllers\pages\Continents;
 use App\Http\Controllers\pages\Dashboard;
+use App\Http\Controllers\pages\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Dashboard::class, 'index'])->name('dashboard');
+Route::get('/', [Index::class, 'dashboard'])->name('dashboard');
 Route::get('lang/{locale}', [LanguageController::class, 'swap']);
-Route::get('continents', [Continents::class, 'index'])->name('continents');
+Route::get('continents', [Index::class, 'continents'])->name('continents');
 Route::get('continents/{continent}', [Continents::class, 'continent'])->name("continents");
+Route::resource("/list-by-continent", Continents::class);

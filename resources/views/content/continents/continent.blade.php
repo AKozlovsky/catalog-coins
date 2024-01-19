@@ -29,6 +29,7 @@ $configData = Helper::appClasses();
 @section('page-script')
 <script src="{{asset('assets/js/forms-selects.js')}}"></script>
 <script src="{{asset('assets/js/tables-datatables-basic.js')}}"></script>
+<script src="{{asset('js/custom/table.js')}}"></script>
 @endsection
 @section('content')
 <div class="col-12">
@@ -36,7 +37,7 @@ $configData = Helper::appClasses();
       <div class="form-floating form-floating-outline">
          <select id="select2Multiple" class="select2 form-select" multiple>
             @foreach ($data as $value)
-            <option value="{{ $value->country_code }}">{{ $value->country }}</option>
+            <option value="{{ $value->code }}">{{ $value->country_name }}</option>
             @endforeach
          </select>
          <label for="select2Multiple">Country</label>
@@ -48,7 +49,7 @@ $configData = Helper::appClasses();
   </h4>
 <div class="card">
    <div class="card-datatable table-responsive pt-0">
-      <table class="datatables-basic table table-bordered">
+      <table class="datatable table table-bordered">
          <thead>
             <tr>
                <th>Country</th>
@@ -123,4 +124,5 @@ $configData = Helper::appClasses();
       </form>
    </div>
 </div>
+<input type="hidden" id="continent" value="{{ strtolower($continent) }}">
 @endsection

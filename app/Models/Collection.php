@@ -26,14 +26,14 @@ class Collection extends Model
         return $this->belongsTo('App\Models\Items');
     }
 
-    public static function getCollection($continent)
+    public static function getCollection($continent, $limit = null)
     {
         $result = Collection::join('continents', 'collections.continent', '=', 'continents.code')
             ->join('countries', 'collections.country', '=', 'countries.code')
             ->join('items', 'collections.item', '=', 'items.id')
             ->join('currencies', 'items.currency', '=', 'currencies.id')
             ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.id')
-            ->select('countries.code AS country_code', 'countries.country_name AS country', 'currencies.name AS currency', 'currencies.symbol', 'numerical_values.value')
+            ->select('countries.code AS country_code', 'countries.country_name AS country', 'currencies.name AS currency', 'currencies.symbol AS symbol', 'numerical_values.value as numerical_value')
             ->where('continents.continent_name', '=', $continent)
             ->get();
 

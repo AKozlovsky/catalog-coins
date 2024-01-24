@@ -9,12 +9,11 @@ class Index extends Controller
 {
     public function dashboard()
     {
-        return view('content.dashboard.index');
+        return view('pages.dashboard.index');
     }
     public function continents()
     {
         $data = json_decode(File::get('assets/json/continents.json'));
-
-        return view('content.continents.index', ["data" => $data]);
+        return view('pages.continents.index', ["data" => $data]);
     }
 }

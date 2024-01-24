@@ -3,7 +3,7 @@
 return [
     "creatorName" => "Pixinvent",
     "creatorUrl" => "https://pixinvent.com",
-    "templateName" => "My Collection",
+    "templateName" => "My Coins",
     "templateSuffix" => "Main Page",
     "templateVersion" => "1.3.0",
     "templateFree" => false,

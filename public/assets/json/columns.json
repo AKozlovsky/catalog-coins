@@ -1,0 +1,19 @@
+{
+    "continents": [
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
+        },
+        {
+            "name": "Actions"
+        }
+    ]
+}

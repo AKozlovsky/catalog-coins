@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             ['code' => 'AF', 'continent_name' => 'Africa', 'created_at' => date('Y-m-d h:i:s')],
             ['code' => 'AS', 'continent_name' => 'Asia', 'created_at' => date('Y-m-d h:i:s')],
             ['code' => 'EU', 'continent_name' => 'Europe', 'created_at' => date('Y-m-d h:i:s')],
-            ['code' => 'NA', 'continent_name' => 'North  America', 'created_at' => date('Y-m-d h:i:s')],
+            ['code' => 'NA', 'continent_name' => 'North America', 'created_at' => date('Y-m-d h:i:s')],
             ['code' => 'SA', 'continent_name' => 'South America', 'created_at' => date('Y-m-d h:i:s')],
             ['code' => 'OC', 'continent_name' => 'Oceania', 'created_at' => date('Y-m-d h:i:s')],
         ]);

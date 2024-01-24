@@ -7,26 +7,31 @@ use App\Models\Collection;
 use App\Models\Continent;
 use App\Models\Country;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class Continents extends Controller
 {
     public function index(Request $request)
     {
-        $columns = ['country', 'currency', 'symbol', 'numerical_value'];
+        $columns = ['country', 'currency', 'symbol', 'numerical_value', "action"];
         $continent = $request->input('continent');
         $limit = $request->input('length');
         $start = $request->input('start');
         $order = $columns[$request->input('order.0.column')];
         $dir = $request->input('order.0.dir');
+        $search = $request->input('search.value');
+        $columns = $request->input('columns');
+        $totalData = Collection::getTotalCollections($continent);
+        $totalFiltered = Collection::getTotalCollections($continent, $search, $columns);
+        $data = Collection::getCollection($continent, $limit, $start, $order, $dir, $search, $columns);
 
-        if (empty($request->input('search.value'))) {
-            $data = Collection::getCollection($continent, $limit, $start, $order, $dir);
-        }
-
-        $totalData = Collection::getTotalCollections($continent, $limit, $start, $order, $dir);
-        $totalFiltered = $totalData;
-
-        if ($data) {
+        if (!$data) {
+            return response()->json([
+                'message' => 'Internal Server Error',
+                'code' => 500,
+                'data' => [],
+            ]);
+        } else {
             return response()->json([
                 'draw' => intval($request->input('draw')),
                 'recordsTotal' => intval($totalData),
@@ -34,21 +39,15 @@ class Continents extends Controller
                 'code' => 200,
                 'data' => $data,
             ]);
-        } else {
-            return response()->json([
-                'message' => 'Internal Server Error',
-                'code' => 500,
-                'data' => [],
-            ]);
         }
     }
 
     public function continent($continent)
     {
-        $code = Continent::getCode($continent);
-        $data = Country::getCountriesByContinent($code);
         $continent = ucwords(str_replace("-", " ", $continent));
-
-        return view("content.continents.continent", ["data" => $data, "continent" => $continent]);
+        $code = Continent::getCode($continent);
+        $result = Country::getCountriesByContinent($code);
+        $columns = json_decode(File::get('assets/json/columns.json'))->continents;
+        return view("pages.continents.list", ["data" => $result, "continent" => $continent, "columns" => $columns]);
     }
 }

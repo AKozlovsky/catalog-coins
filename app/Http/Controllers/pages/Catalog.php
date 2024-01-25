@@ -9,7 +9,7 @@ use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
-class Continents extends Controller
+class Catalog extends Controller
 {
     public function index(Request $request)
     {
@@ -23,7 +23,7 @@ class Continents extends Controller
         $columns = $request->input('columns');
         $totalData = Collection::getTotalCollections($continent);
         $totalFiltered = Collection::getTotalCollections($continent, $search, $columns);
-        $data = Collection::getCollection($continent, $limit, $start, $order, $dir, $search, $columns);
+        $data = Collection::getCollections($continent, $limit, $start, $order, $dir, $search, $columns);
 
         if (!$data) {
             return response()->json([
@@ -48,6 +48,6 @@ class Continents extends Controller
         $code = Continent::getCode($continent);
         $result = Country::getCountriesByContinent($code);
         $columns = json_decode(File::get('assets/json/columns.json'))->continents;
-        return view("pages.continents.list", ["data" => $result, "continent" => $continent, "columns" => $columns]);
+        return view("pages.catalog.list", ["data" => $result, "continent" => $continent, "columns" => $columns]);
     }
 }

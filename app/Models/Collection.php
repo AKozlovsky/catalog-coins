@@ -26,22 +26,26 @@ class Collection extends Model
         return $this->belongsTo('App\Models\Items');
     }
 
-    public static function getCollection($continent, $limit, $start, $order, $dir, $search = "", $columns = [])
+    public static function getCollections($continent = null, $limit = 10, $start = 0, $order = "country_code", $dir = "asc", $search = "", $columns = [])
     {
         $result = Collection::select(
-            'collections.id',
+            'collections.id AS id',
             'countries.code AS country_code',
             'countries.country_name AS country',
             'currencies.name AS currency',
             'currencies.symbol AS symbol',
-            'numerical_values.value as numerical_value'
+            'numerical_values.value AS numerical_value'
         )
             ->join('continents', 'collections.continent', '=', 'continents.code')
             ->join('countries', 'collections.country', '=', 'countries.code')
             ->join('items', 'collections.item', '=', 'items.id')
             ->join('currencies', 'items.currency', '=', 'currencies.id')
             ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.id')
-            ->where('continents.continent_name', '=', $continent)
+            ->where(function ($query) use ($continent) {
+                if (!empty($continent)) {
+                    return $query->where('continents.continent_name', '=', $continent);
+                }
+            })
             ->where(function ($query) use ($search) {
                 if (!empty($search)) {
                     return $query

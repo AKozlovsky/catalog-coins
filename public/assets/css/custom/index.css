@@ -6,3 +6,7 @@
     border-color: #666cff !important;
     cursor: pointer;
 }
+
+.card-countries {
+    display: block !important;
+}

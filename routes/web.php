@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\language\LanguageController;
+use App\Http\Controllers\pages\Catalog;
 use App\Http\Controllers\pages\Continents;
-use App\Http\Controllers\pages\Dashboard;
+use App\Http\Controllers\pages\Detail;
 use App\Http\Controllers\pages\Index;
 use Illuminate\Support\Facades\Route;
 
@@ -20,5 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Index::class, 'dashboard'])->name('dashboard');
 Route::get('lang/{locale}', [LanguageController::class, 'swap']);
 Route::get('continents', [Index::class, 'continents'])->name('continents');
-Route::get('continents/{continent}', [Continents::class, 'continent'])->name("continents");
-Route::resource("/list-by-continent", Continents::class);
+Route::get('continents/{continent}', [Catalog::class, 'continent'])->name("continents");
+Route::get('countries', [Index::class, 'countries'])->name('countries');
+Route::get('edit-coin/{id}', [Detail::class, 'edit'])->name("edit-coin");
+Route::resource("/data-table", Catalog::class);

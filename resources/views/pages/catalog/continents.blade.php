@@ -1,13 +1,9 @@
-@php
-    //$configData = Helper::appClasses();
-@endphp
-
 @extends('layouts/layoutMaster')
 
 @section('title', 'Continents')
 
 @section('vendor-style')
-<link rel="stylesheet" href="{{asset('assets/css/custom/continents.css')}}" />
+<link rel="stylesheet" href="{{asset('assets/css/custom/index.css')}}" />
 @endsection
 
 @section('page-script')
@@ -23,7 +19,7 @@
                 <div class="card-header">{{$value->name}}</div>
                 <div class="card-body">
                     <p class="card-text">
-                        <img class="card-img" src="{{asset($value->path)}}" alt="{{$value->name}} map" height="240" />
+                        <img class="card-img" src="{{asset($value->path)}}" alt="{{$value->name}} map" height="180" />
                         <a href="{{ url($value->url) }}" style="display: none"></a>
                     </p>
                 </div>

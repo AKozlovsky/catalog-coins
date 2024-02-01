@@ -16,19 +16,23 @@ class Country extends Model
         return $this->hasMany('App\Models\Collections');
     }
 
-    public static function getCountriesByContinent($continentCode)
+    public static function getCountries($columns, $code = null, $continentCode = null, $countryName = null)
     {
-        $result = Country::select("code AS country_code", "country_name")
-            ->where("continent_code", $continentCode)
-            ->get();
-        return $result;
-    }
+        $select = Country::select($columns);
 
-    public static function getCountriesByCode($code)
-    {
-        $result = Country::select("code", "country_name", "full_name")
-            ->whereIn("code", $code)
-            ->get();
+        if ($code != null) {
+            $select = $select->whereIn("code", $code);
+        }
+
+        if ($continentCode != null) {
+            $select = $select->where("continent_code", $continentCode);
+        }
+
+        if ($countryName != null) {
+            $select = $select->where("country_name", $countryName);
+        }
+
+        $result = $select->get();
         return $result;
     }
 }

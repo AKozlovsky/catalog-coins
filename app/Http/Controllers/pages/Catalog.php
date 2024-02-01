@@ -42,12 +42,23 @@ class Catalog extends Controller
         }
     }
 
-    public function continent($continent)
+    public function list(Request $request, $value)
     {
-        $continent = ucwords(str_replace("-", " ", $continent));
-        $code = Continent::getCode($continent);
-        $result = Country::getCountriesByContinent($code);
-        $columns = json_decode(File::get('assets/json/columns.json'))->continents;
-        return view("pages.catalog.list", ["data" => $result, "continent" => $continent, "columns" => $columns]);
+        if ($request->route()->named("continents")) {
+            $windowTitle = "Continents";
+            $title = "Continent";
+            $input = ucwords(str_replace("-", " ", $value));
+            $columns = json_decode(File::get('assets/json/columns.json'))->continents->datatable_columns;
+        } elseif ($request->route()->named("countries")) {
+            $columns = json_decode(File::get('assets/json/columns.json'))->countries->datatable_columns;
+            return view("pages.catalog.list", ["columns" => $columns]);
+        }
+
+        return view("pages.catalog.list", [
+            "windowTitle" => $windowTitle,
+            "title" => $title,
+            "input" => $input,
+            "columns" => $columns
+        ]);
     }
 }

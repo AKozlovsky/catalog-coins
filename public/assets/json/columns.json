@@ -1,19 +1,74 @@
 {
-    "continents": [
-        {
-            "name": "Country"
-        },
-        {
-            "name": "Currency"
-        },
-        {
-            "name": "Symbol"
-        },
-        {
-            "name": "Value"
-        },
-        {
-            "name": "Actions"
-        }
-    ]
+    "continents": {
+        "datatable_columns": [
+            {
+                "name": "Country"
+            },
+            {
+                "name": "Currency"
+            },
+            {
+                "name": "Symbol"
+            },
+            {
+                "name": "Value"
+            },
+            {
+                "name": "Actions"
+            }
+        ],
+        "dbNames": [
+            {
+                "data": "country"
+            },
+            {
+                "data": "currency"
+            },
+            {
+                "data": "symbol"
+            },
+            {
+                "data": "numerical_value"
+            },
+            {
+                "data": "action"
+            }
+        ]
+    },
+    "countries": {
+        "datatable_columns": [
+            {
+                "name": "Country"
+            },
+            {
+                "name": "Currency"
+            },
+            {
+                "name": "Symbol"
+            },
+            {
+                "name": "Value"
+            },
+            {
+                "name": "Actions"
+            }
+        ],
+        "dbNames": [
+            {
+                "data": "country"
+            },
+            {
+                "data": "currency"
+            },
+            {
+                "data": "symbol"
+            },
+            {
+                "data": "numerical_value"
+            },
+            {
+                "data": "action"
+            }
+        ]
+    }
 }

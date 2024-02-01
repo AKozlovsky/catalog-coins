@@ -2,7 +2,7 @@
 
 $(function () {
     var dt_table = $(".datatable"),
-        detailUrl = baseUrl + "edit-coin/";
+        detailUrl = baseUrl + "edit/";
 
     if (dt_table.length) {
         $(".datatable thead tr").clone(true).appendTo(".datatable thead");
@@ -30,13 +30,18 @@ $(function () {
             .then((response) => response.json())
             .then((json) => (countriesJson = json));
 
+        var columns;
+        fetch(assetsPath + "json/columns.json")
+            .then((response) => response.json())
+            .then((json) => (columns = json->dbNames));
+
         var dt = dt_table.DataTable({
             processing: true,
             serverSide: true,
             ajax: {
                 url: baseUrl + "data-table",
                 data: {
-                    continent: $("#continent").val(),
+                    input: $("#input").val(),
                 },
             },
             columns: [

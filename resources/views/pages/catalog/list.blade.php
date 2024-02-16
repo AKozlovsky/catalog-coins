@@ -31,4 +31,5 @@
    </div>
 </div>
 <input type="hidden" id="input" value="{{ strtolower($input) }}">
+<input type="hidden" id="action" value="{{ $action }}">
 @endsection

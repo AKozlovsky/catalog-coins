@@ -33,7 +33,10 @@ $(function () {
         var columns;
         fetch(assetsPath + "json/columns.json")
             .then((response) => response.json())
-            .then((json) => (columns = json->dbNames));
+            .then((json) => {
+                var action = $("#action").val();
+                columns = json[action]["db_names"];
+            });
 
         var dt = dt_table.DataTable({
             processing: true,

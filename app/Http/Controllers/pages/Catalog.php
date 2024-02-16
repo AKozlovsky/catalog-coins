@@ -8,6 +8,7 @@ use App\Models\Continent;
 use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Route;
 
 class Catalog extends Controller
 {
@@ -44,21 +45,24 @@ class Catalog extends Controller
 
     public function list(Request $request, $value)
     {
+        $json = json_decode(File::get('assets/json/columns.json'));
+
         if ($request->route()->named("continents")) {
             $windowTitle = "Continents";
             $title = "Continent";
-            $input = ucwords(str_replace("-", " ", $value));
-            $columns = json_decode(File::get('assets/json/columns.json'))->continents->datatable_columns;
+            $columns = $json->continents;
         } elseif ($request->route()->named("countries")) {
-            $columns = json_decode(File::get('assets/json/columns.json'))->countries->datatable_columns;
-            return view("pages.catalog.list", ["columns" => $columns]);
+            $windowTitle = "Countries";
+            $title = "Country";
+            $columns = $json->countries;
         }
 
         return view("pages.catalog.list", [
             "windowTitle" => $windowTitle,
             "title" => $title,
-            "input" => $input,
-            "columns" => $columns
+            "input" => ucwords(str_replace("-", " ", $value)),
+            "columns" => $columns->datatable_columns,
+            "action" => Route::current()->action["as"]
         ]);
     }
 }

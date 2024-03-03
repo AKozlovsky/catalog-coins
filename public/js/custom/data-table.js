@@ -14,7 +14,6 @@ $(function () {
                         title +
                         '" />'
                 );
-
                 $("input", this).on("keyup change", function () {
                     if (dt.column(i).search() !== this.value) {
                         dt.column(i).search(this.value).draw();
@@ -30,14 +29,6 @@ $(function () {
             .then((response) => response.json())
             .then((json) => (countriesJson = json));
 
-        var columns;
-        fetch(assetsPath + "json/columns.json")
-            .then((response) => response.json())
-            .then((json) => {
-                var action = $("#action").val();
-                columns = json[action]["db_names"];
-            });
-
         var dt = dt_table.DataTable({
             processing: true,
             serverSide: true,
@@ -47,13 +38,7 @@ $(function () {
                     input: $("#input").val(),
                 },
             },
-            columns: [
-                { data: "country" },
-                { data: "currency" },
-                { data: "symbol" },
-                { data: "numerical_value" },
-                { data: "action" },
-            ],
+            columns: getColumns($("#action").val()),
             columnDefs: [
                 {
                     targets: 0,
@@ -61,7 +46,10 @@ $(function () {
                         var output = "";
 
                         for (let i = 0; i < countriesJson.length; i++) {
-                            if (full["country"] == countriesJson[i].name) {
+                            if (
+                                location.href.includes("continents") &&
+                                full["country"] == countriesJson[i].name
+                            ) {
                                 output +=
                                     '<div class="d-flex justify-content-start align-items-center user-name">';
                                 output += '<div class="me-3">';
@@ -76,6 +64,10 @@ $(function () {
                                 output +=
                                     '</div><div class="d-flex flex-column">';
                                 output += data + "</div></div>";
+                            } else if (
+                                full["country"] == countriesJson[i].name
+                            ) {
+                                output += data;
                             }
                         }
 

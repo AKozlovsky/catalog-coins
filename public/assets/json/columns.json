@@ -1,74 +1,33 @@
 {
-    "continents": {
-        "datatable_columns": [
-            {
-                "name": "Country"
-            },
-            {
-                "name": "Currency"
-            },
-            {
-                "name": "Symbol"
-            },
-            {
-                "name": "Value"
-            },
-            {
-                "name": "Actions"
-            }
-        ],
-        "db_names": [
-            {
-                "data": "country"
-            },
-            {
-                "data": "currency"
-            },
-            {
-                "data": "symbol"
-            },
-            {
-                "data": "numerical_value"
-            },
-            {
-                "data": "action"
-            }
-        ]
-    },
-    "countries": {
-        "datatable_columns": [
-            {
-                "name": "Country"
-            },
-            {
-                "name": "Currency"
-            },
-            {
-                "name": "Symbol"
-            },
-            {
-                "name": "Value"
-            },
-            {
-                "name": "Actions"
-            }
-        ],
-        "db_names": [
-            {
-                "data": "country"
-            },
-            {
-                "data": "currency"
-            },
-            {
-                "data": "symbol"
-            },
-            {
-                "data": "numerical_value"
-            },
-            {
-                "data": "action"
-            }
-        ]
-    }
+    "continents": [
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
+        },
+        {
+            "name": "Actions"
+        }
+    ],
+    "countries": [
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
+        },
+        {
+            "name": "Actions"
+        }
+    ]
 }

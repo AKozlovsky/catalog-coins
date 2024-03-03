@@ -9,7 +9,8 @@
 <script src="{{asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js')}}"></script>
 @endsection
 @section('page-script')
-<script src="{{asset('js/custom/data-table.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/custom/columns.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/custom/data-table.js')}}"></script>
 @endsection
 @section('content')
 <div class="card">

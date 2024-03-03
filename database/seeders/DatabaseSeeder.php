@@ -26,7 +26,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             CountrySeeder::class,
-            CurrencySeeder::class
+            CurrencySeeder::class,
+            CollectionSeeder::class
         ]);
     }
 }

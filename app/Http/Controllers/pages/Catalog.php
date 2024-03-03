@@ -14,17 +14,16 @@ class Catalog extends Controller
 {
     public function index(Request $request)
     {
-        $columns = ['country', 'currency', 'symbol', 'numerical_value', "action"];
-        $continent = $request->input('continent');
+        $input = $request->input('input');
         $limit = $request->input('length');
         $start = $request->input('start');
-        $order = $columns[$request->input('order.0.column')];
+        $columns = $request->input('columns');
+        $order = $columns[$request->input('order.0.column')]["data"];
         $dir = $request->input('order.0.dir');
         $search = $request->input('search.value');
-        $columns = $request->input('columns');
-        $totalData = Collection::getTotalCollections($continent);
-        $totalFiltered = Collection::getTotalCollections($continent, $search, $columns);
-        $data = Collection::getCollections($continent, $limit, $start, $order, $dir, $search, $columns);
+        $totalData = Collection::getTotalCollections($input);
+        $totalFiltered = Collection::getTotalCollections($input, $search, $columns);
+        $data = Collection::getCollections($input, $limit, $start, $order, $dir, $search, $columns);
 
         if (!$data) {
             return response()->json([
@@ -61,7 +60,7 @@ class Catalog extends Controller
             "windowTitle" => $windowTitle,
             "title" => $title,
             "input" => ucwords(str_replace("-", " ", $value)),
-            "columns" => $columns->datatable_columns,
+            "columns" => $columns,
             "action" => Route::current()->action["as"]
         ]);
     }

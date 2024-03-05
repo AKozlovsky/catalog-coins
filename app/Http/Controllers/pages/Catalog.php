@@ -4,8 +4,6 @@ namespace App\Http\Controllers\pages;
 
 use App\Http\Controllers\Controller;
 use App\Models\Collection;
-use App\Models\Continent;
-use App\Models\Country;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;

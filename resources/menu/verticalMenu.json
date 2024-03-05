@@ -30,8 +30,8 @@
                 {
                     "name": "Monarchs",
                     "icon": "menu-icon tf-icons mdi mdi-crown",
-                    "slug": "",
-                    "url": ""
+                    "slug": "monarchs",
+                    "url": "monarchs"
                 },
                 {
                     "name": "Reign Period",
@@ -88,7 +88,7 @@
                     "url": ""
                 },
                 {
-                    "name": "Krause",
+                    "name": "Price by Krause",
                     "icon": "menu-icon tf-icons mdi mdi-book-open-page-variant",
                     "slug": "",
                     "url": ""

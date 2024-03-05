@@ -32,13 +32,14 @@
    <div class="col-md-6 col-lg-4 mb-3" id="{{ strtolower(str_replace(" ", "-", $country->name)) }}">
    <div class="card card-countries text-center mb-4">
       <div class="card-body">
-         <img src="{{asset('assets/img/flags')}}/{{strtolower($country->alpha3)}}.svg" alt="Card image cap" height="60"/>
+         <img src="{{$country->flag_url}}" alt="Card image cap" height="60"/>&nbsp;
+         <img src="{{$country->emblem_url}}" alt="Emblem image" height="60"/>
          <br><br>
          <h5 class="card-title">{{ $value->country_name }}</h5>
          <p class="card-subtitle">{{ $value->full_name }}</p>
          <br>
          <a href="/countries/{{ strtolower(str_replace(" ", "-", $country->name)) }}" class="btn btn-outline-primary">View Data</a>
-         <a href="" class="btn btn-outline-primary">Wikipedia</a>
+         <a href="https://en.wikipedia.org{{$country->url}}" class="btn btn-outline-primary">Wikipedia</a>
       </div>
    </div>
 </div>

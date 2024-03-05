@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('currency', 3);
             $table->smallInteger('numerical_value');
+            $table->bigInteger('other_criteria');
             $table->timestamps();
             $table->foreign('currency')->references('code')->on('currencies');
             $table->foreign('numerical_value')->references('value')->on('numerical_values');
+            $table->foreign('other_criteria')->references('id')->on('other_criteria');
         });
     }
 

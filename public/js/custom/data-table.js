@@ -55,10 +55,8 @@ $(function () {
                                 output += '<div class="me-3">';
                                 output +=
                                     '<img src="' +
-                                    assetsPath +
-                                    "img/flags/" +
-                                    countriesJson[i].alpha3.toLowerCase() +
-                                    '.svg" alt="' +
+                                    countriesJson[i].flag_url +
+                                    '" alt="' +
                                     countriesJson[i].name +
                                     ' Flag" class="rounded-circle" height=32 width=32>';
                                 output +=

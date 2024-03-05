@@ -1,10 +1,9 @@
 <?php
 
 use App\Http\Controllers\language\LanguageController;
+use App\Http\Controllers\pages\Base;
 use App\Http\Controllers\pages\Catalog;
-use App\Http\Controllers\pages\Continents;
 use App\Http\Controllers\pages\Detail;
-use App\Http\Controllers\pages\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,11 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Index::class, 'dashboard'])->name('dashboard');
+Route::get('/', [Base::class, 'dashboard'])->name('dashboard');
 Route::get('lang/{locale}', [LanguageController::class, 'swap']);
-Route::get('continents', [Index::class, 'continents'])->name('continents');
+Route::get('continents', [Base::class, 'continents'])->name('continents');
 Route::get('continents/{continent}', [Catalog::class, 'list'])->name("continents");
-Route::get('countries', [Index::class, 'countries'])->name('countries');
+Route::get('countries', [Base::class, 'countries'])->name('countries');
 Route::get('countries/{country}', [Catalog::class, 'list'])->name('countries');
+Route::get('monarchs', [Base::class, 'monarchs'])->name('monarchs');
 Route::get('edit/{id}', [Detail::class, 'edit'])->name("edit");
 Route::resource("/data-table", Catalog::class);

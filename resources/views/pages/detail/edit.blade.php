@@ -7,5 +7,5 @@
 @section('page-script')
 @endsection
 @section('content')
-{{ $item }}
+    {{ $item }}
 @endsection

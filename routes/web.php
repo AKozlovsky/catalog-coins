@@ -23,6 +23,12 @@ Route::get('continents', [Base::class, 'continents'])->name('continents');
 Route::get('continents/{continent}', [Catalog::class, 'list'])->name("continents");
 Route::get('countries', [Base::class, 'countries'])->name('countries');
 Route::get('countries/{country}', [Catalog::class, 'list'])->name('countries');
-Route::get('monarchs', [Base::class, 'monarchs'])->name('monarchs');
+
+$urls = ["monarchs", "reign-periods", "mintage-years", "avers", "revers", "coin-edges", "currencies", "centuries", "metals", "qualities", "prices-by-krause"];
+
+foreach ($urls as $u) {
+    Route::get($u, [Catalog::class, 'list'])->name($u);
+}
+
 Route::get('edit/{id}', [Detail::class, 'edit'])->name("edit");
 Route::resource("/data-table", Catalog::class);

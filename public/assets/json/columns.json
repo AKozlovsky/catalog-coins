@@ -29,5 +29,102 @@
         {
             "name": "Actions"
         }
+    ],
+    "monarchs": [
+        {
+            "name": "Monarch"
+        },
+        {
+            "name": "Actions"
+        }
+    ],
+    "reign-periods": [
+        {
+            "name": "Reign period from"
+        },
+        {
+            "name": "Reign period to"
+        },
+        {
+            "name": "Actions"
+        }
+    ],
+    "mintage-years": [
+        {
+            "name": "Mintage year"
+        },
+        {
+            "name": "Actions"
+        }
+    ],
+    "avers": [
+        {
+            "name": "Avers"
+        },
+        {
+            "name": "Actions"
+        }
+    ],
+    "revers": [
+        {
+            "name": "Revers"
+        },
+        {
+            "name": "Actions"
+        }
+    ],
+    "coin-edges": [
+        {
+            "name": "Coin edge"
+        },
+        {
+            "name": "Actions"
+        }
+    ],
+    "currencies": [
+        {
+            "name": "Name"
+        },
+        {
+            "name": "Code"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Actions"
+        }
+    ],
+    "centuries": [
+        {
+            "name": "Century"
+        },
+        {
+            "name": "Actions"
+        }
+    ],
+    "metals": [
+        {
+            "name": "Metal"
+        },
+        {
+            "name": "Actions"
+        }
+    ],
+    "qualities": [
+        {
+            "name": "Quality"
+        },
+        {
+            "name": "Actions"
+        }
+    ],
+    "prices-by-krause": [
+        {
+            "name": "Price by Krause"
+        },
+        {
+            "name": "Actions"
+        }
     ]
 }

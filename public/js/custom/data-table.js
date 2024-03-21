@@ -2,12 +2,30 @@
 
 $(function () {
     var dt_table = $(".datatable"),
-        detailUrl = baseUrl + "edit/";
+        detailUrl = baseUrl + "edit/",
+        urls = ["continents", "countries"],
+        urls2 = [
+            "monarchs",
+            "reign-periods",
+            "mintage-years",
+            "avers",
+            "revers",
+            "coin-edges",
+            "currencies",
+            "centuries",
+            "metals",
+            "qualities",
+            "prices-by-krause",
+        ],
+        urls3 = ["reign-periods"];
 
     if (dt_table.length) {
         $(".datatable thead tr").clone(true).appendTo(".datatable thead");
         $(".datatable thead tr:eq(1) th").each(function (i) {
-            if (i < 4) {
+            if (
+                i + 1 < $(".datatable thead tr:eq(1) th").length &&
+                urls.includes($("#action").val())
+            ) {
                 var title = $(this).text();
                 $(this).html(
                     '<input type="text" class="form-control" placeholder="Search ' +
@@ -30,14 +48,16 @@ $(function () {
             .then((json) => (countriesJson = json));
 
         var dt = dt_table.DataTable({
-            processing: true,
-            serverSide: true,
-            ajax: {
-                url: baseUrl + "data-table",
-                data: {
-                    input: $("#input").val(),
-                },
-            },
+            processing: urls2.includes($("#action").val()) ? false : true,
+            serverSide: urls2.includes($("#action").val()) ? false : true,
+            ajax: urls2.includes($("#action").val())
+                ? false
+                : {
+                      url: baseUrl + "data-table",
+                      data: {
+                          input: $("#input").val(),
+                      },
+                  },
             columns: getColumns($("#action").val()),
             columnDefs: [
                 {
@@ -45,28 +65,32 @@ $(function () {
                     render: function (data, type, full, meta) {
                         var output = "";
 
-                        for (let i = 0; i < countriesJson.length; i++) {
-                            if (
-                                location.href.includes("continents") &&
-                                full["country"] == countriesJson[i].name
-                            ) {
-                                output +=
-                                    '<div class="d-flex justify-content-start align-items-center user-name">';
-                                output += '<div class="me-3">';
-                                output +=
-                                    '<img src="' +
-                                    countriesJson[i].flag_url +
-                                    '" alt="' +
-                                    countriesJson[i].name +
-                                    ' Flag" class="rounded-circle" height=32 width=32>';
-                                output +=
-                                    '</div><div class="d-flex flex-column">';
-                                output += data + "</div></div>";
-                            } else if (
-                                full["country"] == countriesJson[i].name
-                            ) {
-                                output += data;
+                        if (urls.includes($("#action").val())) {
+                            for (let i = 0; i < countriesJson.length; i++) {
+                                if (
+                                    $("#action").val() == "continents" &&
+                                    full["country"] == countriesJson[i].name
+                                ) {
+                                    output +=
+                                        '<div class="d-flex justify-content-start align-items-center user-name">';
+                                    output += '<div class="me-3">';
+                                    output +=
+                                        '<img src="' +
+                                        countriesJson[i].flag_url +
+                                        '" alt="' +
+                                        countriesJson[i].name +
+                                        ' Flag" class="rounded-circle" height=32 width=32>';
+                                    output +=
+                                        '</div><div class="d-flex flex-column">';
+                                    output += data + "</div></div>";
+                                } else if (
+                                    full["country"] == countriesJson[i].name
+                                ) {
+                                    output += data;
+                                }
                             }
+                        } else {
+                            output = data;
                         }
 
                         return output;
@@ -283,6 +307,114 @@ $(function () {
                     },
                 },
             ],
+            initComplete: function () {
+                if (urls2.includes($("#action").val())) {
+                    this.api()
+                        .columns(0)
+                        .every(function () {
+                            var column = this,
+                                type = $("#type").val().replaceAll("_", " "),
+                                select = $(
+                                    '<select class="form-select text-capitalize"><option value=""> Select ' +
+                                        type.charAt(0).toUpperCase() +
+                                        type.slice(1) +
+                                        ($("#type").val() == "reign_period"
+                                            ? " From"
+                                            : "") +
+                                        " </option></select>"
+                                )
+                                    .appendTo(
+                                        ".select_" +
+                                            $("#type").val() +
+                                            ($("#type").val() == "reign_period"
+                                                ? "_from"
+                                                : "")
+                                    )
+                                    .on("change", function () {
+                                        var val =
+                                            $.fn.dataTable.util.escapeRegex(
+                                                $(this).val()
+                                            );
+                                        column
+                                            .search(
+                                                val ? "^" + val + "$" : "",
+                                                true,
+                                                false
+                                            )
+                                            .draw();
+                                    });
+
+                            column
+                                .data()
+                                .unique()
+                                .sort()
+                                .each(function (d, j) {
+                                    select.append(
+                                        '<option value="' +
+                                            d +
+                                            '">' +
+                                            d +
+                                            "</option>"
+                                    );
+                                });
+                        });
+
+                    if (urls3.includes($("#action").val())) {
+                        this.api()
+                            .columns(1)
+                            .every(function () {
+                                var column = this,
+                                    type = $("#type")
+                                        .val()
+                                        .replaceAll("_", " "),
+                                    select = $(
+                                        '<select class="form-select text-capitalize"><option value=""> Select ' +
+                                            type.charAt(0).toUpperCase() +
+                                            type.slice(1) +
+                                            ($("#type").val() == "reign_period"
+                                                ? " To"
+                                                : "") +
+                                            " </option></select>"
+                                    )
+                                        .appendTo(
+                                            ".select_" +
+                                                $("#type").val() +
+                                                ($("#type").val() ==
+                                                "reign_period"
+                                                    ? "_to"
+                                                    : "")
+                                        )
+                                        .on("change", function () {
+                                            var val =
+                                                $.fn.dataTable.util.escapeRegex(
+                                                    $(this).val()
+                                                );
+                                            column
+                                                .search(
+                                                    val ? "^" + val + "$" : "",
+                                                    true,
+                                                    false
+                                                )
+                                                .draw();
+                                        });
+
+                                column
+                                    .data()
+                                    .unique()
+                                    .sort()
+                                    .each(function (d, j) {
+                                        select.append(
+                                            '<option value="' +
+                                                d +
+                                                '">' +
+                                                d +
+                                                "</option>"
+                                        );
+                                    });
+                            });
+                    }
+                }
+            },
         });
     }
 

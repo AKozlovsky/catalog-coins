@@ -25,4 +25,9 @@ class Item extends Model
     {
         return $this->belongsTo('App\Models\NumericalValues');
     }
+
+    public function other_criteria()
+    {
+        return $this->belongsTo('App\Models\OtherCriteria');
+    }
 }

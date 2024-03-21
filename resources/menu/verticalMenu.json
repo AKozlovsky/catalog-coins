@@ -36,62 +36,62 @@
                 {
                     "name": "Reign Period",
                     "icon": "menu-icon tf-icons mdi mdi-account-clock",
-                    "slug": "",
-                    "url": ""
+                    "slug": "reign-periods",
+                    "url": "reign-periods"
                 },
                 {
                     "name": "Mintage Year",
                     "icon": "menu-icon tf-icons mdi mdi-wrench-clock",
-                    "slug": "",
-                    "url": ""
+                    "slug": "mintage-years",
+                    "url": "mintage-years"
                 },
                 {
                     "name": "Avers",
                     "icon": "menu-icon tf-icons mdi mdi-hand-coin",
-                    "slug": "",
-                    "url": ""
+                    "slug": "avers",
+                    "url": "avers"
                 },
                 {
                     "name": "Revers",
                     "icon": "menu-icon tf-icons mdi mdi-hand-coin-outline",
-                    "slug": "",
-                    "url": ""
+                    "slug": "revers",
+                    "url": "revers"
                 },
                 {
                     "name": "Coin Edge",
                     "icon": "menu-icon tf-icons mdi mdi-circle-multiple",
-                    "slug": "",
-                    "url": ""
+                    "slug": "coin-edges",
+                    "url": "coin-edges"
                 },
                 {
                     "name": "Currency",
                     "icon": "menu-icon tf-icons mdi mdi-currency-usd",
-                    "slug": "",
-                    "url": ""
+                    "slug": "currencies",
+                    "url": "currencies"
                 },
                 {
                     "name": "Century",
                     "icon": "menu-icon tf-icons mdi mdi-calendar-month",
-                    "slug": "",
-                    "url": ""
+                    "slug": "centuries",
+                    "url": "centuries"
                 },
                 {
                     "name": "Metal",
                     "icon": "menu-icon tf-icons mdi mdi-magnify-expand",
-                    "slug": "",
-                    "url": ""
+                    "slug": "metals",
+                    "url": "metals"
                 },
                 {
                     "name": "Quality",
                     "icon": "menu-icon tf-icons mdi mdi-cash-check",
-                    "slug": "",
-                    "url": ""
+                    "slug": "qualities",
+                    "url": "qualities"
                 },
                 {
                     "name": "Price by Krause",
                     "icon": "menu-icon tf-icons mdi mdi-book-open-page-variant",
-                    "slug": "",
-                    "url": ""
+                    "slug": "prices-by-krause",
+                    "url": "prices-by-krause"
                 }
             ]
         },

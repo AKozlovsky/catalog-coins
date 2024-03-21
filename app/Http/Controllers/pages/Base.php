@@ -28,9 +28,4 @@ class Base extends Controller
         $countriesJson = json_decode(File::get('assets/json/countries.json'));
         return view('pages.catalog.countries', ["data" => $countries, "countries" => $countriesJson]);
     }
-
-    public function monarchs()
-    {
-        //return //view("pages.catalog.monarchs", ["data" : [{"id" : "1", "monarch" : "Ludvik 14"}]]);
-    }
 }

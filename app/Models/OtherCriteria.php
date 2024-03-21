@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Currency extends Model
+class OtherCriteria extends Model
 {
     use HasFactory;
-    protected $table = 'currencies';
+
+    protected $table = 'other_criteria';
     protected $primaryKey = 'id';
 
     public function items()
@@ -18,7 +19,7 @@ class Currency extends Model
 
     public static function getData($columns)
     {
-        $result = Currency::select("*")
+        $result = OtherCriteria::select("*")
             ->when($columns, function ($query, $columns) {
                 if (!empty($columns)) {
                     return $query->orderBy($columns[0], "asc");

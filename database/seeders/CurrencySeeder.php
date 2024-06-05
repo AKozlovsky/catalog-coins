@@ -13,7 +13,12 @@ class CurrencySeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('currencies')->insert([
+        DB::table('currencies')->insert($this->_getData());
+    }
+
+    private function _getData(): array
+    {
+        $result = [
             ['code' => 'ALL', 'name' => 'Leke', 'symbol' => 'Lek'],
             ['code' => 'USD', 'name' => 'Dollars', 'symbol' => '$'],
             ['code' => 'AFN', 'name' => 'Afghanis', 'symbol' => '؋'],
@@ -60,7 +65,7 @@ class CurrencySeeder extends Seeder
             ['code' => 'HKD', 'name' => 'Dollars', 'symbol' => '$'],
             ['code' => 'HUF', 'name' => 'Forint', 'symbol' => 'Ft'],
             ['code' => 'ISK', 'name' => 'Kronur', 'symbol' => 'kr'],
-            ['code' => 'INR', 'name' => 'Rupees', 'symbol' => 'Rp'],
+            ['code' => 'INR', 'name' => 'Rupees', 'symbol' => '₹'],
             ['code' => 'IDR', 'name' => 'Rupiahs', 'symbol' => 'Rp'],
             ['code' => 'IRR', 'name' => 'Rials', 'symbol' => '﷼'],
             ['code' => 'IMP', 'name' => 'Pounds', 'symbol' => '£'],
@@ -125,8 +130,13 @@ class CurrencySeeder extends Seeder
             ['code' => 'VEF', 'name' => 'Bolivares Fuertes', 'symbol' => 'Bs'],
             ['code' => 'VND', 'name' => 'Dong', 'symbol' => '₫'],
             ['code' => 'YER', 'name' => 'Rials', 'symbol' => '﷼'],
-            ['code' => 'ZWD', 'name' => 'Zimbabwe Dollars', 'symbol' => 'Z$'],
-            ['code' => 'INR', 'name' => 'Rupees', 'symbol' => '₹']
-        ]);
+            ['code' => 'ZWD', 'name' => 'Zimbabwe Dollars', 'symbol' => 'Z$']
+        ];
+
+        foreach ($result as $key => $value) {
+            $result[$key]["created_at"] = date('Y-m-d h:i:s');
+        }
+
+        return $result;
     }
 }

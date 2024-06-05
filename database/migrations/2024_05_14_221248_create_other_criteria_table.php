@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('other_criteria', function (Blueprint $table) {
-            $table->id();
-            $table->bigInteger('item');
+            $table->id()->unique();
+            $table->bigInteger('item')->unique();
             $table->string('monarch', 255);
             $table->smallInteger('reign_period_from');
             $table->smallInteger('reign_period_to');
@@ -26,7 +26,6 @@ return new class extends Migration
             $table->string('quality', 255);
             $table->bigInteger('price_by_krause');
             $table->timestamps();
-            $table->foreign('item')->references('id')->on('items');
         });
     }
 

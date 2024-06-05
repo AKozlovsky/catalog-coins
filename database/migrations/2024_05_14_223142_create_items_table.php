@@ -13,13 +13,16 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->string('currency', 3);
+            $table->char('currency', 3);
             $table->smallInteger('numerical_value');
+            $table->bigInteger('photo');
             $table->bigInteger('other_criteria');
+            $table->bigInteger('collection')->unique();
             $table->timestamps();
             $table->foreign('currency')->references('code')->on('currencies');
             $table->foreign('numerical_value')->references('value')->on('numerical_values');
-            $table->foreign('other_criteria')->references('id')->on('other_criteria');
+            $table->foreign('photo')->references('item')->on('photos');
+            $table->foreign('other_criteria')->references('item')->on('other_criteria');
         });
     }
 

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('currencies', function (Blueprint $table) {
             $table->id();
             $table->string("name", 20);
-            $table->string("code", 3);
+            $table->char("code", 3)->unique();
             $table->string("symbol", 5);
             $table->timestamps();
         });

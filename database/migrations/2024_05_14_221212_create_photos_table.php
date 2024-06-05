@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('numerical_values', function (Blueprint $table) {
+        Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->smallInteger("value")->unique();
+            $table->bigInteger('item')->unique();
+            $table->string('filename', 255);
             $table->timestamps();
         });
     }
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('numerical_values');
+        Schema::dropIfExists('photos');
     }
 };

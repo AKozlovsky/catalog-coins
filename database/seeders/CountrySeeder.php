@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -13,7 +12,12 @@ class CountrySeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('countries')->insert([
+        DB::table('countries')->insert($this->_getData());
+    }
+
+    private function _getData(): array
+    {
+        $result = [
             ['code' => 'AF', 'continent_code' => 'AS', 'country_name' => 'Afghanistan', 'full_name' => 'Islamic Republic of Afghanistan'],
             ['code' => 'AX', 'continent_code' => 'EU', 'country_name' => 'Åland Islands', 'full_name' => 'Åland Islands'],
             ['code' => 'AL', 'continent_code' => 'EU', 'country_name' => 'Albania', 'full_name' => 'Republic of Albania'],
@@ -263,6 +267,12 @@ class CountrySeeder extends Seeder
             ['code' => 'YE', 'continent_code' => 'AS', 'country_name' => 'Yemen', 'full_name' => 'Yemen'],
             ['code' => 'ZM', 'continent_code' => 'AF', 'country_name' => 'Zambia', 'full_name' => 'Republic of Zambia'],
             ['code' => 'ZW', 'continent_code' => 'AF', 'country_name' => 'Zimbabwe', 'full_name' => 'Republic of Zimbabwe'],
-        ]);
+        ];
+
+        foreach ($result as $key => $value) {
+            $result[$key]["created_at"] = date('Y-m-d h:i:s');
+        }
+
+        return $result;
     }
 }

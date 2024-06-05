@@ -11,12 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('photos', function (Blueprint $table) {
+        Schema::create('collections', function (Blueprint $table) {
             $table->id();
-            $table->string('filename', 255);
+            $table->char('continent', 2);
+            $table->char('country', 2);
             $table->bigInteger('item');
             $table->timestamps();
-            $table->foreign('item')->references('id')->on('items');
+            $table->foreign('continent')->references('code')->on('continents');
+            $table->foreign('country')->references('code')->on('countries');
+            $table->foreign('item')->references('collection')->on('items');
         });
     }
 
@@ -25,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('photos');
+        Schema::dropIfExists('collections');
     }
 };

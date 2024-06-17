@@ -45,9 +45,10 @@ class Catalog extends Controller
     {
         $json = json_decode(File::get('assets/json/columns.json'));
         $action = $request->route()->action["as"];
-        $windowTitle = ucfirst($action);
+        $action = substr($action, strpos($action, "catalog/") + strlen("catalog/"));
+        $pageTitle = ucfirst($action);
         $columns = $json->$action;
-        $addSelectionInput = false;
+        $inputSelector = false;
         $data = $type = null;
 
         switch ($action) {
@@ -59,79 +60,79 @@ class Catalog extends Controller
                 break;
             case "monarchs":
                 $title = "Monarch";
-                $addSelectionInput = true;
+                $inputSelector = true;
                 $data = OtherCriteria::getData(["monarch"]);
                 $type = "monarch";
                 break;
             case "reign-periods":
                 $title = "Reign Period";
-                $addSelectionInput = true;
+                $inputSelector = true;
                 $data = OtherCriteria::getData(["reign_period_from"]);
                 $type = "reign_period";
                 break;
             case "mintage-years":
                 $title = "Mintage Year";
-                $addSelectionInput = true;
+                $inputSelector = true;
                 $data = OtherCriteria::getData(["mintage_year"]);
                 $type = "mintage_year";
                 break;
             case "avers":
                 $title = "Avers";
-                $addSelectionInput = true;
+                $inputSelector = true;
                 $data = OtherCriteria::getData(["avers"]);
                 $type = "avers";
                 break;
             case "revers":
                 $title = "Revers";
-                $addSelectionInput = true;
+                $inputSelector = true;
                 $data = OtherCriteria::getData(["revers"]);
                 $type = "revers";
                 break;
             case "coin-edges":
                 $title = "Coin Edge";
-                $addSelectionInput = true;
+                $inputSelector = true;
                 $data = OtherCriteria::getData(["coin_edge"]);
                 $type = "coin_edge";
                 break;
             case "currencies":
                 $title = "Currency";
-                $addSelectionInput = true;
+                $inputSelector = true;
                 $data = Currency::getData(["name"]);
                 $type = "currency";
                 break;
             case "centuries":
                 $title = "Century";
-                $addSelectionInput = true;
+                $inputSelector = true;
                 $data = OtherCriteria::getData(["century"]);
                 $type = "century";
                 break;
             case "metals":
                 $title = "Metal";
-                $addSelectionInput = true;
+                $inputSelector = true;
                 $data = OtherCriteria::getData(["metal"]);
                 $type = "metal";
                 break;
             case "qualities":
                 $title = "Quality";
-                $addSelectionInput = true;
+                $inputSelector = true;
                 $data = OtherCriteria::getData(["quality"]);
                 $type = "quality";
                 break;
             case "prices-by-krause":
                 $title = "Price by Krause";
-                $addSelectionInput = true;
+                $inputSelector = true;
                 $data = OtherCriteria::getData(["price_by_krause"]);
                 $type = "price_by_krause";
                 break;
         }
 
         return view("pages.catalog.list", [
-            "windowTitle" => $windowTitle,
+            "pageTitle" => $pageTitle,
             "title" => $title,
             "input" => ucwords(str_replace("-", " ", $value)),
             "columns" => $columns,
             "action" => $action,
-            "addSelectionInput" => $addSelectionInput,
+            "inputSelector" => $inputSelector,
             "data" => $data,
             "type" => $type
         ]);

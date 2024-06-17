@@ -411,6 +411,7 @@ class Collection extends Model
                 }
             })
             ->count();
+
         return $result;
     }
 }

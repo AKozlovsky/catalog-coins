@@ -12,85 +12,85 @@
         {
             "name": "List",
             "icon": "menu-icon tf-icons mdi mdi-table",
-            "slug": "coin",
+            "slug": "catalog",
             "url": "",
             "submenu": [
                 {
                     "name": "Continents",
                     "icon": "menu-icon tf-icons mdi mdi-earth",
-                    "slug": "continents",
+                    "slug": "catalog/continents",
                     "url": "continents"
                 },
                 {
                     "name": "Countries",
                     "icon": "menu-icon tf-icons mdi mdi-flag",
-                    "slug": "countries",
+                    "slug": "catalog/countries",
                     "url": "countries"
                 },
                 {
                     "name": "Monarchs",
                     "icon": "menu-icon tf-icons mdi mdi-crown",
-                    "slug": "monarchs",
+                    "slug": "catalog/monarchs",
                     "url": "monarchs"
                 },
                 {
                     "name": "Reign Period",
                     "icon": "menu-icon tf-icons mdi mdi-account-clock",
-                    "slug": "reign-periods",
+                    "slug": "catalog/reign-periods",
                     "url": "reign-periods"
                 },
                 {
                     "name": "Mintage Year",
                     "icon": "menu-icon tf-icons mdi mdi-wrench-clock",
-                    "slug": "mintage-years",
+                    "slug": "catalog/mintage-years",
                     "url": "mintage-years"
                 },
                 {
                     "name": "Avers",
                     "icon": "menu-icon tf-icons mdi mdi-hand-coin",
-                    "slug": "avers",
+                    "slug": "catalog/avers",
                     "url": "avers"
                 },
                 {
                     "name": "Revers",
                     "icon": "menu-icon tf-icons mdi mdi-hand-coin-outline",
-                    "slug": "revers",
+                    "slug": "catalog/revers",
                     "url": "revers"
                 },
                 {
                     "name": "Coin Edge",
                     "icon": "menu-icon tf-icons mdi mdi-circle-multiple",
-                    "slug": "coin-edges",
+                    "slug": "catalog/coin-edges",
                     "url": "coin-edges"
                 },
                 {
                     "name": "Currency",
                     "icon": "menu-icon tf-icons mdi mdi-currency-usd",
-                    "slug": "currencies",
+                    "slug": "catalog/currencies",
                     "url": "currencies"
                 },
                 {
                     "name": "Century",
                     "icon": "menu-icon tf-icons mdi mdi-calendar-month",
-                    "slug": "centuries",
+                    "slug": "catalog/centuries",
                     "url": "centuries"
                 },
                 {
                     "name": "Metal",
                     "icon": "menu-icon tf-icons mdi mdi-magnify-expand",
-                    "slug": "metals",
+                    "slug": "catalog/metals",
                     "url": "metals"
                 },
                 {
                     "name": "Quality",
                     "icon": "menu-icon tf-icons mdi mdi-cash-check",
-                    "slug": "qualities",
+                    "slug": "catalog/qualities",
                     "url": "qualities"
                 },
                 {
                     "name": "Price by Krause",
                     "icon": "menu-icon tf-icons mdi mdi-book-open-page-variant",
-                    "slug": "prices-by-krause",
+                    "slug": "catalog/prices-by-krause",
                     "url": "prices-by-krause"
                 }
             ]
@@ -107,12 +107,12 @@
                 {
                     "url": "",
                     "name": "Add",
-                    "slug": "add-coin"
+                    "slug": "coin/add"
                 },
                 {
                     "url": "",
                     "name": "Edit",
-                    "slug": "edit"
+                    "slug": "coin/edit"
                 }
             ]
         }

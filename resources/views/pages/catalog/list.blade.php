@@ -1,5 +1,5 @@
 @extends('layouts/layoutMaster')
-@section('title', $windowTitle)
+@section('title', $pageTitle)
 @section('vendor-style')
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css') }}">
@@ -19,7 +19,7 @@
                 <span class="text-muted fw-light">{{ $title }} /</span> {{ $input }}
             </h5>
         </div>
-        @if ($addSelectionInput)
+        @if ($inputSelector)
             <div class="card-header">
                 <h5 class="card-title">Search Filter</h5>
                 <div class="d-flex align-items-center row py-3 gap-md-0">

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->bigInteger('other_criteria');
             $table->bigInteger('collection')->unique();
             $table->timestamps();
-            $table->foreign('currency')->references('id')->on('currencies');
+            $table->foreign('currency')->references('code')->on('currencies');
             $table->foreign('numerical_value')->references('value')->on('numerical_values');
             $table->foreign('photo')->references('item')->on('photos');
             $table->foreign('other_criteria')->references('item')->on('other_criteria');

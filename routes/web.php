@@ -21,13 +21,13 @@ Route::get('/', [Base::class, 'dashboard'])->name('dashboard');
 Route::get('lang/{locale}', [LanguageController::class, 'swap']);
 Route::get('continents', [Base::class, 'continents'])->name('catalog/continents');
 Route::get('continents/{continent}', [Catalog::class, 'list'])->name('catalog/continents');
-Route::get('countries', [Base::class, 'countries'])->name('countries');
-Route::get('countries/{country}', [Catalog::class, 'list'])->name('countries');
+Route::get('countries', [Base::class, 'countries'])->name('catalog/countries');
+Route::get('countries/{country}', [Catalog::class, 'list'])->name('catalog/countries');
 
 $subpages = ["monarchs", "reign-periods", "mintage-years", "avers", "revers", "coin-edges", "currencies", "centuries", "metals", "qualities", "prices-by-krause"];
 
 foreach ($subpages as $sub) {
-    Route::get($sub, [Catalog::class, 'list'])->name($sub);
+    Route::get($sub, [Catalog::class, 'list'])->name("catalog/" . $sub);
 }
 
 Route::get('edit/{id}', [Detail::class, 'edit'])->name("edit");

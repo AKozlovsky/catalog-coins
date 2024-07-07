@@ -101,8 +101,8 @@ class Collection extends Model
             })
             ->join('countries', 'collections.country', '=', 'countries.code')
             ->join('items', 'collections.item', '=', 'items.id')
-            ->join('currencies', 'items.currency', '=', 'currencies.id')
-            ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.id')
+            ->join('currencies', 'items.currency', '=', 'currencies.code')
+            ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.value')
             ->join('other_criteria', 'items.other_criteria', '=', 'other_criteria.item')
             ->where(function ($query) use ($type, $input) {
                 if (!empty($input)) {
@@ -282,8 +282,8 @@ class Collection extends Model
         })
             ->join('countries', 'collections.country', '=', 'countries.code')
             ->join('items', 'collections.item', '=', 'items.id')
-            ->join('currencies', 'items.currency', '=', 'currencies.id')
-            ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.id')
+            ->join('currencies', 'items.currency', '=', 'currencies.code')
+            ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.value')
             ->join('other_criteria', 'items.other_criteria', '=', 'other_criteria.item')
             ->where(function ($query) use ($type, $input) {
                 switch ($type) {

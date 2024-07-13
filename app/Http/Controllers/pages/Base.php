@@ -11,7 +11,7 @@ class Base extends Controller
 {
     public function dashboard()
     {
-        return view('pages.dashboard.index');
+        return view('pages.dashboard.index', ["totalItems" => 2, "newItems" => 4, "totalCountries" => 2, "newCountries" => 1]);
     }
 
     public function continents()

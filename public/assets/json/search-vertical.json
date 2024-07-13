@@ -4,6 +4,71 @@
             "name": "Dashboard",
             "icon": "mdi-home-outline",
             "url": ""
+        },
+        {
+            "name": "Continents",
+            "icon": "mdi-earth",
+            "url": "continents"
+        },
+        {
+            "name": "Countries",
+            "icon": "mdi-flag",
+            "url": "countries"
+        },
+        {
+            "name": "Monarchs",
+            "icon": "mdi-crown",
+            "url": "monarchs"
+        },
+        {
+            "name": "Reign Periods",
+            "icon": "mdi-account-clock",
+            "url": "reign-periods"
+        },
+        {
+            "name": "Mintage Years",
+            "icon": "mdi-wrench-clock",
+            "url": "mintage-years"
+        },
+        {
+            "name": "Avers",
+            "icon": "mdi-hand-coin",
+            "url": "avers"
+        },
+        {
+            "name": "Revers",
+            "icon": "mdi-hand-coin-outline",
+            "url": "revers"
+        },
+        {
+            "name": "Coin Edges",
+            "icon": "mdi-circle-multiple",
+            "url": "coin-edges"
+        },
+        {
+            "name": "Currencies",
+            "icon": "mdi-currency-usd",
+            "url": "currencies"
+        },
+        {
+            "name": "Centuries",
+            "icon": "mdi-calendar-month",
+            "url": "centuries"
+        },
+        {
+            "name": "Metals",
+            "icon": "mdi-magnify-expand",
+            "url": "metals"
+        },
+        {
+            "name": "Qualities",
+            "icon": "mdi-cash-check",
+            "url": "qualities"
+        },
+        {
+            "name": "Prices by Krause",
+            "icon": "mdi-book-open-page-variant",
+            "url": "prices-by-krause"
         }
     ]
 }

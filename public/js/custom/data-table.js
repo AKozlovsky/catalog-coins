@@ -72,7 +72,7 @@ $(function () {
                                     full["country"] == countriesJson[i].name
                                 ) {
                                     output +=
-                                        '<div class="d-flex justify-content-start align-items-center user-name">';
+                                        '<div class="d-flex justify-content-start align-items-center country-name">';
                                     output += '<div class="me-3">';
                                     output +=
                                         '<img src="' +
@@ -133,29 +133,36 @@ $(function () {
                     buttons: [
                         {
                             extend: "print",
-                            title: "Users",
+                            title:
+                                $("#input")
+                                    .val()
+                                    .substring(0, 1)
+                                    .toUpperCase() +
+                                $("#input").val().substring(1),
                             text: '<i class="mdi mdi-printer-outline me-1" ></i>Print',
                             className: "dropdown-item",
                             exportOptions: {
-                                columns: [2, 3],
+                                columns: [0, 1, 2, 3],
                                 // prevent avatar to be print
                                 format: {
                                     body: function (inner, coldex, rowdex) {
                                         if (inner.length <= 0) return inner;
-                                        var el = $.parseHTML(inner);
                                         var result = "";
-                                        $.each(el, function (index, item) {
-                                            if (
-                                                item.classList !== undefined &&
-                                                item.classList.contains(
-                                                    "user-name"
-                                                )
-                                            ) {
-                                                result =
-                                                    result +
-                                                    item.lastChild.textContent;
-                                            } else result = result + item.innerText;
-                                        });
+                                        if (!isNaN(inner)) {
+                                            result = result + inner;
+                                        } else {
+                                            var el = $.parseHTML(inner);
+                                            $.each(el, function (index, item) {
+                                                if (
+                                                    item.classList !== undefined
+                                                ) {
+                                                    result =
+                                                        result +
+                                                        item.lastChild
+                                                            .textContent;
+                                                } else result = result + item.textContent;
+                                            });
+                                        }
                                         return result;
                                     },
                                 },

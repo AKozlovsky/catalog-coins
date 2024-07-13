@@ -34,13 +34,13 @@
                     "url": "monarchs"
                 },
                 {
-                    "name": "Reign Period",
+                    "name": "Reign Periods",
                     "icon": "menu-icon tf-icons mdi mdi-account-clock",
                     "slug": "catalog/reign-periods",
                     "url": "reign-periods"
                 },
                 {
-                    "name": "Mintage Year",
+                    "name": "Mintage Years",
                     "icon": "menu-icon tf-icons mdi mdi-wrench-clock",
                     "slug": "catalog/mintage-years",
                     "url": "mintage-years"
@@ -58,37 +58,37 @@
                     "url": "revers"
                 },
                 {
-                    "name": "Coin Edge",
+                    "name": "Coin Edges",
                     "icon": "menu-icon tf-icons mdi mdi-circle-multiple",
                     "slug": "catalog/coin-edges",
                     "url": "coin-edges"
                 },
                 {
-                    "name": "Currency",
+                    "name": "Currencies",
                     "icon": "menu-icon tf-icons mdi mdi-currency-usd",
                     "slug": "catalog/currencies",
                     "url": "currencies"
                 },
                 {
-                    "name": "Century",
+                    "name": "Centuries",
                     "icon": "menu-icon tf-icons mdi mdi-calendar-month",
                     "slug": "catalog/centuries",
                     "url": "centuries"
                 },
                 {
-                    "name": "Metal",
+                    "name": "Metals",
                     "icon": "menu-icon tf-icons mdi mdi-magnify-expand",
                     "slug": "catalog/metals",
                     "url": "metals"
                 },
                 {
-                    "name": "Quality",
+                    "name": "Qualities",
                     "icon": "menu-icon tf-icons mdi mdi-cash-check",
                     "slug": "catalog/qualities",
                     "url": "qualities"
                 },
                 {
-                    "name": "Price by Krause",
+                    "name": "Prices by Krause",
                     "icon": "menu-icon tf-icons mdi mdi-book-open-page-variant",
                     "slug": "catalog/prices-by-krause",
                     "url": "prices-by-krause"

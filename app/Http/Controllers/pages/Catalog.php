@@ -53,25 +53,25 @@ class Catalog extends Controller
 
         switch ($action) {
             case "continents":
-                $title = "Continent";
+                $title = "Continents";
                 break;
             case "countries":
-                $title = "Country";
+                $title = "Countries";
                 break;
             case "monarchs":
-                $title = "Monarch";
+                $title = "Monarchs";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["monarch"]);
                 $type = "monarch";
                 break;
             case "reign-periods":
-                $title = "Reign Period";
+                $title = "Reign Periods";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["reign_period_from"]);
                 $type = "reign_period";
                 break;
             case "mintage-years":
-                $title = "Mintage Year";
+                $title = "Mintage Years";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["mintage_year"]);
                 $type = "mintage_year";
@@ -89,37 +89,37 @@ class Catalog extends Controller
                 $type = "revers";
                 break;
             case "coin-edges":
-                $title = "Coin Edge";
+                $title = "Coin Edges";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["coin_edge"]);
                 $type = "coin_edge";
                 break;
             case "currencies":
-                $title = "Currency";
+                $title = "Currencies";
                 $inputSelector = true;
                 $data = Currency::getData(["name"]);
                 $type = "currency";
                 break;
             case "centuries":
-                $title = "Century";
+                $title = "Centuries";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["century"]);
                 $type = "century";
                 break;
             case "metals":
-                $title = "Metal";
+                $title = "Metals";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["metal"]);
                 $type = "metal";
                 break;
             case "qualities":
-                $title = "Quality";
+                $title = "Qualities";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["quality"]);
                 $type = "quality";
                 break;
             case "prices-by-krause":
-                $title = "Price by Krause";
+                $title = "Prices by Krause";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["price_by_krause"]);
                 $type = "price_by_krause";

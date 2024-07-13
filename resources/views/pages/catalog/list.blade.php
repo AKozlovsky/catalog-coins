@@ -16,7 +16,11 @@
     <div class="card">
         <div class="card-header border-bottom">
             <h5 class="card-title">
-                <span class="text-muted fw-light">{{ $title }} /</span> {{ $input }}
+                @if ($input)
+                    <span class="text-muted fw-light">{{ $title }} /</span> {{ $input }}
+                @else
+                    <span class="text-muted fw-light">List /</span> {{ $title }}
+                @endif
             </h5>
         </div>
         @if ($inputSelector)

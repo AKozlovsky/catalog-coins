@@ -1,16 +1,21 @@
 @extends('layouts/layoutMaster')
+
 @section('title', 'Countries')
+
 @section('vendor-style')
     <link rel="stylesheet" href="{{ asset('assets/css/custom/index.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/select2/select2.css') }}" />
 @endsection
+
 @section('vendor-script')
     <script src="{{ asset('assets/vendor/libs/select2/select2.js') }}"></script>
 @endsection
+
 @section('page-script')
     <script src="{{ asset('assets/js/forms-selects.js') }}"></script>
     <script src="{{ asset('js/custom/countries.js') }}"></script>
 @endsection
+
 @section('content')
     <div class="row">
         <div class="col-md-6 col-lg-4 mb-4">

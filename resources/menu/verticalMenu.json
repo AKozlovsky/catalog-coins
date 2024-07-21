@@ -101,18 +101,13 @@
         {
             "name": "Actions",
             "icon": "menu-icon tf-icons mdi mdi-square-edit-outline",
-            "slug": "coin",
+            "slug": "action",
             "url": "",
             "submenu": [
                 {
-                    "url": "",
+                    "url": "add",
                     "name": "Add",
-                    "slug": "coin/add"
-                },
-                {
-                    "url": "",
-                    "name": "Edit",
-                    "slug": "coin/edit"
+                    "slug": "action/add"
                 }
             ]
         }

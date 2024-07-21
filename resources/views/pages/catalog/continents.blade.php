@@ -1,11 +1,15 @@
 @extends('layouts/layoutMaster')
+
 @section('title', 'Continents')
+
 @section('vendor-style')
     <link rel="stylesheet" href="{{ asset('assets/css/custom/index.css') }}" />
 @endsection
+
 @section('page-script')
     <script src="{{ asset('js/custom/continents.js') }}"></script>
 @endsection
+
 @section('content')
     <div class="row">
         @foreach ($continents as $item)

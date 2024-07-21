@@ -4,6 +4,7 @@ namespace App\Http\Controllers\pages;
 
 use App\Http\Controllers\Controller;
 use App\Models\Collection;
+use App\Models\Continent;
 use App\Models\Country;
 use Illuminate\Support\Facades\File;
 
@@ -16,7 +17,7 @@ class Base extends Controller
 
     public function continents()
     {
-        $continents = json_decode(File::get('assets/json/continents.json'));
+        $continents = Continent::getContinents();
 
         return view('pages.catalog.continents', ["continents" => $continents]);
     }

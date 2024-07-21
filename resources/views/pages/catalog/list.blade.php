@@ -1,28 +1,32 @@
 @extends('layouts/layoutMaster')
+
 @section('title', $pageTitle)
+
 @section('vendor-style')
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css') }}">
 @endsection
+
 @section('vendor-script')
     <script src="{{ asset('assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js') }}"></script>
 @endsection
+
 @section('page-script')
     <script type="text/javascript" src="{{ asset('js/custom/columns.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/custom/data-table.js') }}"></script>
 @endsection
+
 @section('content')
+    <h4 class="py-3 mb-4">
+        @if ($input)
+            <span class="text-muted fw-light">{{ $title }} /</span> {{ $input }}
+        @else
+            <span class="text-muted fw-light">List /</span> {{ $title }}
+        @endif
+    </h4>
+
     <div class="card">
-        <div class="card-header border-bottom">
-            <h5 class="card-title">
-                @if ($input)
-                    <span class="text-muted fw-light">{{ $title }} /</span> {{ $input }}
-                @else
-                    <span class="text-muted fw-light">List /</span> {{ $title }}
-                @endif
-            </h5>
-        </div>
         @if ($inputSelector)
             <div class="card-header">
                 <h5 class="card-title">Search Filter</h5>

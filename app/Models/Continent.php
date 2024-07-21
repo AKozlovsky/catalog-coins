@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 
 class Continent extends Model
 {
@@ -19,7 +20,12 @@ class Continent extends Model
     public static function getCode($continent)
     {
         $result = Continent::where("continent_name", $continent)->pluck("code");
-        
+
         return $result[0];
+    }
+
+    public static function getContinents()
+    {
+        return json_decode(File::get('assets/json/continents.json'));
     }
 }

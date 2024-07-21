@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\language\LanguageController;
+use App\Http\Controllers\pages\Action;
+use App\Http\Controllers\pages\Add;
 use App\Http\Controllers\pages\Base;
 use App\Http\Controllers\pages\Catalog;
 use App\Http\Controllers\pages\Detail;
@@ -30,5 +32,6 @@ foreach ($subpages as $sub) {
     Route::get($sub, [Catalog::class, 'list'])->name("catalog/" . $sub);
 }
 
-Route::get('edit/{id}', [Detail::class, 'edit'])->name("edit");
+Route::get('add', [Action::class, 'add'])->name("add");
+// Route::get('edit/{id}', [Detail::class, 'edit'])->name("edit");
 Route::resource("/data-table", Catalog::class);

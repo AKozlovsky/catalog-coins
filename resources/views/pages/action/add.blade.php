@@ -10,6 +10,10 @@
     <script src="{{ asset('assets/vendor/libs/select2/select2.js') }}"></script>
 @endsection
 
+@section('page-script')
+    <script src="{{ asset('assets/js/app-action.js') }}"></script>
+@endsection
+
 @section('content')
     <h4 class="py-3 mb-4">
         <span class="text-muted fw-light">Actions /</span><span> Add</span>

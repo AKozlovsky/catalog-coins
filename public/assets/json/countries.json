@@ -111,7 +111,7 @@
         "name": "Austria",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Azerbaijan",
@@ -119,7 +119,7 @@
         "name": "Azerbaijan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Bahamas",
@@ -127,7 +127,7 @@
         "name": "Bahamas",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/93/Flag_of_the_Bahamas.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Bahrain",
@@ -135,7 +135,7 @@
         "name": "Bahrain",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Bangladesh",
@@ -143,7 +143,7 @@
         "name": "Bangladesh",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Barbados",
@@ -151,7 +151,7 @@
         "name": "Barbados",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Barbados.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Belarus",
@@ -159,7 +159,7 @@
         "name": "Belarus",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Belgium",
@@ -167,7 +167,7 @@
         "name": "Belgium",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Belize",
@@ -175,7 +175,7 @@
         "name": "Belize",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/e/e7/Flag_of_Belize.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Benin",
@@ -183,7 +183,7 @@
         "name": "Benin",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Benin.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Bermuda",
@@ -191,7 +191,7 @@
         "name": "Bermuda",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bermuda.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Bhutan",
@@ -199,7 +199,7 @@
         "name": "Bhutan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Bolivia",
@@ -207,7 +207,7 @@
         "name": "Bolivia (Plurinational State of)",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/b3/Bandera_de_Bolivia_%28Estado%29.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Caribbean_Netherlands",
@@ -215,7 +215,7 @@
         "name": "Bonaire - Sint Eustatius and Saba",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Bosnia_and_Herzegovina",
@@ -223,7 +223,7 @@
         "name": "Bosnia and Herzegovina",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Botswana",
@@ -231,7 +231,7 @@
         "name": "Botswana",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Botswana.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Brazil",
@@ -239,7 +239,7 @@
         "name": "Brazil",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/British_Indian_Ocean_Territory",
@@ -247,7 +247,7 @@
         "name": "British Indian Ocean Territory",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_the_Commissioner_of_the_British_Indian_Ocean_Territory.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Brunei_Darussalam",
@@ -255,7 +255,7 @@
         "name": "Brunei Darussalam",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Bulgaria",
@@ -263,7 +263,7 @@
         "name": "Bulgaria",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Burkina_Faso",
@@ -271,7 +271,7 @@
         "name": "Burkina Faso",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Burundi",
@@ -279,7 +279,7 @@
         "name": "Burundi",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/5/50/Flag_of_Burundi.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Cabo_Verde",
@@ -287,7 +287,7 @@
         "name": "Cabo Verde",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Cape_Verde.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Cambodia",
@@ -295,7 +295,7 @@
         "name": "Cambodia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Cameroon",
@@ -303,7 +303,7 @@
         "name": "Cameroon",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_Cameroon.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Canada",
@@ -311,7 +311,7 @@
         "name": "Canada",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Cayman_Islands",
@@ -319,7 +319,7 @@
         "name": "Cayman Islands",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_the_Cayman_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Central_African_Republic",
@@ -327,7 +327,7 @@
         "name": "Central African Republic",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Central_African_Republic.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Chad",
@@ -335,7 +335,7 @@
         "name": "Chad",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/4b/Flag_of_Chad.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Chile",
@@ -343,7 +343,7 @@
         "name": "Chile",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/China",
@@ -351,7 +351,7 @@
         "name": "China",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Christmas_Island",
@@ -359,7 +359,7 @@
         "name": "Christmas Island",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/67/Flag_of_Christmas_Island.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Cocos_(Keeling)_Islands",
@@ -367,7 +367,7 @@
         "name": "Cocos (Keeling) Islands",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/7/74/Flag_of_the_Cocos_%28Keeling%29_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Colombia",
@@ -375,7 +375,7 @@
         "name": "Colombia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Comoros",
@@ -383,7 +383,7 @@
         "name": "Comoros",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/94/Flag_of_the_Comoros.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Republic_of_the_Congo",
@@ -391,7 +391,7 @@
         "name": "Congo",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_the_Republic_of_the_Congo.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Democratic_Republic_of_the_Congo",
@@ -399,7 +399,7 @@
         "name": "Congo - Democratic Republic of the",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Cook_Islands",
@@ -407,7 +407,7 @@
         "name": "Cook Islands",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/35/Flag_of_the_Cook_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Costa_Rica",
@@ -415,7 +415,7 @@
         "name": "Costa Rica",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Ivory_Coast",
@@ -423,7 +423,7 @@
         "name": "C\u00f4te d'Ivoire",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Croatia",
@@ -431,7 +431,7 @@
         "name": "Croatia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Cuba",
@@ -439,7 +439,7 @@
         "name": "Cuba",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/bd/Flag_of_Cuba.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Cura%C3%A7ao",
@@ -447,7 +447,7 @@
         "name": "Cura\u00e7ao",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_Cura%C3%A7ao.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Cyprus",
@@ -455,7 +455,7 @@
         "name": "Cyprus",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Czech_Republic",
@@ -463,7 +463,7 @@
         "name": "Czechia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Denmark",
@@ -471,7 +471,7 @@
         "name": "Denmark",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Djibouti",
@@ -479,7 +479,7 @@
         "name": "Djibouti",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_Djibouti.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Dominica",
@@ -487,7 +487,7 @@
         "name": "Dominica",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/c/c4/Flag_of_Dominica.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Dominican_Republic",
@@ -495,7 +495,7 @@
         "name": "Dominican Republic",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_the_Dominican_Republic.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Ecuador",
@@ -503,7 +503,7 @@
         "name": "Ecuador",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Egypt",
@@ -511,7 +511,7 @@
         "name": "Egypt",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/El_Salvador",
@@ -519,7 +519,7 @@
         "name": "El Salvador",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_El_Salvador.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Equatorial_Guinea",
@@ -527,7 +527,7 @@
         "name": "Equatorial Guinea",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Equatorial_Guinea.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Eritrea",
@@ -535,7 +535,7 @@
         "name": "Eritrea",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_Eritrea.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Estonia",
@@ -543,7 +543,7 @@
         "name": "Estonia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/8f/Flag_of_Estonia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Eswatini",
@@ -551,7 +551,7 @@
         "name": "Eswatini",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/fb/Flag_of_Eswatini.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Ethiopia",
@@ -559,7 +559,7 @@
         "name": "Ethiopia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Falkland_Islands",
@@ -567,7 +567,7 @@
         "name": "Falkland Islands (Malvinas)",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_Falkland_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Faroe_Islands",
@@ -575,7 +575,7 @@
         "name": "Faroe Islands",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/3c/Flag_of_the_Faroe_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Fiji",
@@ -583,7 +583,7 @@
         "name": "Fiji",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Fiji.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Finland",
@@ -591,7 +591,7 @@
         "name": "Finland",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/France",
@@ -599,7 +599,7 @@
         "name": "France",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/French_Polynesia",
@@ -607,15 +607,7 @@
         "name": "French Polynesia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/db/Flag_of_French_Polynesia.svg",
         "license": "Public domain",
-        "continent": ""
-    },
-    {
-        "url": "/wiki/French_Southern_and_Antarctic_Lands",
-        "alpha3": "ATF",
-        "name": "French Southern Territories",
-        "flag_url": "//upload.wikimedia.org/wikipedia/commons/a/a7/Flag_of_the_French_Southern_and_Antarctic_Lands.svg",
-        "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Gabon",
@@ -623,7 +615,7 @@
         "name": "Gabon",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/04/Flag_of_Gabon.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Gambia",
@@ -631,7 +623,7 @@
         "name": "Gambia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_The_Gambia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Georgia_(country)",
@@ -639,7 +631,7 @@
         "name": "Georgia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Georgia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Germany",
@@ -647,7 +639,7 @@
         "name": "Germany",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Ghana",
@@ -655,7 +647,7 @@
         "name": "Ghana",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Ghana.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Gibraltar",
@@ -663,7 +655,7 @@
         "name": "Gibraltar",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/02/Flag_of_Gibraltar.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Greece",
@@ -671,15 +663,7 @@
         "name": "Greece",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg",
         "license": "Public domain",
-        "continent": ""
-    },
-    {
-        "url": "/wiki/Greenland",
-        "alpha3": "GRL",
-        "name": "Greenland",
-        "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_Greenland.svg",
-        "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Grenada",
@@ -687,7 +671,7 @@
         "name": "Grenada",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Grenada.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Guam",
@@ -695,7 +679,7 @@
         "name": "Guam",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/07/Flag_of_Guam.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Guatemala",
@@ -703,7 +687,7 @@
         "name": "Guatemala",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/e/ec/Flag_of_Guatemala.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Bailiwick_of_Guernsey",
@@ -711,7 +695,7 @@
         "name": "Guernsey",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Guernsey.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Guinea",
@@ -719,7 +703,7 @@
         "name": "Guinea",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/e/ed/Flag_of_Guinea.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Guinea-Bissau",
@@ -727,7 +711,7 @@
         "name": "Guinea-Bissau",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Guinea-Bissau.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Guyana",
@@ -735,7 +719,7 @@
         "name": "Guyana",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_Guyana.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Haiti",
@@ -743,15 +727,7 @@
         "name": "Haiti",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Haiti.svg",
         "license": "Public domain",
-        "continent": ""
-    },
-    {
-        "url": "/wiki/Heard_Island_and_McDonald_Islands",
-        "alpha3": "HMD",
-        "name": "Heard Island and McDonald Islands",
-        "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/bb/Proposed_flag_of_Antarctica_%28Graham_Bartram%29.svg",
-        "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Vatican_City",
@@ -759,7 +735,7 @@
         "name": "Holy See",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_the_Vatican_City.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Honduras",
@@ -767,7 +743,7 @@
         "name": "Honduras",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/82/Flag_of_Honduras.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Hong_Kong",
@@ -775,7 +751,7 @@
         "name": "Hong Kong",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/5/5b/Flag_of_Hong_Kong.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Hungary",
@@ -783,7 +759,7 @@
         "name": "Hungary",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Iceland",
@@ -791,7 +767,7 @@
         "name": "Iceland",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/India",
@@ -799,7 +775,7 @@
         "name": "India",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Indonesia",
@@ -807,7 +783,7 @@
         "name": "Indonesia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Iran",
@@ -815,7 +791,7 @@
         "name": "Iran (Islamic Republic of)",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Iraq",
@@ -823,7 +799,7 @@
         "name": "Iraq",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Iraq.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Republic_of_Ireland",
@@ -831,7 +807,7 @@
         "name": "Ireland",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Isle_of_Man",
@@ -839,7 +815,7 @@
         "name": "Isle of Man",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_the_Isle_of_Man.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Israel",
@@ -847,7 +823,7 @@
         "name": "Israel",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Italy",
@@ -855,7 +831,7 @@
         "name": "Italy",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Jamaica",
@@ -863,7 +839,7 @@
         "name": "Jamaica",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Jamaica.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Japan",
@@ -871,7 +847,7 @@
         "name": "Japan",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Jersey",
@@ -879,7 +855,7 @@
         "name": "Jersey",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/1/1c/Flag_of_Jersey.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Jordan",
@@ -887,7 +863,7 @@
         "name": "Jordan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Kazakhstan",
@@ -895,7 +871,7 @@
         "name": "Kazakhstan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Kenya",
@@ -903,7 +879,7 @@
         "name": "Kenya",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Kiribati",
@@ -911,7 +887,7 @@
         "name": "Kiribati",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kiribati.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/North_Korea",
@@ -919,7 +895,7 @@
         "name": "Korea (Democratic People's Republic of)",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_North_Korea.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/South_Korea",
@@ -927,7 +903,7 @@
         "name": "Korea - Republic of",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Kuwait",
@@ -935,7 +911,7 @@
         "name": "Kuwait",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Kuwait.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Kyrgyzstan",
@@ -943,7 +919,7 @@
         "name": "Kyrgyzstan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Kyrgyzstan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Laos",
@@ -951,7 +927,7 @@
         "name": "Lao People's Democratic Republic",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Latvia",
@@ -959,7 +935,7 @@
         "name": "Latvia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Latvia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Lebanon",
@@ -967,7 +943,7 @@
         "name": "Lebanon",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/5/59/Flag_of_Lebanon.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Lesotho",
@@ -975,7 +951,7 @@
         "name": "Lesotho",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/4a/Flag_of_Lesotho.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Liberia",
@@ -983,7 +959,7 @@
         "name": "Liberia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/b8/Flag_of_Liberia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Libya",
@@ -991,7 +967,7 @@
         "name": "Libya",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Libya.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Liechtenstein",
@@ -999,7 +975,7 @@
         "name": "Liechtenstein",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Liechtenstein.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Lithuania",
@@ -1007,7 +983,7 @@
         "name": "Lithuania",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Lithuania.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Luxembourg",
@@ -1015,7 +991,7 @@
         "name": "Luxembourg",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Luxembourg.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Macau",
@@ -1023,7 +999,7 @@
         "name": "Macao",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/63/Flag_of_Macau.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Madagascar",
@@ -1031,7 +1007,7 @@
         "name": "Madagascar",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Madagascar.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Malawi",
@@ -1039,7 +1015,7 @@
         "name": "Malawi",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d1/Flag_of_Malawi.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Malaysia",
@@ -1047,7 +1023,7 @@
         "name": "Malaysia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Maldives",
@@ -1055,7 +1031,7 @@
         "name": "Maldives",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Maldives.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Mali",
@@ -1063,7 +1039,7 @@
         "name": "Mali",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Mali.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Malta",
@@ -1071,7 +1047,7 @@
         "name": "Malta",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Malta.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Marshall_Islands",
@@ -1079,7 +1055,7 @@
         "name": "Marshall Islands",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/2e/Flag_of_the_Marshall_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Mauritania",
@@ -1087,7 +1063,7 @@
         "name": "Mauritania",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/43/Flag_of_Mauritania.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Mauritius",
@@ -1095,7 +1071,7 @@
         "name": "Mauritius",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Mauritius.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Mexico",
@@ -1103,7 +1079,7 @@
         "name": "Mexico",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Federated_States_of_Micronesia",
@@ -1111,7 +1087,7 @@
         "name": "Micronesia (Federated States of)",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/e/e4/Flag_of_the_Federated_States_of_Micronesia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Moldova",
@@ -1119,7 +1095,7 @@
         "name": "Moldova - Republic of",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Moldova.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Monaco",
@@ -1127,7 +1103,7 @@
         "name": "Monaco",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/e/ea/Flag_of_Monaco.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Mongolia",
@@ -1135,7 +1111,7 @@
         "name": "Mongolia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Montenegro",
@@ -1143,7 +1119,7 @@
         "name": "Montenegro",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Montenegro.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Montserrat",
@@ -1151,7 +1127,7 @@
         "name": "Montserrat",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Montserrat.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Morocco",
@@ -1159,7 +1135,7 @@
         "name": "Morocco",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Mozambique",
@@ -1167,7 +1143,7 @@
         "name": "Mozambique",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Mozambique.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Myanmar",
@@ -1175,7 +1151,7 @@
         "name": "Myanmar",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Namibia",
@@ -1183,7 +1159,7 @@
         "name": "Namibia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Namibia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Nauru",
@@ -1191,7 +1167,7 @@
         "name": "Nauru",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/30/Flag_of_Nauru.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Nepal",
@@ -1199,7 +1175,7 @@
         "name": "Nepal",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Kingdom_of_the_Netherlands",
@@ -1207,7 +1183,7 @@
         "name": "Netherlands",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/New_Caledonia",
@@ -1215,7 +1191,7 @@
         "name": "New Caledonia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/0c/Drapeau_de_Nouvelle-Cal%C3%A9donie.png",
         "license": "Creative Commons Attribution-Share Alike 4.0 International",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/New_Zealand",
@@ -1223,7 +1199,7 @@
         "name": "New Zealand",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Nicaragua",
@@ -1231,7 +1207,7 @@
         "name": "Nicaragua",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Niger",
@@ -1239,7 +1215,7 @@
         "name": "Niger",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/f4/Flag_of_Niger.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Nigeria",
@@ -1247,7 +1223,7 @@
         "name": "Nigeria",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Niue",
@@ -1255,7 +1231,7 @@
         "name": "Niue",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Niue.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Norfolk_Island",
@@ -1263,7 +1239,7 @@
         "name": "Norfolk Island",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Norfolk_Island.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/North_Macedonia",
@@ -1271,7 +1247,7 @@
         "name": "North Macedonia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_North_Macedonia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Northern_Mariana_Islands",
@@ -1279,7 +1255,7 @@
         "name": "Northern Mariana Islands",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/e/e0/Flag_of_the_Northern_Mariana_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Norway",
@@ -1287,7 +1263,7 @@
         "name": "Norway",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Oman",
@@ -1295,7 +1271,7 @@
         "name": "Oman",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Oman.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Pakistan",
@@ -1303,7 +1279,7 @@
         "name": "Pakistan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Palau",
@@ -1311,7 +1287,7 @@
         "name": "Palau",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Palau.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/State_of_Palestine",
@@ -1319,7 +1295,7 @@
         "name": "Palestine - State of",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Panama",
@@ -1327,7 +1303,7 @@
         "name": "Panama",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Papua_New_Guinea",
@@ -1335,7 +1311,7 @@
         "name": "Papua New Guinea",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/e/e3/Flag_of_Papua_New_Guinea.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Paraguay",
@@ -1343,7 +1319,7 @@
         "name": "Paraguay",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Paraguay.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Peru",
@@ -1351,7 +1327,7 @@
         "name": "Peru",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Philippines",
@@ -1359,7 +1335,7 @@
         "name": "Philippines",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Pitcairn_Islands",
@@ -1367,7 +1343,7 @@
         "name": "Pitcairn",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_the_Pitcairn_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Poland",
@@ -1375,7 +1351,7 @@
         "name": "Poland",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/1/12/Flag_of_Poland.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Portugal",
@@ -1383,7 +1359,7 @@
         "name": "Portugal",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Puerto_Rico",
@@ -1391,7 +1367,7 @@
         "name": "Puerto Rico",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/28/Flag_of_Puerto_Rico.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Qatar",
@@ -1399,7 +1375,7 @@
         "name": "Qatar",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Qatar.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Romania",
@@ -1407,7 +1383,7 @@
         "name": "Romania",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Russia",
@@ -1415,7 +1391,7 @@
         "name": "Russian Federation",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Rwanda",
@@ -1423,7 +1399,7 @@
         "name": "Rwanda",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Rwanda.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Saint_Barth%C3%A9lemy",
@@ -1431,7 +1407,7 @@
         "name": "Saint Barth\u00e9lemy",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Saint_Helena,_Ascension_and_Tristan_da_Cunha",
@@ -1439,7 +1415,7 @@
         "name": "Saint Helena - Ascension and Tristan da Cunha",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Saint_Kitts_and_Nevis",
@@ -1447,7 +1423,7 @@
         "name": "Saint Kitts and Nevis",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Saint_Lucia",
@@ -1455,7 +1431,7 @@
         "name": "Saint Lucia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Saint_Lucia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Collectivity_of_Saint_Martin",
@@ -1463,7 +1439,7 @@
         "name": "Saint Martin (French part)",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Saint_Vincent_and_the_Grenadines",
@@ -1471,7 +1447,7 @@
         "name": "Saint Vincent and the Grenadines",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/6d/Flag_of_Saint_Vincent_and_the_Grenadines.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Samoa",
@@ -1479,7 +1455,7 @@
         "name": "Samoa",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Samoa.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/San_Marino",
@@ -1487,7 +1463,7 @@
         "name": "San Marino",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_San_Marino.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe",
@@ -1495,7 +1471,7 @@
         "name": "Sao Tome and Principe",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_Sao_Tome_and_Principe.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Senegal",
@@ -1503,7 +1479,7 @@
         "name": "Senegal",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Serbia",
@@ -1511,7 +1487,7 @@
         "name": "Serbia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Seychelles",
@@ -1519,7 +1495,7 @@
         "name": "Seychelles",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Seychelles.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Sierra_Leone",
@@ -1527,7 +1503,7 @@
         "name": "Sierra Leone",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Sierra_Leone.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Singapore",
@@ -1535,7 +1511,7 @@
         "name": "Singapore",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Sint_Maarten",
@@ -1543,7 +1519,7 @@
         "name": "Sint Maarten (Dutch part)",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Sint_Maarten.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Slovakia",
@@ -1551,7 +1527,7 @@
         "name": "Slovakia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Slovakia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Slovenia",
@@ -1559,7 +1535,7 @@
         "name": "Slovenia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Slovenia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Solomon_Islands",
@@ -1567,7 +1543,7 @@
         "name": "Solomon Islands",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/7/74/Flag_of_the_Solomon_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Somalia",
@@ -1575,7 +1551,7 @@
         "name": "Somalia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_Somalia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/South_Africa",
@@ -1583,15 +1559,7 @@
         "name": "South Africa",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg",
         "license": "Public domain",
-        "continent": ""
-    },
-    {
-        "url": "/wiki/South_Georgia_and_the_South_Sandwich_Islands",
-        "alpha3": "SGS",
-        "name": "South Georgia and the South Sandwich Islands",
-        "flag_url": "//upload.wikimedia.org/wikipedia/commons/e/ed/Flag_of_South_Georgia_and_the_South_Sandwich_Islands.svg",
-        "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/South_Sudan",
@@ -1599,7 +1567,7 @@
         "name": "South Sudan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/7/7a/Flag_of_South_Sudan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Spain",
@@ -1607,7 +1575,7 @@
         "name": "Spain",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/89/Bandera_de_Espa%C3%B1a.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Sri_Lanka",
@@ -1615,7 +1583,7 @@
         "name": "Sri Lanka",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Sudan",
@@ -1623,7 +1591,7 @@
         "name": "Sudan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Sudan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Suriname",
@@ -1631,7 +1599,7 @@
         "name": "Suriname",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/60/Flag_of_Suriname.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Svalbard_and_Jan_Mayen",
@@ -1639,7 +1607,7 @@
         "name": "Svalbard and Jan Mayen",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Sweden",
@@ -1647,7 +1615,7 @@
         "name": "Sweden",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Switzerland",
@@ -1655,7 +1623,7 @@
         "name": "Switzerland",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Syria",
@@ -1663,7 +1631,7 @@
         "name": "Syrian Arab Republic",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/5/53/Flag_of_Syria.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Tajikistan",
@@ -1671,7 +1639,7 @@
         "name": "Tajikistan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Tajikistan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Tanzania",
@@ -1679,7 +1647,7 @@
         "name": "Tanzania - United Republic of",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Tanzania.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Thailand",
@@ -1687,7 +1655,7 @@
         "name": "Thailand",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/East_Timor",
@@ -1695,7 +1663,7 @@
         "name": "Timor-Leste",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/26/Flag_of_East_Timor.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Togo",
@@ -1703,7 +1671,7 @@
         "name": "Togo",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/68/Flag_of_Togo.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Tokelau",
@@ -1711,7 +1679,7 @@
         "name": "Tokelau",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/8e/Flag_of_Tokelau.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Tonga",
@@ -1719,7 +1687,7 @@
         "name": "Tonga",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Tonga.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Trinidad_and_Tobago",
@@ -1727,7 +1695,7 @@
         "name": "Trinidad and Tobago",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Trinidad_and_Tobago.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Tunisia",
@@ -1735,7 +1703,7 @@
         "name": "Tunisia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Tunisia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Turkey",
@@ -1743,7 +1711,7 @@
         "name": "T\u00fcrkiye",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/Turkmenistan",
@@ -1751,7 +1719,7 @@
         "name": "Turkmenistan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Turkmenistan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Turks_and_Caicos_Islands",
@@ -1759,7 +1727,7 @@
         "name": "Turks and Caicos Islands",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_the_Turks_and_Caicos_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Tuvalu",
@@ -1767,7 +1735,7 @@
         "name": "Tuvalu",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Tuvalu.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Uganda",
@@ -1775,7 +1743,7 @@
         "name": "Uganda",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/4e/Flag_of_Uganda.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Ukraine",
@@ -1783,7 +1751,7 @@
         "name": "Ukraine",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/United_Arab_Emirates",
@@ -1791,7 +1759,7 @@
         "name": "United Arab Emirates",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/United_Kingdom",
@@ -1799,7 +1767,7 @@
         "name": "United Kingdom of Great Britain and Northern Ireland",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Europe"
     },
     {
         "url": "/wiki/United_States",
@@ -1807,7 +1775,7 @@
         "name": "United States of America",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/United_States_Minor_Outlying_Islands",
@@ -1815,7 +1783,7 @@
         "name": "United States Minor Outlying Islands",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Uruguay",
@@ -1823,7 +1791,7 @@
         "name": "Uruguay",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Uruguay.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Uzbekistan",
@@ -1831,7 +1799,7 @@
         "name": "Uzbekistan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Vanuatu",
@@ -1839,7 +1807,7 @@
         "name": "Vanuatu",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/6e/Flag_of_Vanuatu_%28official%29.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Venezuela",
@@ -1847,7 +1815,7 @@
         "name": "Venezuela (Bolivarian Republic of)",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Venezuela.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "South America"
     },
     {
         "url": "/wiki/Vietnam",
@@ -1855,7 +1823,7 @@
         "name": "Vietnam",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/British_Virgin_Islands",
@@ -1863,7 +1831,7 @@
         "name": "Virgin Islands (British)",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_British_Virgin_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/United_States_Virgin_Islands",
@@ -1871,7 +1839,7 @@
         "name": "Virgin Islands (U.S.)",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/f/f8/Flag_of_the_United_States_Virgin_Islands.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "North America"
     },
     {
         "url": "/wiki/Wallis_and_Futuna",
@@ -1879,7 +1847,7 @@
         "name": "Wallis and Futuna",
         "flag_url": "//upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Oceania"
     },
     {
         "url": "/wiki/Yemen",
@@ -1887,7 +1855,7 @@
         "name": "Yemen",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Yemen.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Asia"
     },
     {
         "url": "/wiki/Zambia",
@@ -1895,7 +1863,7 @@
         "name": "Zambia",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Zambia.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     },
     {
         "url": "/wiki/Zimbabwe",
@@ -1903,6 +1871,6 @@
         "name": "Zimbabwe",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Zimbabwe.svg",
         "license": "Public domain",
-        "continent": ""
+        "continent": "Africa"
     }
 ]

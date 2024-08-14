@@ -3,15 +3,16 @@
 namespace App\Http\Controllers\pages;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\Continent;
+use App\Models\Currency;
 
 class Action extends Controller
 {
     public function add()
     {
         $continents = Continent::getContinents();
+        $currencies = Currency::getData();
 
-        return view("pages.action.add", ["continents" => $continents]);
+        return view("pages.action.add", ["continents" => $continents, "currencies" => $currencies]);
     }
 }

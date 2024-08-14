@@ -33,6 +33,7 @@ class Country extends Model
         }
 
         $result = $select->get();
+
         return $result;
     }
 }

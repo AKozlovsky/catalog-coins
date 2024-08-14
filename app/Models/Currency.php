@@ -16,7 +16,7 @@ class Currency extends Model
         return $this->hasMany('App\Models\Items');
     }
 
-    public static function getData($columns)
+    public static function getData($columns = [])
     {
         $result = Currency::select("*")
             ->when($columns, function ($query, $columns) {
@@ -25,6 +25,7 @@ class Currency extends Model
                 }
             })
             ->get();
+
         return $result;
     }
 }

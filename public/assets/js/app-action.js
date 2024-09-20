@@ -59,31 +59,6 @@ $(function () {
         });
     }
 
-    // Continent selector
-    var selectContinent = $("#continent");
-    var selectCountry = $("#country");
-
-    selectContinent.on("change", function () {
-        var selectedContinent = $(this).val();
-        selectCountry.find("option").remove().end();
-
-        $.getJSON("assets/json/countries.json", function (country) {
-            $.each(country, function (key, value) {
-                if (value.continent == selectedContinent) {
-                    selectCountry.append(
-                        '<option value="' +
-                            value.name +
-                            '">' +
-                            value.name +
-                            "</option>"
-                    );
-                }
-            });
-        });
-
-        validation.revalidateField("continent");
-    });
-
     // Media upload
     const previewTemplate = `<div class="dz-preview dz-file-preview">
     <div class="dz-details">
@@ -123,18 +98,14 @@ $(function () {
             continent: {
                 validators: {
                     notEmpty: {
-                        message: "Please enter your name",
+                        message: "Please select a continent",
                     },
-                    stringLength: {
-                        min: 6,
-                        max: 30,
-                        message:
-                            "The name must be more than 6 and less than 30 characters long",
-                    },
-                    regexp: {
-                        regexp: /^[a-zA-Z0-9 ]+$/,
-                        message:
-                            "The name can only consist of alphabetical, number and space",
+                },
+            },
+            country: {
+                validators: {
+                    notEmpty: {
+                        message: "Please select a country",
                     },
                 },
             },
@@ -146,6 +117,7 @@ $(function () {
                 rowSelector: function (field, ele) {
                     switch (field) {
                         case "continent":
+                        case "country":
                             return ".col-md-6";
                         default:
                             return ".row";
@@ -182,8 +154,50 @@ $(function () {
         },
     });
 
+    // Continent selector
+    var selectContinent = $("#continent"),
+        selectCountry = $("#country");
+
     if (selectContinent.length) {
         select2Focus(selectContinent);
         selectContinent.wrap('<div class="position-relative"></div>');
+        selectContinent
+            .select2({
+                placeholder: "Select continent",
+                dropdownParent: selectContinent.parent(),
+            })
+            .on("change", function () {
+                var selectedContinent = $(this).val();
+                selectCountry.find("option").remove().end();
+                $.getJSON("assets/json/countries.json", function (country) {
+                    $.each(country, function (key, value) {
+                        if (value.continent == selectedContinent) {
+                            selectCountry.append(
+                                '<option value="' +
+                                    value.name +
+                                    '">' +
+                                    value.name +
+                                    "</option>"
+                            );
+                        }
+                    });
+                });
+
+                validation.revalidateField("continent");
+                validation.resetField("country");
+            });
+    }
+
+    if (selectCountry.length) {
+        select2Focus(selectCountry);
+        selectCountry.wrap('<div class="position-relative"></div>');
+        selectCountry
+            .select2({
+                placeholder: "Select country",
+                dropdownParent: selectCountry.parent(),
+            })
+            .on("change", function () {
+                validation.revalidateField("country");
+            });
     }
 });

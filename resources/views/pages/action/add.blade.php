@@ -34,15 +34,15 @@
             <div class="card">
                 <h5 class="card-header">Add a new item</h5>
                 <div class="card-body">
-                    <form id="formAddItem" class="row g-3">
+                    <form id="formAddItem" class="row g-3" action="{{ url('/add-submit') }}" method="POST">
+                        @csrf
                         <div class="col-12">
                             <h6>1. Origin Details</h6>
                             <hr class="mt-0" />
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating form-floating-outline">
-                                <select id="continent" name="continent" class="select2 form-select"
-                                    data-placeholder="Select Continent">
+                                <select id="continent" name="continent" class="select2 form-select" data-allow-clear="true">
                                     <option value="">Select Continent</option>
                                     @foreach ($continents as $continent)
                                         <option value="{{ $continent->name }}">{{ $continent->name }}</option>
@@ -53,7 +53,8 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating form-floating-outline">
-                                <select id="country" class="select2 form-select" data-placeholder="Select Country">
+                                <select id="country" name="country" class="select2 form-select" data-allow-clear="true"
+                                    required>
                                     <option value="">Select Country</option>
                                 </select>
                                 <label for="country">Country</label>
@@ -169,9 +170,12 @@
                                 <label for="krausePrice">Krause Price</label>
                             </div>
                         </div>
+                        <div class="col-12">
+                            <button type="submit" name="submitButton" class="btn btn-primary">Add</button>
+                        </div>
                     </form>
                 </div>
-                <div class="card-body">
+                {{-- <div class="card-body">
                     <div class="col-12">
                         <h6 class="mt-2">5. Media Upload</h6>
                         <hr class="mt-0" />
@@ -187,12 +191,7 @@
                             <input name="file" type="file" />
                         </div>
                     </form>
-                </div>
-                <div class="card-body">
-                    <div class="col-12">
-                        <button type="submit" name="submitButton" class="btn btn-primary">Add</button>
-                    </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

@@ -24,6 +24,7 @@ class Collection extends Model
     use HasFactory;
     protected $table = 'collections';
     protected $primaryKey = 'id';
+    protected $fillable = ["continent", "country", "item"];
 
     public function continents()
     {
@@ -413,5 +414,10 @@ class Collection extends Model
             ->count();
 
         return $result;
+    }
+
+    public static function addCollection()
+    {
+        $result = Collection::addCollection();
     }
 }

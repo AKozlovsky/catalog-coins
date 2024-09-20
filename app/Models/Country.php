@@ -10,6 +10,7 @@ class Country extends Model
     use HasFactory;
     protected $table = 'countries';
     protected $primaryKey = 'code';
+    public $incrementing = false;
 
     public function collections()
     {
@@ -35,5 +36,12 @@ class Country extends Model
         $result = $select->get();
 
         return $result;
+    }
+
+    public static function getCode($country)
+    {
+        $result = Country::where("country_name", $country)->pluck("code");
+
+        return $result[0];
     }
 }

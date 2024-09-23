@@ -53,8 +53,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating form-floating-outline">
-                                <select id="country" name="country" class="select2 form-select" data-allow-clear="true"
-                                    required>
+                                <select id="country" name="country" class="select2 form-select" data-allow-clear="true">
                                     <option value="">Select Country</option>
                                 </select>
                                 <label for="country">Country</label>
@@ -66,7 +65,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating form-floating-outline">
-                                <select id="currency" class="select2 form-select" data-placeholder="Select Currency">
+                                <select id="currency" name="currency" class="select2 form-select" data-allow-clear="true">
                                     <option value="">Select Currency</option>
                                     @foreach ($currencies as $currency)
                                         <option value="{{ $currency->code }}">{{ $currency->code }} -
@@ -80,8 +79,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating form-floating-outline">
-                                <input type="number" class="form-control" id="currencyValue"
-                                    placeholder="Select Currency Value" name="currencyValue" aria-label="Currency Value">
+                                <input type="number" class="form-control" id="currencyValue" name="currencyValue">
                                 <label for="currencyValue">Currency Value</label>
                             </div>
                         </div>

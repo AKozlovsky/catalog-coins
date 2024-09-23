@@ -109,6 +109,20 @@ $(function () {
                     },
                 },
             },
+            currency: {
+                validators: {
+                    notEmpty: {
+                        message: "Please select a currency",
+                    },
+                },
+            },
+            currencyValue: {
+                validators: {
+                    notEmpty: {
+                        message: "Please select a currency value",
+                    },
+                },
+            },
         },
         plugins: {
             trigger: new FormValidation.plugins.Trigger(),
@@ -118,6 +132,8 @@ $(function () {
                     switch (field) {
                         case "continent":
                         case "country":
+                        case "currency":
+                        case "currencyValue":
                             return ".col-md-6";
                         default:
                             return ".row";
@@ -156,7 +172,9 @@ $(function () {
 
     // Continent selector
     var selectContinent = $("#continent"),
-        selectCountry = $("#country");
+        selectCountry = $("#country"),
+        selectCurrency = $("#currency"),
+        selectCurrencyValue = $("#currencyValue");
 
     if (selectContinent.length) {
         select2Focus(selectContinent);
@@ -198,6 +216,19 @@ $(function () {
             })
             .on("change", function () {
                 validation.revalidateField("country");
+            });
+    }
+
+    if (selectCurrency.length) {
+        select2Focus(selectCurrency);
+        selectCurrency.wrap('<div class="position-relative"></div>');
+        selectCurrency
+            .select2({
+                placeholder: "Select currency",
+                dropdownParent: selectCurrency.parent(),
+            })
+            .on("change", function () {
+                validation.revalidateField("currency");
             });
     }
 });

@@ -18,11 +18,10 @@ class CollectionSeeder extends Seeder
             ["value" => 5000, "created_at" => date('Y-m-d h:i:s')],
         ]);
         DB::table('photos')->insert([
-            ["filename" => "", "item" => 1, "created_at" => date('Y-m-d h:i:s')]
+            ["filename" => "", "created_at" => date('Y-m-d h:i:s')]
         ]);
         DB::table('other_criteria')->insert([
             [
-                "item" => 1,
                 "monarch" => "František II",
                 "reign_period_from" => 1792,
                 "reign_period_to" => 1806,
@@ -38,8 +37,8 @@ class CollectionSeeder extends Seeder
             ]
         ]);
         DB::table('items')->insert([
-            ["currency" => "ALL", "numerical_value" => 10000, "other_criteria" => 1, "photo" => 1, "collection" => 1, "created_at" => date('Y-m-d h:i:s')],
-            ["currency" => "USD", "numerical_value" => 5000, "other_criteria" => 1, "photo" => 1, "collection" => 2, "created_at" => date('Y-m-d h:i:s')],
+            ["currency" => "ALL", "numerical_value" => 10000, "other_criteria" => 1, "photo" => 1,  "created_at" => date('Y-m-d h:i:s')],
+            ["currency" => "USD", "numerical_value" => 5000, "other_criteria" => 1, "photo" => 1, "created_at" => date('Y-m-d h:i:s')],
         ]);
         DB::table('collections')->insert([
             ["continent" => "AF", "country" => "AO", "item" => 1, "created_at" => date('Y-m-d h:i:s')],

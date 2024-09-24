@@ -173,8 +173,7 @@ $(function () {
     // Continent selector
     var selectContinent = $("#continent"),
         selectCountry = $("#country"),
-        selectCurrency = $("#currency"),
-        selectCurrencyValue = $("#currencyValue");
+        selectCurrency = $("#currency");
 
     if (selectContinent.length) {
         select2Focus(selectContinent);

@@ -104,7 +104,7 @@ class Collection extends Model
             ->join('items', 'collections.item', '=', 'items.id')
             ->join('currencies', 'items.currency', '=', 'currencies.code')
             ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.value')
-            ->join('other_criteria', 'items.other_criteria', '=', 'other_criteria.item')
+            ->join('other_criteria', 'items.other_criteria', '=', 'other_criteria.id')
             ->where(function ($query) use ($type, $input) {
                 if (!empty($input)) {
                     switch ($type) {
@@ -285,7 +285,7 @@ class Collection extends Model
             ->join('items', 'collections.item', '=', 'items.id')
             ->join('currencies', 'items.currency', '=', 'currencies.code')
             ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.value')
-            ->join('other_criteria', 'items.other_criteria', '=', 'other_criteria.item')
+            ->join('other_criteria', 'items.other_criteria', '=', 'other_criteria.id')
             ->where(function ($query) use ($type, $input) {
                 switch ($type) {
                     case self::CONTINENTS:

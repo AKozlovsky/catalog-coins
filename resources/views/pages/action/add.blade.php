@@ -34,7 +34,7 @@
             <div class="card">
                 <h5 class="card-header">Add a new item</h5>
                 <div class="card-body">
-                    <form id="formAddItem" class="row g-3" action="{{ url('/add-submit') }}" method="POST">
+                    <form id="formAddItem" class="row g-3" action="{{ url('/submit') }}" method="POST">
                         @csrf
                         <div class="col-12">
                             <h6>1. Origin Details</h6>

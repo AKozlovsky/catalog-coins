@@ -10,6 +10,7 @@ class Item extends Model
     use HasFactory;
     protected $table = 'items';
     protected $primaryKey = 'id';
+    protected $fillable = ["currency", "numerical_value"];
 
     public function collections()
     {

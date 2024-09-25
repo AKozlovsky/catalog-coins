@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->char('currency', 3);
             $table->smallInteger('numerical_value');
-            $table->bigInteger('photo')->nullable(true)->change();
-            $table->bigInteger('other_criteria')->nullable(true)->change();
+            $table->bigInteger('photo')->nullable();
+            $table->bigInteger('other_criteria')->nullable();
             $table->timestamps();
             $table->foreign('currency')->references('code')->on('currencies');
             $table->foreign('numerical_value')->references('value')->on('numerical_values');

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Models\Collection;
 use App\Models\Country;
 use App\Models\Item;
+use App\Models\OtherCriteria;
 
 class Action extends Controller
 {
@@ -22,10 +23,17 @@ class Action extends Controller
 
     public function submit(Request $request)
     {
+        $otherCriteria = $this->setOtherCriteria($request);
+
         $item = [
             "currency" => $request->currency,
             "numerical_value" => $request->currencyValue
         ];
+
+        if (!empty($otherCriteria)) {
+            $id = OtherCriteria::create($otherCriteria);
+            $item["other_criteria"] = $id;
+        }
 
         $itemId = Item::create($item)->id;
 
@@ -36,5 +44,16 @@ class Action extends Controller
         ];
 
         Collection::create($data);
+    }
+
+    public function setOtherCriteria($request)
+    {
+        $result = [];
+
+        if ($request->monarch != null) {
+            $result["monarch"] = $request->monarch;
+        }
+
+        return $result;
     }
 }

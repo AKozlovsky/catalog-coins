@@ -11,6 +11,7 @@ class OtherCriteria extends Model
 
     protected $table = 'other_criteria';
     protected $primaryKey = 'id';
+    protected $fillable = ["monarch", "reign_period_from", "reign_period_to", "mintage_year", "avers", "revers", "coin_edge", "century", "metal", "quality", "price_by_krause"];
 
     public function items()
     {

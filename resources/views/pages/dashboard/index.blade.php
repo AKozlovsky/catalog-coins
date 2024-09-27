@@ -21,8 +21,8 @@
 @endsection
 
 @section('page-script')
-    {{-- <script src="{{ asset('assets/js/app-logistics-dashboard.js') }}"></script> --}}
     <script src="{{ asset('assets/js/app-academy-dashboard.js') }}"></script>
+    <script src="{{ asset('assets/js/dashboard.js') }}"></script>
 @endsection
 
 @section('content')
@@ -43,7 +43,7 @@
                     </div>
                     <p class="mb-0 text-heading">Total of items</p>
                     <p class="mb-0">
-                        <span class="me-1">+ {{ $newItems }}</span>
+                        <span class="me-1">+ {{ $itemsThisWeek }}</span>
                         <small class="text-muted">this week</small>
                     </p>
                 </div>
@@ -61,7 +61,7 @@
                     </div>
                     <p class="mb-0 text-heading">Total of countries</p>
                     <p class="mb-0">
-                        <span class="me-1">+ {{ $newCountries }}</span>
+                        <span class="me-1">+ {{ $countriesThisWeek }}</span>
                         <small class="text-muted">this week</small>
                     </p>
                 </div>

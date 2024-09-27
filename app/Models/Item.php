@@ -31,4 +31,17 @@ class Item extends Model
     {
         return $this->belongsTo('App\Models\OtherCriteria');
     }
+
+    public static function getCount()
+    {
+        return Item::select()->count();
+    }
+
+    public static function getTotalThisWeek()
+    {
+        $actualWeek = Common::getActualWeek();
+        $result = Item::select()->whereBetween("created_at", $actualWeek)->count();
+
+        return $result;
+    }
 }

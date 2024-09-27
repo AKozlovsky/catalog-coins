@@ -6,13 +6,19 @@ use App\Http\Controllers\Controller;
 use App\Models\Collection;
 use App\Models\Continent;
 use App\Models\Country;
+use App\Models\Item;
 use Illuminate\Support\Facades\File;
 
 class Base extends Controller
 {
     public function dashboard()
     {
-        return view('pages.dashboard.index', ["totalItems" => 2, "newItems" => 4, "totalCountries" => 2, "newCountries" => 1]);
+        return view('pages.dashboard.index', [
+            "totalItems" => Item::getCount(),
+            "itemsThisWeek" => Item::getTotalThisWeek(),
+            "totalCountries" => Collection::getTotalCountries(),
+            "countriesThisWeek" => Collection::getTotalCountriesThisWeek()
+        ]);
     }
 
     public function continents()

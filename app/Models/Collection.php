@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Collection extends Model
 {
-    const CONTINENTS = "continents",
+    const
+        CONTINENTS = "continents",
         COUNTRIES = "countries",
         MONARCHS = "monarchs",
         REIGN_PERIODS = "reign-periods",
@@ -414,6 +415,23 @@ class Collection extends Model
                 }
             })
             ->count();
+
+        return $result;
+    }
+
+    public static function getTotalCountries()
+    {
+        $result = Collection::select("country")->groupBy("country")->get();
+        $result = $result->count();
+
+        return $result;
+    }
+
+    public static function getTotalCountriesThisWeek()
+    {
+        $actualWeek = Common::getActualWeek();
+        $result = Collection::select("country")->whereBetween("created_at", $actualWeek)->groupBy("country")->get();
+        $result = $result->count();
 
         return $result;
     }

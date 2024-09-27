@@ -10,6 +10,7 @@ class NumericalValue extends Model
     use HasFactory;
     protected $table = 'numerical_values';
     protected $primaryKey = 'id';
+    protected $fillable = ["value"];
 
     public function items()
     {

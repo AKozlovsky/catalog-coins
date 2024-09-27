@@ -19,7 +19,7 @@ return new class extends Migration
             $table->bigInteger('other_criteria')->nullable();
             $table->timestamps();
             $table->foreign('currency')->references('code')->on('currencies');
-            $table->foreign('numerical_value')->references('value')->on('numerical_values');
+            $table->foreign('numerical_value')->references('id')->on('numerical_values');
         });
     }
 

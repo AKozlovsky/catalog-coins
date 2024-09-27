@@ -37,8 +37,8 @@ class CollectionSeeder extends Seeder
             ]
         ]);
         DB::table('items')->insert([
-            ["currency" => "ALL", "numerical_value" => 10000, "other_criteria" => 1, "photo" => 1,  "created_at" => date('Y-m-d h:i:s')],
-            ["currency" => "USD", "numerical_value" => 5000, "other_criteria" => 1, "photo" => 1, "created_at" => date('Y-m-d h:i:s')],
+            ["currency" => "ALL", "numerical_value" => 1, "other_criteria" => 1, "photo" => 1,  "created_at" => date('Y-m-d h:i:s')],
+            ["currency" => "USD", "numerical_value" => 2, "other_criteria" => 1, "photo" => 1, "created_at" => date('Y-m-d h:i:s')],
         ]);
         DB::table('collections')->insert([
             ["continent" => "AF", "country" => "AO", "item" => 1, "created_at" => date('Y-m-d h:i:s')],

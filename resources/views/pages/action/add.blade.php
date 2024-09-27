@@ -96,16 +96,18 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating form-floating-outline">
-                                <input type="number" class="form-control" id="reignFrom"
-                                    placeholder="Select Reign Period From" name="reignFrom" aria-label="Reign Period From">
-                                <label for="reignFrom">Reign Period From</label>
+                                <input type="number" class="form-control" id="reign_period_from"
+                                    placeholder="Select Reign Period From" name="reign_period_from"
+                                    aria-label="Reign Period From">
+                                <label for="reign_period_from">Reign Period From</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating form-floating-outline">
-                                <input type="number" class="form-control" id="reignTo"
-                                    placeholder="Select Reign Period To" name="reignTo" aria-label="Reign Period To">
-                                <label for="reignTo">Reign Period To</label>
+                                <input type="number" class="form-control" id="reign_period_to"
+                                    placeholder="Select Reign Period To" name="reign_period_to"
+                                    aria-label="Reign Period To">
+                                <label for="reign_period_to">Reign Period To</label>
                             </div>
                         </div>
                         <div class="col-12">
@@ -114,9 +116,9 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating form-floating-outline">
-                                <input type="number" class="form-control" id="mintageYear"
-                                    placeholder="Select Mintage Year" name="mintageYear" aria-label="Mintage Year">
-                                <label for="mintageYear">Mintage Year</label>
+                                <input type="number" class="form-control" id="mintage_year"
+                                    placeholder="Select Mintage Year" name="mintage_year" aria-label="Mintage Year">
+                                <label for="mintage_year">Mintage Year</label>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -135,9 +137,9 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating form-floating-outline">
-                                <input type="text" class="form-control" id="coinEdge" placeholder="Select Coin Edge"
-                                    name="coinEdge" aria-label="Coin Edge">
-                                <label for="coinEdge">Coin Edge</label>
+                                <input type="text" class="form-control" id="coin_edge" placeholder="Select Coin Edge"
+                                    name="coin_edge" aria-label="Coin Edge">
+                                <label for="coin_edge">Coin Edge</label>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -163,9 +165,9 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating form-floating-outline">
-                                <input type="number" class="form-control" id="krausePrice"
-                                    placeholder="Select Krause Price" name="krausePrice" aria-label="Krause Price">
-                                <label for="krausePrice">Krause Price</label>
+                                <input type="number" class="form-control" id="price_by_krause"
+                                    placeholder="Select Krause Price" name="price_by_krause" aria-label="Krause Price">
+                                <label for="price_by_krause">Krause Price</label>
                             </div>
                         </div>
                         <div class="col-12">

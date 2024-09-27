@@ -4,7 +4,6 @@
         "alpha3": "AFG",
         "name": "Afghanistan",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg",
-        "emblem_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Arms_of_the_Islamic_Emirate_of_Afghanistan.svg",
         "license": "Public domain",
         "continent": "Asia"
     },
@@ -53,7 +52,6 @@
         "alpha3": "AGO",
         "name": "Angola",
         "flag_url": "//upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg",
-        "emblem_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Emblem_of_Angola.svg",
         "license": "Public domain",
         "continent": "Africa"
     },

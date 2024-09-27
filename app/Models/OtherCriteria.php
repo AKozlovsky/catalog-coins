@@ -23,10 +23,18 @@ class OtherCriteria extends Model
         $result = OtherCriteria::select("*")
             ->when($columns, function ($query, $columns) {
                 if (!empty($columns)) {
-                    return $query->orderBy($columns[0], "asc");
+                    return $query->where($columns[0], "!=", "")->orderBy($columns[0], "asc");
                 }
             })
             ->get();
+        //     ->toSql();
+        // dump($result);
+        // exit;
         return $result;
+    }
+
+    public static function getColumns()
+    {
+        return ["monarch", "reign_period_from", "reign_period_to", "mintage_year", "avers", "revers", "coin_edge", "century", "metal", "quality", "price_by_krause"];
     }
 }

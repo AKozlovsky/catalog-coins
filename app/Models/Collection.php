@@ -103,7 +103,7 @@ class Collection extends Model
             ->join('countries', 'collections.country', '=', 'countries.code')
             ->join('items', 'collections.item', '=', 'items.id')
             ->join('currencies', 'items.currency', '=', 'currencies.code')
-            ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.value')
+            ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.id')
             ->join('other_criteria', 'items.other_criteria', '=', 'other_criteria.id')
             ->where(function ($query) use ($type, $input) {
                 if (!empty($input)) {
@@ -238,7 +238,9 @@ class Collection extends Model
             ->limit($limit)
             ->orderBy($order, $dir)
             ->get();
-
+        // ->toSql();
+        // dump($result);
+        // exit;
         return $result;
     }
 
@@ -284,7 +286,7 @@ class Collection extends Model
             ->join('countries', 'collections.country', '=', 'countries.code')
             ->join('items', 'collections.item', '=', 'items.id')
             ->join('currencies', 'items.currency', '=', 'currencies.code')
-            ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.value')
+            ->join('numerical_values', 'items.numerical_value', '=', 'numerical_values.id')
             ->join('other_criteria', 'items.other_criteria', '=', 'other_criteria.id')
             ->where(function ($query) use ($type, $input) {
                 switch ($type) {
@@ -414,10 +416,5 @@ class Collection extends Model
             ->count();
 
         return $result;
-    }
-
-    public static function addCollection()
-    {
-        $result = Collection::addCollection();
     }
 }

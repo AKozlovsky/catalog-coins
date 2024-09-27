@@ -13,17 +13,17 @@ return new class extends Migration
     {
         Schema::create('other_criteria', function (Blueprint $table) {
             $table->id()->unique();
-            $table->string('monarch', 255);
-            $table->smallInteger('reign_period_from');
-            $table->smallInteger('reign_period_to');
-            $table->smallInteger('mintage_year');
-            $table->string('avers', 255);
-            $table->string('revers', 255);
-            $table->string('coin_edge', 255);
-            $table->smallInteger('century');
-            $table->string('metal', 255);
-            $table->string('quality', 255);
-            $table->bigInteger('price_by_krause');
+            $table->string('monarch', 255)->nullable();
+            $table->smallInteger('reign_period_from')->nullable();
+            $table->smallInteger('reign_period_to')->nullable();
+            $table->smallInteger('mintage_year')->nullable();
+            $table->string('avers', 255)->nullable();
+            $table->string('revers', 255)->nullable();
+            $table->string('coin_edge', 255)->nullable();
+            $table->smallInteger('century')->nullable();
+            $table->string('metal', 255)->nullable();
+            $table->string('quality', 255)->nullable();
+            $table->bigInteger('price_by_krause')->nullable();
             $table->timestamps();
         });
     }

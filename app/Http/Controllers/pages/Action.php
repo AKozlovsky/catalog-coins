@@ -5,6 +5,7 @@ namespace App\Http\Controllers\pages;
 use App\Http\Controllers\Controller;
 use App\Models\Continent;
 use App\Models\Currency;
+use App\Models\NumericalValue;
 use Illuminate\Http\Request;
 use App\Models\Collection;
 use App\Models\Country;
@@ -27,20 +28,17 @@ class Action extends Controller
 
         $item = [
             "currency" => $request->currency,
-            "numerical_value" => $request->currencyValue
+            "numerical_value" => NumericalValue::create(["value" => $request->currencyValue])->id
         ];
 
         if (!empty($otherCriteria)) {
-            $id = OtherCriteria::create($otherCriteria);
-            $item["other_criteria"] = $id;
+            $item["other_criteria"] = OtherCriteria::create($otherCriteria)->id;
         }
-
-        $itemId = Item::create($item)->id;
 
         $data = [
             "continent" => Continent::getCode($request->continent),
             "country" => Country::getCode($request->country),
-            "item" => $itemId
+            "item" => Item::create($item)->id
         ];
 
         Collection::create($data);
@@ -50,8 +48,10 @@ class Action extends Controller
     {
         $result = [];
 
-        if ($request->monarch != null) {
-            $result["monarch"] = $request->monarch;
+        foreach (OtherCriteria::getColumns() as $column) {
+            if ($request->$column != null) {
+                $result[$column] = $request->$column;
+            }
         }
 
         return $result;

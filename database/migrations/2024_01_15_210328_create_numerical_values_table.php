@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('numerical_values', function (Blueprint $table) {
             $table->id();
-            $table->smallInteger("value")->unique();
+            $table->smallInteger("value");
             $table->timestamps();
         });
     }

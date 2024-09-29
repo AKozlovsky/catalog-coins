@@ -1,5 +1,4 @@
 $(function () {
-    // Select2
     var select2 = $(".select2");
     if (select2.length) {
         select2.each(function () {
@@ -7,16 +6,12 @@ $(function () {
             select2Focus($this);
             $this.wrap('<div class="position-relative"></div>').select2({
                 dropdownParent: $this.parent(),
-                placeholder: $this.data("placeholder"), // for dynamic placeholder
+                placeholder: $this.data("placeholder"),
             });
         });
     }
 
     var formRepeater = $(".form-repeater");
-
-    // Form Repeater
-    // ! Using jQuery each loop to add dynamic id and class for inputs. You may need to improve it based on form fields.
-    // -----------------------------------------------------------------------------------------------------------------
 
     if (formRepeater.length) {
         var row = 2;

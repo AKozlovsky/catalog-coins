@@ -1,5 +1,4 @@
 $(function () {
-    // Select2
     var select2 = $(".select2");
 
     if (select2.length) {
@@ -14,10 +13,6 @@ $(function () {
     }
 
     var formRepeater = $(".form-repeater");
-
-    // Form Repeater
-    // ! Using jQuery each loop to add dynamic id and class for inputs. You may need to improve it based on form fields.
-    // -----------------------------------------------------------------------------------------------------------------
 
     if (formRepeater.length) {
         var row = 2;
@@ -141,7 +136,6 @@ $(function () {
                 },
             }),
             submitButton: new FormValidation.plugins.SubmitButton(),
-            defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
             autoFocus: new FormValidation.plugins.AutoFocus(),
         },
         init: (instance) => {
@@ -168,6 +162,32 @@ $(function () {
                 }
             });
         },
+    }).on("core.form.valid", function () {
+        $.ajax({
+            data: $("#formAddItem").serialize(),
+            url: `${baseUrl}submit`,
+            type: "POST",
+            success: function (status) {
+                Swal.fire({
+                    icon: "success",
+                    title: `Successfully!`,
+                    text: `Item was added successfully.`,
+                    customClass: {
+                        confirmButton: "btn btn-success",
+                    },
+                });
+            },
+            error: function (err) {
+                Swal.fire({
+                    title: "Error!",
+                    text: err,
+                    icon: "error",
+                    customClass: {
+                        confirmButton: "btn btn-success",
+                    },
+                });
+            },
+        });
     });
 
     // Continent selector

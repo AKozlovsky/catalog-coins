@@ -42,7 +42,7 @@ class CollectionSeeder extends Seeder
         ]);
         DB::table('collections')->insert([
             ["continent" => "AF", "country" => "AO", "item" => 1, "created_at" => date('Y-m-d h:i:s')],
-            ["continent" => "AF", "country" => "AF", "item" => 2, "created_at" => date('Y-m-d h:i:s')],
+            ["continent" => "AS", "country" => "AF", "item" => 2, "created_at" => date('Y-m-d h:i:s')],
         ]);
     }
 }

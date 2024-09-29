@@ -77,7 +77,7 @@
                 </div>
                 <div class="card-body row g-3">
                     <div class="col-md-6">
-                        <div id="horizontalBarChart" class=""></div>
+                        <div id="horizontalBarChart"></div>
                     </div>
                     <div class="col-md-6 d-flex justify-content-around align-items-center">
                         <div>

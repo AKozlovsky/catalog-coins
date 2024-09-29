@@ -28,12 +28,9 @@ class Action extends Controller
 
         $item = [
             "currency" => $request->currency,
-            "numerical_value" => NumericalValue::create(["value" => $request->currencyValue])->id
+            "numerical_value" => NumericalValue::create(["value" => $request->currencyValue])->id,
+            "other_criteria" => OtherCriteria::create($otherCriteria)->id
         ];
-
-        if (!empty($otherCriteria)) {
-            $item["other_criteria"] = OtherCriteria::create($otherCriteria)->id;
-        }
 
         $data = [
             "continent" => Continent::getCode($request->continent),
@@ -49,9 +46,7 @@ class Action extends Controller
         $result = [];
 
         foreach (OtherCriteria::getColumns() as $column) {
-            if ($request->$column != null) {
-                $result[$column] = $request->$column;
-            }
+            $result[$column] = $request->$column;
         }
 
         return $result;

@@ -21,7 +21,6 @@
 @endsection
 
 @section('page-script')
-    <script src="{{ asset('assets/js/app-academy-dashboard.js') }}"></script>
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
 @endsection
 
@@ -85,7 +84,7 @@
                                 <span class="text-primary me-2"><i class='mdi mdi-circle mdi-14px'></i></span>
                                 <div>
                                     <p class="mb-1">UI Design</p>
-                                    <h5>35%</h5>
+                                    <h5>40%</h5>
                                 </div>
                             </div>
                             <div class="d-flex align-items-baseline my-3">

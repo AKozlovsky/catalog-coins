@@ -435,4 +435,20 @@ class Collection extends Model
 
         return $result;
     }
+
+    public static function getCountriesWithMostItems()
+    {
+        $result = [];
+        $data = Collection::select(["country", "item"])->orderBy("country")->get();
+
+        foreach ($data as $row) {
+            $result[$row["country"]] = 0;
+        }
+
+        foreach ($data as $row) {
+            $result[$row["country"]]++;
+        }
+
+        return $result;
+    }
 }

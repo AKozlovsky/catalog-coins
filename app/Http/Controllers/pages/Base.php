@@ -17,7 +17,8 @@ class Base extends Controller
             "totalItems" => Item::getCount(),
             "itemsThisWeek" => Item::getTotalThisWeek(),
             "totalCountries" => Collection::getTotalCountries(),
-            "countriesThisWeek" => Collection::getTotalCountriesThisWeek()
+            "countriesThisWeek" => Collection::getTotalCountriesThisWeek(),
+            "totalCountriesWithMostItems" => Collection::getCountriesWithMostItems()
         ]);
     }
 

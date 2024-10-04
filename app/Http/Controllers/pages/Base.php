@@ -18,7 +18,7 @@ class Base extends Controller
             "itemsThisWeek" => Item::getTotalThisWeek(),
             "totalCountries" => Collection::getTotalCountries(),
             "countriesThisWeek" => Collection::getTotalCountriesThisWeek(),
-            "totalCountriesWithMostItems" => Collection::getCountriesWithMostItems()
+            "totalCountriesWithMostItems" => $this->_implodeCountriesWithMostItems()
         ]);
     }
 
@@ -37,5 +37,18 @@ class Base extends Controller
         $countriesJson = json_decode(File::get('assets/json/countries.json'));
 
         return view('pages.catalog.countries', ["data" => $countries, "countries" => $countriesJson]);
+    }
+
+    private function _implodeCountriesWithMostItems()
+    {
+        $result = "";
+        $data = Collection::getCountriesWithMostItems();
+
+        foreach ($data as $key => $value) {
+            $country = Country::getCountries(["country_name"], [$key])[0]->country_name;
+            $result .= $country . ":" . $value . ";";
+        }
+
+        return $result;
     }
 }

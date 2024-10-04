@@ -46,6 +46,9 @@ function initHorizontalBarChart(data) {
                 config.colors.danger,
                 config.colors.warning,
             ],
+            dataLabels: {
+                enabled: false,
+            },
             labels: labels,
             series: [
                 {

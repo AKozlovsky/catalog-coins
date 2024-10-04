@@ -22,6 +22,9 @@
 
 @section('page-script')
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
+    <script>
+        initHorizontalBarChart(("{{ $totalCountriesWithMostItems }}"));
+    </script>
 @endsection
 
 @section('content')
@@ -78,7 +81,7 @@
                     <div class="col-md-6">
                         <div id="horizontalBarChart"></div>
                     </div>
-                    <div class="col-md-6 d-flex justify-content-around align-items-center">
+                    {{-- <div class="col-md-6 d-flex justify-content-around align-items-center">
                         <div>
                             <div class="d-flex align-items-baseline">
                                 <span class="text-primary me-2"><i class='mdi mdi-circle mdi-14px'></i></span>
@@ -126,20 +129,20 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="col-12 order-5">
+    {{-- <div class="col-12 order-5">
         <div class="card">
             <div class="card-header d-flex align-items-center justify-content-between">
                 <div class="card-title mb-0">
                     <h5 class="m-0 me-2">The last items</h5>
                 </div>
             </div>
-            {{-- <div class="card-datatable table-responsive">
+            <div class="card-datatable table-responsive">
                 <table class="dt-route-vehicles table">
                     <thead class="table-light">
                         <tr>
@@ -153,7 +156,7 @@
                         </tr>
                     </thead>
                 </table>
-            </div> --}}
+            </div>
         </div>
-    </div>
+    </div> --}}
 @endsection

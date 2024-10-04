@@ -449,6 +449,8 @@ class Collection extends Model
             $result[$row["country"]]++;
         }
 
+        arsort($result);
+
         return $result;
     }
 }

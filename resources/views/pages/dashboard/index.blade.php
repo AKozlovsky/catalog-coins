@@ -23,7 +23,7 @@
 @section('page-script')
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
     <script>
-        initHorizontalBarChart(("{{ $totalCountriesWithMostItems }}"));
+        initHorizontalBarChart(("{{ $implodeCountriesWithMostItems }}"));
     </script>
 @endsection
 
@@ -81,58 +81,42 @@
                     <div class="col-md-6">
                         <div id="horizontalBarChart"></div>
                     </div>
-                    {{-- <div class="col-md-6 d-flex justify-content-around align-items-center">
-                        <div>
-                            <div class="d-flex align-items-baseline">
-                                <span class="text-primary me-2"><i class='mdi mdi-circle mdi-14px'></i></span>
-                                <div>
-                                    <p class="mb-1">UI Design</p>
-                                    <h5>40%</h5>
-                                </div>
+                    <div class="col-md-6 d-flex justify-content-around align-items-center">
+                        @if ($totalCountriesWithMostItems)
+                            <div>
+                                @foreach ($totalCountriesWithMostItems as $key => $row)
+                                    @if ($key < 3)
+                                        <div class="d-flex align-items-baseline">
+                                            <span class="{{ $colors[$key] }} me-2"><i
+                                                    class='mdi mdi-circle mdi-14px'></i></span>
+                                            <div>
+                                                <p class="mb-1">{{ $row['country'] }}</p>
+                                                <h5>{{ $row['count'] }}</h5>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endforeach
                             </div>
-                            <div class="d-flex align-items-baseline my-3">
-                                <span class="text-success me-2"><i class='mdi mdi-circle mdi-14px'></i></span>
-                                <div>
-                                    <p class="mb-1">Music</p>
-                                    <h5>14%</h5>
-                                </div>
+                            <div>
+                                @foreach ($totalCountriesWithMostItems as $key => $row)
+                                    @if ($key > 2)
+                                        <div class="d-flex align-items-baseline my-3">
+                                            <span class="{{ $colors[$key] }} me-2"><i
+                                                    class='mdi mdi-circle mdi-14px'></i></span>
+                                            <div>
+                                                <p class="mb-1">{{ $row['country'] }}</p>
+                                                <h5>{{ $row['count'] }}</h5>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endforeach
                             </div>
-                            <div class="d-flex align-items-baseline">
-                                <span class="text-danger me-2"><i class='mdi mdi-circle mdi-14px'></i></span>
-                                <div>
-                                    <p class="mb-1">React</p>
-                                    <h5>10%</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="d-flex align-items-baseline">
-                                <span class="text-info me-2"><i class='mdi mdi-circle mdi-14px'></i></span>
-                                <div>
-                                    <p class="mb-1">UX Design</p>
-                                    <h5>20%</h5>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-baseline my-3">
-                                <span class="text-secondary me-2"><i class='mdi mdi-circle mdi-14px'></i></span>
-                                <div>
-                                    <p class="mb-1">Animation</p>
-                                    <h5>12%</h5>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-baseline">
-                                <span class="text-warning me-2"><i class='mdi mdi-circle mdi-14px'></i></span>
-                                <div>
-                                    <p class="mb-1">SEO</p>
-                                    <h5>9%</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div> --}}
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     {{-- <div class="col-12 order-5">

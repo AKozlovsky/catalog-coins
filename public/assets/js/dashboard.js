@@ -14,11 +14,13 @@ function initHorizontalBarChart(data) {
                 },
             },
             plotOptions: {
-                horizontal: true,
-                barHeight: "70%",
-                distributed: true,
-                startingShape: "rounded",
-                borderRadius: 7,
+                bar: {
+                    horizontal: true,
+                    barHeight: "70%",
+                    distributed: true,
+                    startingShape: "rounded",
+                    borderRadius: 7,
+                },
             },
             grid: {
                 strokeDashArray: 10,
@@ -38,6 +40,7 @@ function initHorizontalBarChart(data) {
                     bottom: -12,
                 },
             },
+
             colors: [
                 config.colors.primary,
                 config.colors.info,
@@ -55,6 +58,7 @@ function initHorizontalBarChart(data) {
                     data: values,
                 },
             ],
+
             xaxis: {
                 categories: labels,
                 axisBorder: {
@@ -96,7 +100,7 @@ function initHorizontalBarChart(data) {
                         '<div class="px-3 py-2">' +
                         "<span>" +
                         series[seriesIndex][dataPointIndex] +
-                        "</span>" +
+                        " items</span>" +
                         "</div>"
                     );
                 },

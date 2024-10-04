@@ -13,12 +13,16 @@ class Base extends Controller
 {
     public function dashboard()
     {
+        $colors = ["text-primary", "text-info", "text-success", "text-secondary", "text-danger", "text-warning"];
+
         return view('pages.dashboard.index', [
             "totalItems" => Item::getCount(),
             "itemsThisWeek" => Item::getTotalThisWeek(),
             "totalCountries" => Collection::getTotalCountries(),
             "countriesThisWeek" => Collection::getTotalCountriesThisWeek(),
-            "totalCountriesWithMostItems" => $this->_implodeCountriesWithMostItems()
+            "implodeCountriesWithMostItems" => $this->_implodeCountriesWithMostItems(),
+            "totalCountriesWithMostItems" => $this->_setCountriesWithMostItems(),
+            "colors" => $colors
         ]);
     }
 
@@ -47,6 +51,21 @@ class Base extends Controller
         foreach ($data as $key => $value) {
             $country = Country::getCountries(["country_name"], [$key])[0]->country_name;
             $result .= $country . ":" . $value . ";";
+        }
+
+        return $result;
+    }
+
+    private function _setCountriesWithMostItems()
+    {
+        $result = [];
+        $data = Collection::getCountriesWithMostItems();
+        $i = 0;
+
+        foreach ($data as $key => $value) {
+            $result[$i]["country"] = Country::getCountries(["country_name"], [$key])[0]->country_name;
+            $result[$i]["count"] = $value;
+            $i++;
         }
 
         return $result;

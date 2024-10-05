@@ -22,7 +22,8 @@ class Base extends Controller
             "countriesThisWeek" => Collection::getTotalCountriesThisWeek(),
             "implodeCountriesWithMostItems" => $this->_implodeCountriesWithMostItems(),
             "totalCountriesWithMostItems" => $this->_setCountriesWithMostItems(),
-            "colors" => $colors
+            "colors" => $colors,
+            "lastItems" => Collection::getLastFiveItems()
         ]);
     }
 

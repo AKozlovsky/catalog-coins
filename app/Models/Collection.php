@@ -453,4 +453,19 @@ class Collection extends Model
 
         return $result;
     }
+
+    public static function getLastFiveItems()
+    {
+        $result = [];
+        $data = Collection::select(["country", "item"])->orderBy("created_at", "desc")->limit(5)->get();
+
+        foreach ($data as $i => $row) {
+            $result[$i]["country"] = Country::getCountries(["country_name"], [$row["country"]])[0]->country_name;
+            $item = Item::getItem($row["item"]);
+            $result[$i]["currency"] = Currency::getCurrencyName($item["currency"]);
+            $result[$i]["value"] = NumericalValue::getValue($item["numerical_value"])->value;
+        }
+
+        return $result;
+    }
 }

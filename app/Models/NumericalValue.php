@@ -16,4 +16,9 @@ class NumericalValue extends Model
     {
         return $this->hasMany('App\Models\Items');
     }
+
+    public static function getValue($id)
+    {
+        return NumericalValue::select("value")->where("id", $id)->get()[0];
+    }
 }

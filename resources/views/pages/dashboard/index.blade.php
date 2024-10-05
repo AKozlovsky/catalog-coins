@@ -119,7 +119,7 @@
     </div>
     </div>
 
-    {{-- <div class="col-12 order-5">
+    <div class="col-12 order-5">
         <div class="card">
             <div class="card-header d-flex align-items-center justify-content-between">
                 <div class="card-title mb-0">
@@ -130,17 +130,22 @@
                 <table class="dt-route-vehicles table">
                     <thead class="table-light">
                         <tr>
-                            <th></th>
-                            <th></th>
-                            <th>location</th>
-                            <th>starting route</th>
-                            <th>ending route</th>
-                            <th>warnings</th>
-                            <th class="w-20">progress</th>
+                            <th>Country</th>
+                            <th>Currency</th>
+                            <th>Value</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        @foreach ($lastItems as $item)
+                            <tr>
+                                <td>{{ $item['country'] }}</td>
+                                <td>{{ $item['currency'] }}</td>
+                                <td>{{ $item['value'] }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
                 </table>
             </div>
         </div>
-    </div> --}}
+    </div>
 @endsection

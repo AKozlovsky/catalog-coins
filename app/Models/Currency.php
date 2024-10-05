@@ -28,4 +28,9 @@ class Currency extends Model
 
         return $result;
     }
+
+    public static function getCurrencyName($code)
+    {
+        return Currency::select("name")->where("code", $code)->get()[0]->name;
+    }
 }

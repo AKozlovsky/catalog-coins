@@ -44,4 +44,9 @@ class Item extends Model
 
         return $result;
     }
+
+    public static function getItem($id)
+    {
+        return Item::select()->where("id", $id)->get()[0];
+    }
 }

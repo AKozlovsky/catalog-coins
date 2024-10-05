@@ -100,7 +100,7 @@ function initHorizontalBarChart(data) {
                         '<div class="px-3 py-2">' +
                         "<span>" +
                         series[seriesIndex][dataPointIndex] +
-                        " items</span>" +
+                        "</span>" +
                         "</div>"
                     );
                 },

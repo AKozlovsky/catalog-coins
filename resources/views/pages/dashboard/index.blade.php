@@ -117,7 +117,6 @@
             </div>
         </div>
     </div>
-    </div>
 
     <div class="col-12 order-5">
         <div class="card">

@@ -107,7 +107,7 @@
                                     @default
                                 @endswitch
                                 <td>
-                                    <div class="d-flex align-items-center">
+                                    {{-- <div class="d-flex align-items-center">
                                         <button class="btn btn-sm btn-icon edit-record" data-id=""
                                             data-bs-toggle="tooltip" data-bs-placement="top"
                                             data-bs-target="#offcanvasAddUser" title="Preview"><i
@@ -117,7 +117,7 @@
                                         <button class="btn btn-sm btn-icon delete-record" data-id=""
                                             data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i
                                                 class="mdi mdi-delete-outline mdi-20px mx-1"></i></button>
-                                    </div>
+                                    </div> --}}
                                 </td>
                             </tr>
                         @endforeach

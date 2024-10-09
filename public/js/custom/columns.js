@@ -36,5 +36,6 @@ var columns = {
 
 var getColumns = function (action) {
     action = action.replaceAll("-", "_");
+
     return columns[action];
 };

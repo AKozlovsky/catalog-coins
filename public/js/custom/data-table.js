@@ -6,8 +6,8 @@ $(function () {
         $("#input").val().substring(1);
     var dt_table = $(".datatable"),
         detailUrl = baseUrl + "edit/",
-        urls = ["continents", "countries"],
-        urls2 = [
+        controllers = ["continents", "countries"],
+        controllers2 = [
             "monarchs",
             "reign-periods",
             "mintage-years",
@@ -20,14 +20,14 @@ $(function () {
             "qualities",
             "prices-by-krause",
         ],
-        urls3 = ["reign-periods"];
+        controllers3 = ["reign-periods"];
 
     if (dt_table.length) {
         $(".datatable thead tr").clone(true).appendTo(".datatable thead");
         $(".datatable thead tr:eq(1) th").each(function (i) {
             if (
                 i + 1 < $(".datatable thead tr:eq(1) th").length &&
-                urls.includes($("#action").val())
+                controllers.includes($("#action").val())
             ) {
                 var title = $(this).text();
                 $(this).html(
@@ -51,9 +51,13 @@ $(function () {
             .then((json) => (countriesJson = json));
 
         var dt = dt_table.DataTable({
-            processing: urls2.includes($("#action").val()) ? false : true,
-            serverSide: urls2.includes($("#action").val()) ? false : true,
-            ajax: urls2.includes($("#action").val())
+            processing: controllers2.includes($("#action").val())
+                ? false
+                : true,
+            serverSide: controllers2.includes($("#action").val())
+                ? false
+                : true,
+            ajax: controllers2.includes($("#action").val())
                 ? false
                 : {
                       url: baseUrl + "data-table",
@@ -68,7 +72,7 @@ $(function () {
                     render: function (data, type, full, meta) {
                         var output = "";
 
-                        if (urls.includes($("#action").val())) {
+                        if (controllers.includes($("#action").val())) {
                             for (let i = 0; i < countriesJson.length; i++) {
                                 if (
                                     $("#action").val() == "continents" &&
@@ -107,7 +111,95 @@ $(function () {
                     render: function (data, type, full, meta) {
                         return (
                             '<div class="d-flex align-items-center">' +
-                            `<button class="btn btn-sm btn-icon edit-record" data-id="${full["id"]}" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-target="#offcanvasAddUser" title="Preview"><i class="mdi mdi-eye-outline mdi-20px mx-1"></i></button>` +
+                            `<button class="btn btn-sm btn-icon edit-record" data-id="${full["id"]}" data-bs-toggle="modal" data-bs-placement="top" data-bs-target="#preview-${full["id"]}" title="Preview"><i class="mdi mdi-eye-outline mdi-20px mx-1"></i></button>` +
+                            `<div class="modal fade" id="preview-${full["id"]}" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Detail</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="d-flex align-items-center flex-column">
+                                                    <img class="img-fluid rounded mb-3 mt-4" src="{{asset('assets/img/avatars/10.png')}}" height="120" width="120" alt="User avatar" />
+                                                </div>
+                                                <div class="d-flex justify-content-between flex-wrap my-2 py-3">
+                                                    <div class="d-flex align-items-center me-4 mt-3 gap-3">
+                                                        <div class="avatar-initial bg-label-primary rounded">
+                                                            <i class='mdi mdi-earth mdi-24px'></i>
+                                                        </div>
+                                                        <div>
+                                                          <h4 class="mb-0">${full["country"]}</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mt-3 gap-3">
+                                                        <div class="avatar-initial bg-label-primary rounded">
+                                                            <i class='mdi mdi-cash-multiple mdi-24px'></i>
+                                                        </div>
+                                                        <div>
+                                                          <h4 class="mb-0">${full["numerical_value"]}<span> ${full["symbol"]}</span></h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h5 class="pb-3 border-bottom mb-3">Details</h5>
+                                                <div class="info-container">
+                                                    <ul class="list-unstyled mb-4">
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Currency:</span>
+                                                            <span>${full["currency"]}</span>
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Monarch:</span>
+                                                            <span>${full["monarch"]}</span>
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Reign Period From:</span>
+                                                            <span>${full["reign_period_from"]}</span>
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Reign Period To:</span>
+                                                            <span>${full["reign_period_to"]}</span>
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Mintage Year:</span>
+                                                            <span>${full["mintage_year"]}</span>
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Avers:</span>
+                                                            <span>${full["avers"]}</span>
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Revers:</span>
+                                                            <span>${full["revers"]}</span>
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Coin edge:</span>
+                                                            <span>${full["coin_edge"]}</span>
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Century:</span>
+                                                            <span>${full["century"]}</span>
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Metal:</span>
+                                                            <span>${full["metal"]}</span>
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Quality:</span>
+                                                            <span>${full["quality"]}</span>
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <span class="fw-medium text-heading me-2">Price by krause:</span>
+                                                            <span>${full["price_by_krause"]}</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>` +
                             '<a href="' +
                             detailUrl +
                             full["id"] +
@@ -326,7 +418,7 @@ $(function () {
                 },
             ],
             initComplete: function () {
-                if (urls2.includes($("#action").val())) {
+                if (controllers2.includes($("#action").val())) {
                     this.api()
                         .columns(0)
                         .every(function () {
@@ -377,7 +469,7 @@ $(function () {
                                 });
                         });
 
-                    if (urls3.includes($("#action").val())) {
+                    if (controllers3.includes($("#action").val())) {
                         this.api()
                             .columns(1)
                             .every(function () {

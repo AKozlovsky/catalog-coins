@@ -19,7 +19,7 @@ class CountrySeeder extends Seeder
     {
         $result = [
             ['code' => 'AF', 'continent_code' => 'AS', 'country_name' => 'Afghanistan', 'full_name' => 'Islamic Republic of Afghanistan'],
-            ['code' => 'AX', 'continent_code' => 'EU', 'country_name' => 'Åland Islands', 'full_name' => 'Åland Islands'],
+            ['code' => 'AX', 'continent_code' => 'EU', 'country_name' => 'Aland Islands', 'full_name' => 'Aland Islands'],
             ['code' => 'AL', 'continent_code' => 'EU', 'country_name' => 'Albania', 'full_name' => 'Republic of Albania'],
             ['code' => 'DZ', 'continent_code' => 'AF', 'country_name' => 'Algeria', 'full_name' => 'People\'\'s Democratic Republic of Algeria'],
             ['code' => 'AS', 'continent_code' => 'OC', 'country_name' => 'American Samoa', 'full_name' => 'American Samoa'],

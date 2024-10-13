@@ -37,7 +37,8 @@
                     <div class="col-md-6 col-lg-4 mb-3" id="{{ strtolower(str_replace(' ', '-', $country->name)) }}">
                         <div class="card card-countries text-center mb-4">
                             <div class="card-body">
-                                <a href="{{ $country->flag_url }}"><img src="{{ $country->flag_url }}" alt="Card image cap" height="60" />
+                                <a href="{{ $country->flag_url }}"><img src="{{ $country->flag_url }}" alt="Card image cap"
+                                        height="60" />
                                 </a>
                                 <br><br>
                                 <h5 class="card-title">{{ $value->country_name }}</h5>

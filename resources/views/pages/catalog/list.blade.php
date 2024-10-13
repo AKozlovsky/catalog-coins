@@ -59,66 +59,219 @@
                                 @switch($type)
                                     @case('monarch')
                                         <td>{{ $row->monarch }}</td>
+                                        <td>{{ $row->continent }}</td>
+                                        <td>{{ $row->country }}</td>
+                                        <td>{{ $row->currency }}</td>
+                                        <td>{{ $row->symbol }}</td>
+                                        <td>{{ $row->numerical_value }}</td>
+                                        <td style="display: none">{{ $row->id }}</td>
+                                        <td style="display: none">{{ $row->reign_period_from }}</td>
+                                        <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->mintage_year }}</td>
+                                        <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->coin_edge }}</td>
+                                        <td style="display: none">{{ $row->century }}</td>
+                                        <td style="display: none">{{ $row->metal }}</td>
+                                        <td style="display: none">{{ $row->quality }}</td>
+                                        <td style="display: none">{{ $row->price_by_krause }}</td>
                                     @break
 
                                     @case('reign_period')
                                         <td>{{ $row->reign_period_from }}</td>
                                         <td>{{ $row->reign_period_to }}</td>
+                                        <td>{{ $row->continent }}</td>
+                                        <td>{{ $row->country }}</td>
+                                        <td>{{ $row->currency }}</td>
+                                        <td>{{ $row->symbol }}</td>
+                                        <td>{{ $row->value }}</td>
+                                        <td style="display: none">{{ $row->id }}</td>
+                                        <td style="display: none">{{ $row->monarch }}</td>
+                                        <td style="display: none">{{ $row->mintage_year }}</td>
+                                        <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->coin_edge }}</td>
+                                        <td style="display: none">{{ $row->century }}</td>
+                                        <td style="display: none">{{ $row->metal }}</td>
+                                        <td style="display: none">{{ $row->quality }}</td>
+                                        <td style="display: none">{{ $row->price_by_krause }}</td>
                                     @break
 
                                     @case('mintage_year')
                                         <td>{{ $row->mintage_year }}</td>
+                                        <td>{{ $row->continent }}</td>
+                                        <td>{{ $row->country }}</td>
+                                        <td>{{ $row->currency }}</td>
+                                        <td>{{ $row->symbol }}</td>
+                                        <td>{{ $row->value }}</td>
+                                        <td style="display: none">{{ $row->id }}</td>
+                                        <td style="display: none">{{ $row->monarch }}</td>
+                                        <td style="display: none">{{ $row->reign_period_from }}</td>
+                                        <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->coin_edge }}</td>
+                                        <td style="display: none">{{ $row->century }}</td>
+                                        <td style="display: none">{{ $row->metal }}</td>
+                                        <td style="display: none">{{ $row->quality }}</td>
+                                        <td style="display: none">{{ $row->price_by_krause }}</td>
                                     @break
 
                                     @case('avers')
                                         <td>{{ $row->avers }}</td>
+                                        <td>{{ $row->continent }}</td>
+                                        <td>{{ $row->country }}</td>
+                                        <td>{{ $row->currency }}</td>
+                                        <td>{{ $row->symbol }}</td>
+                                        <td>{{ $row->value }}</td>
+                                        <td style="display: none">{{ $row->id }}</td>
+                                        <td style="display: none">{{ $row->monarch }}</td>
+                                        <td style="display: none">{{ $row->reign_period_from }}</td>
+                                        <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->coin_edge }}</td>
+                                        <td style="display: none">{{ $row->century }}</td>
+                                        <td style="display: none">{{ $row->metal }}</td>
+                                        <td style="display: none">{{ $row->quality }}</td>
+                                        <td style="display: none">{{ $row->price_by_krause }}</td>
                                     @break
 
                                     @case('revers')
                                         <td>{{ $row->revers }}</td>
+                                        <td>{{ $row->continent }}</td>
+                                        <td>{{ $row->country }}</td>
+                                        <td>{{ $row->currency }}</td>
+                                        <td>{{ $row->symbol }}</td>
+                                        <td>{{ $row->value }}</td>
+                                        <td style="display: none">{{ $row->id }}</td>
+                                        <td style="display: none">{{ $row->monarch }}</td>
+                                        <td style="display: none">{{ $row->reign_period_from }}</td>
+                                        <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->coin_edge }}</td>
+                                        <td style="display: none">{{ $row->century }}</td>
+                                        <td style="display: none">{{ $row->metal }}</td>
+                                        <td style="display: none">{{ $row->quality }}</td>
+                                        <td style="display: none">{{ $row->price_by_krause }}</td>
                                     @break
 
                                     @case('coin_edge')
                                         <td>{{ $row->coin_edge }}</td>
+                                        <td>{{ $row->continent }}</td>
+                                        <td>{{ $row->country }}</td>
+                                        <td>{{ $row->currency }}</td>
+                                        <td>{{ $row->symbol }}</td>
+                                        <td>{{ $row->value }}</td>
+                                        <td style="display: none">{{ $row->id }}</td>
+                                        <td style="display: none">{{ $row->monarch }}</td>
+                                        <td style="display: none">{{ $row->reign_period_from }}</td>
+                                        <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->century }}</td>
+                                        <td style="display: none">{{ $row->metal }}</td>
+                                        <td style="display: none">{{ $row->quality }}</td>
+                                        <td style="display: none">{{ $row->price_by_krause }}</td>
                                     @break
 
                                     @case('currency')
                                         <td>{{ $row->name }}</td>
-                                        <td>{{ $row->code }}</td>
                                         <td>{{ $row->symbol }}</td>
+                                        <td>{{ $row->continent }}</td>
+                                        <td>{{ $row->country }}</td>
+                                        <td>{{ $row->value }}</td>
+                                        <td style="display: none">{{ $row->id }}</td>
+                                        <td style="display: none">{{ $row->monarch }}</td>
+                                        <td style="display: none">{{ $row->reign_period_from }}</td>
+                                        <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->coin_edge }}</td>
+                                        <td style="display: none">{{ $row->century }}</td>
+                                        <td style="display: none">{{ $row->metal }}</td>
+                                        <td style="display: none">{{ $row->quality }}</td>
+                                        <td style="display: none">{{ $row->price_by_krause }}</td>
                                     @break
 
                                     @case('century')
                                         <td>{{ $row->century }}</td>
+                                        <td>{{ $row->continent }}</td>
+                                        <td>{{ $row->country }}</td>
+                                        <td>{{ $row->currency }}</td>
+                                        <td>{{ $row->symbol }}</td>
+                                        <td>{{ $row->value }}</td>
+                                        <td style="display: none">{{ $row->id }}</td>
+                                        <td style="display: none">{{ $row->monarch }}</td>
+                                        <td style="display: none">{{ $row->reign_period_from }}</td>
+                                        <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->coin_edge }}</td>
+                                        <td style="display: none">{{ $row->metal }}</td>
+                                        <td style="display: none">{{ $row->quality }}</td>
+                                        <td style="display: none">{{ $row->price_by_krause }}</td>
                                     @break
 
                                     @case('metal')
                                         <td>{{ $row->metal }}</td>
+                                        <td>{{ $row->continent }}</td>
+                                        <td>{{ $row->country }}</td>
+                                        <td>{{ $row->currency }}</td>
+                                        <td>{{ $row->symbol }}</td>
+                                        <td>{{ $row->value }}</td>
+                                        <td style="display: none">{{ $row->id }}</td>
+                                        <td style="display: none">{{ $row->monarch }}</td>
+                                        <td style="display: none">{{ $row->reign_period_from }}</td>
+                                        <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->coin_edge }}</td>
+                                        <td style="display: none">{{ $row->century }}</td>
+                                        <td style="display: none">{{ $row->quality }}</td>
+                                        <td style="display: none">{{ $row->price_by_krause }}</td>
                                     @break
 
                                     @case('quality')
                                         <td>{{ $row->quality }}</td>
+                                        <td>{{ $row->continent }}</td>
+                                        <td>{{ $row->country }}</td>
+                                        <td>{{ $row->currency }}</td>
+                                        <td>{{ $row->symbol }}</td>
+                                        <td>{{ $row->value }}</td>
+                                        <td style="display: none">{{ $row->id }}</td>
+                                        <td style="display: none">{{ $row->monarch }}</td>
+                                        <td style="display: none">{{ $row->reign_period_from }}</td>
+                                        <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->coin_edge }}</td>
+                                        <td style="display: none">{{ $row->century }}</td>
+                                        <td style="display: none">{{ $row->metal }}</td>
+                                        <td style="display: none">{{ $row->price_by_krause }}</td>
                                     @break
 
                                     @case('price_by_krause')
                                         <td>{{ $row->price_by_krause }}</td>
+                                        <td>{{ $row->continent }}</td>
+                                        <td>{{ $row->country }}</td>
+                                        <td>{{ $row->currency }}</td>
+                                        <td>{{ $row->symbol }}</td>
+                                        <td>{{ $row->value }}</td>
+                                        <td style="display: none">{{ $row->id }}</td>
+                                        <td style="display: none">{{ $row->monarch }}</td>
+                                        <td style="display: none">{{ $row->reign_period_from }}</td>
+                                        <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->coin_edge }}</td>
+                                        <td style="display: none">{{ $row->century }}</td>
+                                        <td style="display: none">{{ $row->metal }}</td>
+                                        <td style="display: none">{{ $row->quality }}</td>
                                     @break
 
                                     @default
                                 @endswitch
-                                <td>
-                                    {{-- <div class="d-flex align-items-center">
-                                        <button class="btn btn-sm btn-icon edit-record" data-id=""
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            data-bs-target="#offcanvasAddUser" title="Preview"><i
-                                                class="mdi mdi-eye-outline mdi-20px mx-1"></i></button>
-                                        <a href="" data-bs-toggle="tooltip" class="text-body" data-bs-placement="top"
-                                            title="Edit"><i class="mdi mdi-pencil-outline mdi-20px mx-1"></i></a>
-                                        <button class="btn btn-sm btn-icon delete-record" data-id=""
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Delete"><i
-                                                class="mdi mdi-delete-outline mdi-20px mx-1"></i></button>
-                                    </div> --}}
-                                </td>
+                                <td></td>
                             </tr>
                         @endforeach
                     </tbody>

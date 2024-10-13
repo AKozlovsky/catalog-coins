@@ -35,6 +35,21 @@
             "name": "Monarch"
         },
         {
+            "name": "Continent"
+        },
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
+        },
+        {
             "name": "Actions"
         }
     ],
@@ -46,12 +61,42 @@
             "name": "Reign period to"
         },
         {
+            "name": "Continent"
+        },
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
+        },
+        {
             "name": "Actions"
         }
     ],
     "mintage-years": [
         {
             "name": "Mintage year"
+        },
+        {
+            "name": "Continent"
+        },
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
         },
         {
             "name": "Actions"
@@ -62,12 +107,42 @@
             "name": "Avers"
         },
         {
+            "name": "Continent"
+        },
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
+        },
+        {
             "name": "Actions"
         }
     ],
     "revers": [
         {
             "name": "Revers"
+        },
+        {
+            "name": "Continent"
+        },
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
         },
         {
             "name": "Actions"
@@ -78,6 +153,21 @@
             "name": "Coin edge"
         },
         {
+            "name": "Continent"
+        },
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
+        },
+        {
             "name": "Actions"
         }
     ],
@@ -86,10 +176,16 @@
             "name": "Name"
         },
         {
-            "name": "Code"
+            "name": "Symbol"
         },
         {
-            "name": "Symbol"
+            "name": "Continent"
+        },
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Value"
         },
         {
             "name": "Actions"
@@ -100,12 +196,42 @@
             "name": "Century"
         },
         {
+            "name": "Continent"
+        },
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
+        },
+        {
             "name": "Actions"
         }
     ],
     "metals": [
         {
             "name": "Metal"
+        },
+        {
+            "name": "Continent"
+        },
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
         },
         {
             "name": "Actions"
@@ -116,12 +242,42 @@
             "name": "Quality"
         },
         {
+            "name": "Continent"
+        },
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
+        },
+        {
             "name": "Actions"
         }
     ],
     "prices-by-krause": [
         {
             "name": "Price by Krause"
+        },
+        {
+            "name": "Continent"
+        },
+        {
+            "name": "Country"
+        },
+        {
+            "name": "Currency"
+        },
+        {
+            "name": "Symbol"
+        },
+        {
+            "name": "Value"
         },
         {
             "name": "Actions"

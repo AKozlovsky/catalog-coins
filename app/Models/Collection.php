@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Collection extends Model
 {
@@ -83,17 +84,17 @@ class Collection extends Model
             'currencies.code AS code',
             'currencies.symbol AS symbol',
             'numerical_values.value AS numerical_value',
-            'other_criteria.monarch AS monarch',
-            'other_criteria.reign_period_from AS reign_period_from',
-            'other_criteria.reign_period_to AS reign_period_to',
-            'other_criteria.mintage_year AS mintage_year',
-            'other_criteria.avers AS avers',
-            'other_criteria.revers AS revers',
-            'other_criteria.coin_edge AS coin_edge',
-            'other_criteria.century AS century',
-            'other_criteria.metal AS metal',
-            'other_criteria.quality AS quality',
-            'other_criteria.price_by_krause AS price_by_krause'
+            DB::raw('IFNULL(other_criteria.monarch, "") as monarch'),
+            DB::raw('IFNULL(other_criteria.reign_period_from, "") as reign_period_from'),
+            DB::raw('IFNULL(other_criteria.reign_period_to, "") as reign_period_to'),
+            DB::raw('IFNULL(other_criteria.mintage_year, "") as mintage_year'),
+            DB::raw('IFNULL(other_criteria.avers, "") as avers'),
+            DB::raw('IFNULL(other_criteria.revers, "") as revers'),
+            DB::raw('IFNULL(other_criteria.coin_edge, "") as coin_edge'),
+            DB::raw('IFNULL(other_criteria.century, "") as century'),
+            DB::raw('IFNULL(other_criteria.metal, "") as metal'),
+            DB::raw('IFNULL(other_criteria.quality, "") as quality'),
+            DB::raw('IFNULL(other_criteria.price_by_krause, "") as price_by_krause')
         )
             ->when($type, function ($query, $type) {
                 switch ($type) {
@@ -239,9 +240,7 @@ class Collection extends Model
             ->limit($limit)
             ->orderBy($order, $dir)
             ->get();
-        //     ->toSql();
-        // dump($result);
-        // exit;
+
         return $result;
     }
 

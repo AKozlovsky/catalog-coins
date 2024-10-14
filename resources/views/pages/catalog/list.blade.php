@@ -84,7 +84,7 @@
                                         <td>{{ $row->country }}</td>
                                         <td>{{ $row->currency }}</td>
                                         <td>{{ $row->symbol }}</td>
-                                        <td>{{ $row->value }}</td>
+                                        <td>{{ $row->numerical_value }}</td>
                                         <td style="display: none">{{ $row->id }}</td>
                                         <td style="display: none">{{ $row->monarch }}</td>
                                         <td style="display: none">{{ $row->mintage_year }}</td>
@@ -103,7 +103,7 @@
                                         <td>{{ $row->country }}</td>
                                         <td>{{ $row->currency }}</td>
                                         <td>{{ $row->symbol }}</td>
-                                        <td>{{ $row->value }}</td>
+                                        <td>{{ $row->numerical_value }}</td>
                                         <td style="display: none">{{ $row->id }}</td>
                                         <td style="display: none">{{ $row->monarch }}</td>
                                         <td style="display: none">{{ $row->reign_period_from }}</td>
@@ -123,11 +123,12 @@
                                         <td>{{ $row->country }}</td>
                                         <td>{{ $row->currency }}</td>
                                         <td>{{ $row->symbol }}</td>
-                                        <td>{{ $row->value }}</td>
+                                        <td>{{ $row->numerical_value }}</td>
                                         <td style="display: none">{{ $row->id }}</td>
                                         <td style="display: none">{{ $row->monarch }}</td>
                                         <td style="display: none">{{ $row->reign_period_from }}</td>
                                         <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->mintage_year }}</td>
                                         <td style="display: none">{{ $row->revers }}</td>
                                         <td style="display: none">{{ $row->coin_edge }}</td>
                                         <td style="display: none">{{ $row->century }}</td>
@@ -142,11 +143,12 @@
                                         <td>{{ $row->country }}</td>
                                         <td>{{ $row->currency }}</td>
                                         <td>{{ $row->symbol }}</td>
-                                        <td>{{ $row->value }}</td>
+                                        <td>{{ $row->numerical_value }}</td>
                                         <td style="display: none">{{ $row->id }}</td>
                                         <td style="display: none">{{ $row->monarch }}</td>
                                         <td style="display: none">{{ $row->reign_period_from }}</td>
                                         <td style="display: none">{{ $row->reign_period_to }}</td>
+                                        <td style="display: none">{{ $row->mintage_year }}</td>
                                         <td style="display: none">{{ $row->avers }}</td>
                                         <td style="display: none">{{ $row->coin_edge }}</td>
                                         <td style="display: none">{{ $row->century }}</td>
@@ -161,13 +163,14 @@
                                         <td>{{ $row->country }}</td>
                                         <td>{{ $row->currency }}</td>
                                         <td>{{ $row->symbol }}</td>
-                                        <td>{{ $row->value }}</td>
+                                        <td>{{ $row->numerical_value }}</td>
                                         <td style="display: none">{{ $row->id }}</td>
                                         <td style="display: none">{{ $row->monarch }}</td>
                                         <td style="display: none">{{ $row->reign_period_from }}</td>
                                         <td style="display: none">{{ $row->reign_period_to }}</td>
-                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->mintage_year }}</td>
                                         <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
                                         <td style="display: none">{{ $row->century }}</td>
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
@@ -175,17 +178,18 @@
                                     @break
 
                                     @case('currency')
-                                        <td>{{ $row->name }}</td>
+                                        <td>{{ $row->currency }}</td>
                                         <td>{{ $row->symbol }}</td>
                                         <td>{{ $row->continent }}</td>
                                         <td>{{ $row->country }}</td>
-                                        <td>{{ $row->value }}</td>
+                                        <td>{{ $row->numerical_value }}</td>
                                         <td style="display: none">{{ $row->id }}</td>
                                         <td style="display: none">{{ $row->monarch }}</td>
                                         <td style="display: none">{{ $row->reign_period_from }}</td>
                                         <td style="display: none">{{ $row->reign_period_to }}</td>
-                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->mintage_year }}</td>
                                         <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
                                         <td style="display: none">{{ $row->coin_edge }}</td>
                                         <td style="display: none">{{ $row->century }}</td>
                                         <td style="display: none">{{ $row->metal }}</td>
@@ -199,13 +203,14 @@
                                         <td>{{ $row->country }}</td>
                                         <td>{{ $row->currency }}</td>
                                         <td>{{ $row->symbol }}</td>
-                                        <td>{{ $row->value }}</td>
+                                        <td>{{ $row->numerical_value }}</td>
                                         <td style="display: none">{{ $row->id }}</td>
                                         <td style="display: none">{{ $row->monarch }}</td>
                                         <td style="display: none">{{ $row->reign_period_from }}</td>
                                         <td style="display: none">{{ $row->reign_period_to }}</td>
-                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->mintage_year }}</td>
                                         <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
                                         <td style="display: none">{{ $row->coin_edge }}</td>
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
@@ -218,13 +223,14 @@
                                         <td>{{ $row->country }}</td>
                                         <td>{{ $row->currency }}</td>
                                         <td>{{ $row->symbol }}</td>
-                                        <td>{{ $row->value }}</td>
+                                        <td>{{ $row->numerical_value }}</td>
                                         <td style="display: none">{{ $row->id }}</td>
                                         <td style="display: none">{{ $row->monarch }}</td>
                                         <td style="display: none">{{ $row->reign_period_from }}</td>
                                         <td style="display: none">{{ $row->reign_period_to }}</td>
-                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->mintage_year }}</td>
                                         <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
                                         <td style="display: none">{{ $row->coin_edge }}</td>
                                         <td style="display: none">{{ $row->century }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
@@ -237,13 +243,14 @@
                                         <td>{{ $row->country }}</td>
                                         <td>{{ $row->currency }}</td>
                                         <td>{{ $row->symbol }}</td>
-                                        <td>{{ $row->value }}</td>
+                                        <td>{{ $row->numerical_value }}</td>
                                         <td style="display: none">{{ $row->id }}</td>
                                         <td style="display: none">{{ $row->monarch }}</td>
                                         <td style="display: none">{{ $row->reign_period_from }}</td>
                                         <td style="display: none">{{ $row->reign_period_to }}</td>
-                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->mintage_year }}</td>
                                         <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
                                         <td style="display: none">{{ $row->coin_edge }}</td>
                                         <td style="display: none">{{ $row->century }}</td>
                                         <td style="display: none">{{ $row->metal }}</td>
@@ -256,13 +263,14 @@
                                         <td>{{ $row->country }}</td>
                                         <td>{{ $row->currency }}</td>
                                         <td>{{ $row->symbol }}</td>
-                                        <td>{{ $row->value }}</td>
+                                        <td>{{ $row->numerical_value }}</td>
                                         <td style="display: none">{{ $row->id }}</td>
                                         <td style="display: none">{{ $row->monarch }}</td>
                                         <td style="display: none">{{ $row->reign_period_from }}</td>
                                         <td style="display: none">{{ $row->reign_period_to }}</td>
-                                        <td style="display: none">{{ $row->revers }}</td>
+                                        <td style="display: none">{{ $row->mintage_year }}</td>
                                         <td style="display: none">{{ $row->avers }}</td>
+                                        <td style="display: none">{{ $row->revers }}</td>
                                         <td style="display: none">{{ $row->coin_edge }}</td>
                                         <td style="display: none">{{ $row->century }}</td>
                                         <td style="display: none">{{ $row->metal }}</td>

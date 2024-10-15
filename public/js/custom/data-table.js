@@ -464,89 +464,104 @@ $(function () {
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between flex-wrap">
-                                                <div class="d-flex align-items-center me-4 gap-3">
-                                                    <div class="avatar-initial bg-label-primary rounded">
-                                                        <i class='mdi mdi-earth mdi-24px'></i>
-                                                    </div>
-                                                    <div>
-                                                        <h4 class="mb-0">${full["country"]}</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex align-items-center me-4 gap-3">
-                                                    <div class="avatar-initial bg-label-primary rounded">
-                                                        <i class='mdi mdi-cash-multiple mdi-24px'></i>
-                                                    </div>
-                                                    <div>
-                                                        <h4 class="mb-0">${full["numerical_value"]}<span> ${full["symbol"]}</span></h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex align-items-center flex-column text-center">
-                                                <img class="img-fluid rounded mb-3 mt-4" src="` +
+                                    <div class="nav-align-top mb-4">
+                                        <ul class="nav nav-pills mb-3" role="tablist">
+                                            <li class="nav-item">
+                                                <button type="button" class="nav-link active" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-top-home" aria-controls="navs-pills-top-home" aria-selected="true">Home</button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button type="button" class="nav-link" role="tab" data-bs-toggle="tab" data-bs-target="#navs-pills-top-details" aria-controls="navs-pills-top-details" aria-selected="false">Details</button>
+                                            </li>
+                                        </ul>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="tab-content">
+                                                    <div class="tab-pane fade show active" id="navs-pills-top-home" role="tabpanel">
+                                                        <div class="d-flex justify-content-between flex-wrap">
+                                                            <div class="d-flex align-items-center me-4 gap-3">
+                                                                <div class="avatar-initial bg-label-primary rounded">
+                                                                    <i class='mdi mdi-earth mdi-24px'></i>
+                                                                </div>
+                                                                <div>
+                                                                    <h4 class="mb-0">${full["country"]}</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center me-4 gap-3">
+                                                                <div class="avatar-initial bg-label-primary rounded">
+                                                                    <i class='mdi mdi-cash-multiple mdi-24px'></i>
+                                                                </div>
+                                                                <div>
+                                                                    <h4 class="mb-0">${full["numerical_value"]}<span> ${full["symbol"]}</span></h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex align-items-center flex-column text-center">
+                                                            <img class="img-fluid rounded mb-3 mt-4" src="` +
             assetsPath +
             "/img/avatars/10.png" +
             `" height="120" width="120" alt="User avatar" />
-                                            </div>
-                                            <h5 class="pb-3 border-bottom mb-3">Details</h5>
-                                            <div class="d-flex justify-content-between flex-wrap">
-                                                <div class="d-flex align-items-center me-4 gap-3">
-                                                    <ul class="list-unstyled">
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Currency:</span>
-                                                            <span><i>${full["currency"]}</i></span>
-                                                        </li>
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Monarch:</span>
-                                                            <span><i>${full["monarch"]}</i></span>
-                                                        </li>
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Reign Period From:</span>
-                                                            <span><i>${full["reign_period_from"]}</i></span>
-                                                        </li>
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Reign Period To:</span>
-                                                            <span><i>${full["reign_period_to"]}</i></span>
-                                                        </li>
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Mintage Year:</span>
-                                                            <span><i>${full["mintage_year"]}</i></span>
-                                                        </li>
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Avers:</span>
-                                                            <span><i>${full["avers"]}</i></span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="d-flex align-items-center me-4 gap-3">
-                                                    <ul class="list-unstyled">
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Revers:</span>
-                                                            <span><i>${full["revers"]}</i></span>
-                                                        </li>
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Coin Edge:</span>
-                                                            <span><i>${full["coin_edge"]}</i></span>
-                                                        </li>
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Century:</span>
-                                                            <span><i>${full["century"]}</i></span>
-                                                        </li>
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Metal:</span>
-                                                            <span><i>${full["metal"]}</i></span>
-                                                        </li>
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Quality:</span>
-                                                            <span><i>${full["quality"]}</i></span>
-                                                        </li>
-                                                        <li class="mb-3">
-                                                            <span class="fw-medium text-heading me-2">Krause Price:</span>
-                                                            <span><i>${full["price_by_krause"]}</i></span>
-                                                        </li>
-                                                    </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="navs-pills-top-details" role="tabpanel">
+                                                        <div class="d-flex justify-content-between flex-wrap">
+                                                            <div class="d-flex align-items-center me-4 gap-3">
+                                                                <ul class="list-unstyled">
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Currency:</span>
+                                                                        <span><i>${full["currency"]}</i></span>
+                                                                    </li>
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Monarch:</span>
+                                                                        <span><i>${full["monarch"]}</i></span>
+                                                                    </li>
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Reign Period From:</span>
+                                                                        <span><i>${full["reign_period_from"]}</i></span>
+                                                                    </li>
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Reign Period To:</span>
+                                                                        <span><i>${full["reign_period_to"]}</i></span>
+                                                                    </li>
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Mintage Year:</span>
+                                                                        <span><i>${full["mintage_year"]}</i></span>
+                                                                    </li>
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Avers:</span>
+                                                                        <span><i>${full["avers"]}</i></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="d-flex align-items-center me-4 gap-3">
+                                                                <ul class="list-unstyled">
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Revers:</span>
+                                                                        <span><i>${full["revers"]}</i></span>
+                                                                    </li>
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Coin Edge:</span>
+                                                                        <span><i>${full["coin_edge"]}</i></span>
+                                                                    </li>
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Century:</span>
+                                                                        <span><i>${full["century"]}</i></span>
+                                                                    </li>
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Metal:</span>
+                                                                        <span><i>${full["metal"]}</i></span>
+                                                                    </li>
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Quality:</span>
+                                                                        <span><i>${full["quality"]}</i></span>
+                                                                    </li>
+                                                                    <li class="mb-3">
+                                                                        <span class="fw-medium text-heading me-2">Krause Price:</span>
+                                                                        <span><i>${full["price_by_krause"]}</i></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

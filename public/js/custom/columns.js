@@ -134,7 +134,7 @@ var columns = {
     ],
     currencies: [
         { data: "currency" },
-        { date: "symbol" },
+        { data: "symbol" },
         { data: "continent" },
         { data: "country" },
         { data: "numerical_value" },

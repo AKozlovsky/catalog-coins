@@ -18,7 +18,9 @@ class CollectionSeeder extends Seeder
             ["value" => 5000, "created_at" => date('Y-m-d h:i:s')],
         ]);
         DB::table('photos')->insert([
-            ["filename" => "", "created_at" => date('Y-m-d h:i:s')]
+            ["filename" => "coin.jpg", "item" => 1, "created_at" => date('Y-m-d h:i:s')],
+            ["filename" => "coins.jpg", "item" => 1, "created_at" => date('Y-m-d h:i:s')],
+            ["filename" => "dollar.jpg", "item" => 1, "created_at" => date('Y-m-d h:i:s')]
         ]);
         DB::table('other_criteria')->insert([
             [
@@ -37,8 +39,8 @@ class CollectionSeeder extends Seeder
             ]
         ]);
         DB::table('items')->insert([
-            ["currency" => "ALL", "numerical_value" => 1, "other_criteria" => 1, "photo" => 1,  "created_at" => date('Y-m-d h:i:s')],
-            ["currency" => "USD", "numerical_value" => 2, "other_criteria" => 1, "photo" => 1, "created_at" => date('Y-m-d h:i:s')],
+            ["currency" => "ALL", "numerical_value" => 1, "other_criteria" => 1, "created_at" => date('Y-m-d h:i:s')],
+            ["currency" => "USD", "numerical_value" => 2, "other_criteria" => 1, "created_at" => date('Y-m-d h:i:s')],
         ]);
         DB::table('collections')->insert([
             ["continent" => "AF", "country" => "AO", "item" => 1, "created_at" => date('Y-m-d h:i:s')],

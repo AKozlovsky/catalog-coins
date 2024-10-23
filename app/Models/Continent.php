@@ -14,7 +14,7 @@ class Continent extends Model
 
     public function collections()
     {
-        return $this->hasMany('App\Models\Collections');
+        return $this->hasMany('App\Models\Collection');
     }
 
     public static function getCode($continent)

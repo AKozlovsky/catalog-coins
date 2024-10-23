@@ -14,17 +14,17 @@ class Item extends Model
 
     public function collections()
     {
-        return $this->hasMany('App\Models\Collections');
+        return $this->hasMany('App\Models\Collection');
     }
 
     public function currencies()
     {
-        return $this->belongsTo('App\Models\Currencies');
+        return $this->belongsTo('App\Models\Currency');
     }
 
     public function numerical_values()
     {
-        return $this->belongsTo('App\Models\NumericalValues');
+        return $this->belongsTo('App\Models\NumericalValue');
     }
 
     public function other_criteria()

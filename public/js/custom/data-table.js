@@ -539,8 +539,7 @@ $(function () {
             <div class="d-flex align-items-center flex-column text-center">
                 <img class="img-fluid rounded mb-3 mt-4" src="` +
             assetsPath +
-            "/img/avatars/10.png" +
-            `" height="120" width="120" alt="User avatar" />
+            `/photos/${full["filename"]}" alt="Image" width="365"/>
             </div>
         </div>`
         );

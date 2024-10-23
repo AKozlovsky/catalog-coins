@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Collection;
 use App\Models\OtherCriteria;
 use App\Models\Currency;
+use App\Models\Photos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 
@@ -23,6 +24,7 @@ class Catalog extends Controller
         $totalData = Collection::getTotalCollections($input);
         $totalFiltered = Collection::getTotalCollections($input, $search, $columns);
         $data = Collection::getCollections($input, $limit, $start, $order, $dir, $search, $columns);
+        $this->_getPhotos($data);
 
         if (!$data) {
             return response()->json([
@@ -136,5 +138,12 @@ class Catalog extends Controller
             "data" => $data,
             "type" => $type
         ]);
+    }
+
+    private function _getPhotos(&$data)
+    {
+        foreach ($data as $key => $row) {
+            $data[$key]["photos"] = Photos::getPhotos($row["item"]);
+        }
     }
 }

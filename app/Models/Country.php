@@ -14,7 +14,7 @@ class Country extends Model
 
     public function collections()
     {
-        return $this->hasMany('App\Models\Collections');
+        return $this->hasMany('App\Models\Collection');
     }
 
     public static function getCountries($columns, $code = null, $continentCode = null, $countryName = null)

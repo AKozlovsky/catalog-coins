@@ -35,12 +35,12 @@ class Collection extends Model
 
     public function countries()
     {
-        return $this->belongsTo('App\Models\Countries');
+        return $this->belongsTo('App\Models\Country');
     }
 
     public function items()
     {
-        return $this->belongsTo('App\Models\Items');
+        return $this->belongsTo('App\Models\Item');
     }
 
     public static function getCollections($input = null, $limit = 10, $start = 0, $order = "country_code", $dir = "asc", $search = "", $columns = [])
@@ -94,7 +94,8 @@ class Collection extends Model
             DB::raw('IFNULL(other_criteria.century, "") as century'),
             DB::raw('IFNULL(other_criteria.metal, "") as metal'),
             DB::raw('IFNULL(other_criteria.quality, "") as quality'),
-            DB::raw('IFNULL(other_criteria.price_by_krause, "") as price_by_krause')
+            DB::raw('IFNULL(other_criteria.price_by_krause, "") as price_by_krause'),
+            "items.id AS item"
         )
             ->when($type, function ($query, $type) {
                 switch ($type) {

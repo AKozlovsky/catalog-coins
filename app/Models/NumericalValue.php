@@ -14,7 +14,7 @@ class NumericalValue extends Model
 
     public function items()
     {
-        return $this->hasMany('App\Models\Items');
+        return $this->hasMany('App\Models\Item');
     }
 
     public static function getValue($id)

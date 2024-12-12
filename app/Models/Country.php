@@ -44,4 +44,9 @@ class Country extends Model
 
         return $result[0];
     }
+
+    public static function getCountryName($code)
+    {
+        return Country::where("code", $code)->pluck("country_name")[0];
+    }
 }

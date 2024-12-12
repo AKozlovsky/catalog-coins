@@ -85,10 +85,18 @@ $(function () {
         });
     }
 
-    // Form Validation
-    const formAddItem = document.getElementById("formAddItem");
+    // Form Add Validation
+    var formId;
 
-    const validation = FormValidation.formValidation(formAddItem, {
+    if (location.pathname.includes("/add")) {
+        formId = "formAddItem";
+    } else if (location.pathname.includes("/edit")) {
+        formId = "formEditItem";
+    }
+
+    const form = document.getElementById(formId);
+
+    const validation = FormValidation.formValidation(form, {
         fields: {
             continent: {
                 validators: {
@@ -164,7 +172,7 @@ $(function () {
         },
     }).on("core.form.valid", function () {
         $.ajax({
-            data: $("#formAddItem").serialize(),
+            data: $("#" + formId).serialize(),
             url: `${baseUrl}submit`,
             type: "POST",
             success: function (status) {
@@ -190,64 +198,81 @@ $(function () {
         });
     });
 
-    // Continent selector
-    var selectContinent = $("#continent"),
-        selectCountry = $("#country"),
-        selectCurrency = $("#currency");
+    // Continent, country and currency selectors
+    var continent = $("#continent"),
+        country = $("#country");
 
-    if (selectContinent.length) {
-        select2Focus(selectContinent);
-        selectContinent.wrap('<div class="position-relative"></div>');
-        selectContinent
+    if (continent.length) {
+        select2Focus(continent);
+        continent.wrap('<div class="position-relative"></div>');
+        continent
             .select2({
                 placeholder: "Select continent",
-                dropdownParent: selectContinent.parent(),
+                dropdownParent: continent.parent(),
             })
             .on("change", function () {
-                var selectedContinent = $(this).val();
-                selectCountry.find("option").remove().end();
-                $.getJSON("assets/json/countries.json", function (country) {
-                    $.each(country, function (key, value) {
-                        if (value.continent == selectedContinent) {
-                            selectCountry.append(
-                                '<option value="' +
-                                    value.name +
-                                    '">' +
-                                    value.name +
-                                    "</option>"
-                            );
-                        }
-                    });
-                });
-
+                country.find("option").remove().end();
+                setCountryOptions($(this), country);
                 validation.revalidateField("continent");
                 validation.resetField("country");
             });
+
+        if (location.pathname.includes("/edit")) {
+            setCountryOptions(continent, country);
+        }
     }
 
-    if (selectCountry.length) {
-        select2Focus(selectCountry);
-        selectCountry.wrap('<div class="position-relative"></div>');
-        selectCountry
+    if (country.length) {
+        select2Focus(country);
+        country.wrap('<div class="position-relative"></div>');
+        country
             .select2({
                 placeholder: "Select country",
-                dropdownParent: selectCountry.parent(),
+                dropdownParent: country.parent(),
             })
             .on("change", function () {
                 validation.revalidateField("country");
             });
     }
 
-    if (selectCurrency.length) {
-        select2Focus(selectCurrency);
-        selectCurrency.wrap('<div class="position-relative"></div>');
-        selectCurrency
+    var currency = $("#currency");
+
+    if (currency.length) {
+        select2Focus(currency);
+        currency.wrap('<div class="position-relative"></div>');
+        currency
             .select2({
                 placeholder: "Select currency",
-                dropdownParent: selectCurrency.parent(),
+                dropdownParent: currency.parent(),
             })
             .on("change", function () {
                 validation.revalidateField("currency");
             });
+    }
+
+    function setCountryOptions(continent, country) {
+        $.getJSON(assetsPath + "json/countries.json", function (item) {
+            $.each(item, function (key, value) {
+                if (value.continent == continent.val()) {
+                    if ($("#countryToSelect").val() != value.name) {
+                        country.append(
+                            '<option value="' +
+                                value.name +
+                                '">' +
+                                value.name +
+                                "</option>"
+                        );
+                    } else {
+                        country.append(
+                            '<option selected value="' +
+                                value.name +
+                                '">' +
+                                value.name +
+                                "</option>"
+                        );
+                    }
+                }
+            });
+        });
     }
 });

@@ -14,7 +14,7 @@
 
 @section('page-script')
     <script type="text/javascript" src="{{ asset('js/custom/columns.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/custom/common-data-table.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/custom/data-table-common.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/custom/data-table.js') }}"></script>
 @endsection
 

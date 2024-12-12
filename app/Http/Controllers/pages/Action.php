@@ -22,7 +22,30 @@ class Action extends Controller
         return view("pages.action.add", ["continents" => $continents, "currencies" => $currencies]);
     }
 
-    public function submit(Request $request)
+    public function edit($id)
+    {
+        $continents = Continent::getContinents();
+        $currencies = Currency::getData();
+        $collection = Collection::getCollection($id);
+        $continentName = Continent::getContinentName($collection->continent);
+        $countryName = Country::getCountryName($collection->country);
+        $item = Item::getItem($collection->item);
+        $currencyName = Currency::getCurrencyName($item->currency);
+        $numericalValue = NumericalValue::getValue($item->numerical_value);
+        $otherCriteria = OtherCriteria::getValues($item->other_criteria);
+
+        return view("pages.action.edit", [
+            "continents" => $continents,
+            "currencies" => $currencies,
+            "continentName" => $continentName,
+            "countryName" => $countryName,
+            "currencyName" => $currencyName,
+            "numericalValue" => $numericalValue,
+            "otherCriteria" => $otherCriteria
+        ]);
+    }
+
+    public function addSubmit(Request $request)
     {
         $otherCriteria = $this->setOtherCriteria($request);
 

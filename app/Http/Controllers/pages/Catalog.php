@@ -99,7 +99,7 @@ class Catalog extends Controller
             case "currencies":
                 $title = "Currencies";
                 $inputSelector = true;
-                $data = Currency::getData(["name"]);
+                $data = Currency::getData(["currency"]);
                 $type = "currency";
                 break;
             case "centuries":

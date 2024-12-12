@@ -84,4 +84,9 @@ class OtherCriteria extends Model
             "price_by_krause"
         ];
     }
+
+    public static function getValues($id)
+    {
+        return OtherCriteria::select()->where("id", $id)->get()[0];
+    }
 }

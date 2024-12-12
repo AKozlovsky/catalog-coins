@@ -1,14 +1,14 @@
 function detail(full, detailUrl) {
     return (
         '<div class="d-flex align-items-center">' +
-        addButtonPreview(full) +
-        addButtonEdit(full, detailUrl) +
-        addButtonDelete(full) +
+        setButtonPreview(full) +
+        setButtonEdit(full, detailUrl) +
+        setButtonDelete(full) +
         "</div>"
     );
 }
 
-function addButtonPreview(data) {
+function setButtonPreview(data) {
     return (
         `<button class="btn btn-sm btn-icon edit-record" data-id="${data["id"]}" data-bs-toggle="modal" data-bs-placement="top" data-bs-target="#preview-${data["id"]}" title="Preview">
         <i class="mdi mdi-eye-outline mdi-20px mx-1"></i>
@@ -16,7 +16,7 @@ function addButtonPreview(data) {
     );
 }
 
-function addButtonEdit(data, detailUrl) {
+function setButtonEdit(data, detailUrl) {
     return (
         '<a href="' +
         detailUrl +
@@ -25,7 +25,7 @@ function addButtonEdit(data, detailUrl) {
     );
 }
 
-function addButtonDelete(data) {
+function setButtonDelete(data) {
     return `<button class="btn btn-sm btn-icon delete-record" data-id="${data["id"]}" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
     <i class="mdi mdi-delete-outline mdi-20px mx-1"></i>
     </button>`;
@@ -86,13 +86,17 @@ function addTabs(data) {
 }
 
 function addHomeTab(data) {
+    var result = `<div class="tab-pane fade show active" id="navs-pills-top-home-${data["id"]}" role="tabpanel">`;
+
     if (data["photos"].length > 0) {
-        return (
-            `<div class="tab-pane fade show active" id="navs-pills-top-home-${data["id"]}" role="tabpanel">` +
-            loadPhotos(data) +
-            `</div>`
-        );
+        result += loadPhotos(data);
+    } else {
+        result += "No photos";
     }
+
+    result += `</div>`;
+
+    return result;
 }
 
 function addDetailsTab(data) {
@@ -168,10 +172,13 @@ function loadPhotos(data) {
         }
 
         content +=
-            `<img class="d-block w-60 h-60" src="` +
+            `<img class="d-block w-60 h-60" data-id="photo-` +
+            element.filename +
+            `" src="` +
             assetsPath +
             `photos/` +
-            element.filename;
+            element.filename +
+            `" data-bs-toggle="modal" data-bs-placement="top" data-bs-target="#photo-${element.filename}"`;
 
         content += `" alt="` + index + ` slide" /></div>`;
     });

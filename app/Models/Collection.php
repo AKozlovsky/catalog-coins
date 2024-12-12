@@ -468,4 +468,9 @@ class Collection extends Model
 
         return $result;
     }
+
+    public static function getCollection($id)
+    {
+        return Collection::select()->where("id", $id)->get()[0];
+    }
 }

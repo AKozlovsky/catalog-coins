@@ -28,4 +28,9 @@ class Continent extends Model
     {
         return json_decode(File::get('assets/json/continents.json'));
     }
+
+    public static function getContinentName($code)
+    {
+        return Continent::where("code", $code)->pluck("continent_name")[0];
+    }
 }

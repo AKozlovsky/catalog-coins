@@ -89,4 +89,16 @@ class OtherCriteria extends Model
     {
         return OtherCriteria::select()->where("id", $id)->get()[0];
     }
+
+    public static function updateRow($id, $data)
+    {
+        $otherCriteria = OtherCriteria::find($id);
+
+        if ($otherCriteria) {
+            $otherCriteria->update($data);
+            return $otherCriteria;
+        } else {
+            return OtherCriteria::create($data);
+        }
+    }
 }

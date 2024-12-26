@@ -30,7 +30,7 @@ class Action extends Controller
         $continentName = Continent::getContinentName($collection->continent);
         $countryName = Country::getCountryName($collection->country);
         $item = Item::getItem($collection->item);
-        $currencyName = Currency::getCurrencyName($item->currency);
+        $currencyCode = $item->currency;
         $numericalValue = NumericalValue::getValue($item->numerical_value);
         $otherCriteria = OtherCriteria::getValues($item->other_criteria);
 
@@ -39,28 +39,26 @@ class Action extends Controller
             "currencies" => $currencies,
             "continentName" => $continentName,
             "countryName" => $countryName,
-            "currencyName" => $currencyName,
+            "currencyCode" => $currencyCode,
             "numericalValue" => $numericalValue,
-            "otherCriteria" => $otherCriteria
+            "otherCriteria" => $otherCriteria,
+            "collectionId" => $id
         ]);
     }
 
     public function addSubmit(Request $request)
     {
         $otherCriteria = $this->setOtherCriteria($request);
-
         $item = [
             "currency" => $request->currency,
             "numerical_value" => NumericalValue::create(["value" => $request->currencyValue])->id,
             "other_criteria" => OtherCriteria::create($otherCriteria)->id
         ];
-
         $data = [
             "continent" => Continent::getCode($request->continent),
             "country" => Country::getCode($request->country),
             "item" => Item::create($item)->id
         ];
-
         Collection::create($data);
     }
 
@@ -73,5 +71,25 @@ class Action extends Controller
         }
 
         return $result;
+    }
+
+    public function editSubmit($id, Request $request)
+    {
+        $item = Item::getItem(Collection::getCollection($id)->item);
+        $otherCriteriaData = $this->setOtherCriteria($request);
+        $otherCriteria = OtherCriteria::updateRow($item->other_criteria, $otherCriteriaData);
+
+        if (!is_null($item)) {
+            $item->currency = $request->currency;
+            $item->numerical_value = NumericalValue::create(["value" => $request->currencyValue])->id;
+            $item->other_criteria = $otherCriteria->id;
+            $item->save();
+        }
+
+        $data = [
+            "continent" => Continent::getCode($request->continent),
+            "country" => Country::getCode($request->country),
+            "item" => $item->id
+        ];
     }
 }

@@ -35,10 +35,10 @@
             <div class="card">
                 <h5 class="card-header">Add new item</h5>
                 <div class="card-body">
-                    <form id="formAddItem" class="row g-3" action="{{ url('/submit') }}" method="POST">
+                    <form id="formAddItem" class="row g-3" method="POST">
                         @csrf
                         <div class="col-12">
-                            <h6>1. Origin Details</h6>
+                            <h6>Origin</h6>
                             <hr class="mt-0" />
                         </div>
                         <div class="col-md-6">
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <h6 class="mt-2">2. Currency Details</h6>
+                            <h6 class="mt-2">Currency</h6>
                             <hr class="mt-0" />
                         </div>
                         <div class="col-md-6">
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <h6 class="mt-2">3. Monarch Details</h6>
+                            <h6 class="mt-2">Monarch</h6>
                             <hr class="mt-0" />
                         </div>
                         <div class="col-md-6">
@@ -112,7 +112,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <h6 class="mt-2">4. Other Details</h6>
+                            <h6 class="mt-2">Others</h6>
                             <hr class="mt-0" />
                         </div>
                         <div class="col-md-6">

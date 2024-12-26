@@ -35,10 +35,10 @@
             <div class="card">
                 <h5 class="card-header">Edit item</h5>
                 <div class="card-body">
-                    <form id="formEditItem" class="row g-3" action="{{ url('/edit') }}" method="POST">
+                    <form id="formEditItem" class="row g-3" method="POST">
                         @csrf
                         <div class="col-12">
-                            <h6>1. Origin Details</h6>
+                            <h6>Origin</h6>
                             <hr class="mt-0" />
                         </div>
                         <div class="col-md-6">
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <h6 class="mt-2">2. Currency Details</h6>
+                            <h6 class="mt-2">Currency</h6>
                             <hr class="mt-0" />
                         </div>
                         <div class="col-md-6">
@@ -74,7 +74,7 @@
                                 <select id="currency" name="currency" class="select2 form-select" data-allow-clear="true">
                                     <option value="">Select Currency</option>
                                     @foreach ($currencies as $currency)
-                                        @if ($currency->name == $currencyName)
+                                        @if ($currency->code == $currencyCode)
                                             <option selected value="{{ $currency->code }}">{{ $currency->code }} -
                                                 {{ $currency->name }}
                                                 ({{ $currency->symbol }})
@@ -102,7 +102,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <h6 class="mt-2">3. Monarch Details</h6>
+                            <h6 class="mt-2">Monarch</h6>
                             <hr class="mt-0" />
                         </div>
                         <div class="col-md-6">
@@ -129,7 +129,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <h6 class="mt-2">4. Other Details</h6>
+                            <h6 class="mt-2">Others</h6>
                             <hr class="mt-0" />
                         </div>
                         <div class="col-md-6">
@@ -191,6 +191,7 @@
                             </div>
                         </div>
                         <div class="col-12">
+                            <input type="hidden" id="collectionId" value="{{ $collectionId }}">
                             <button type="submit" name="submitButton" class="btn btn-primary data-submit">Edit</button>
                         </div>
                     </form>

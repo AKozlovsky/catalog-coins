@@ -171,15 +171,26 @@ $(function () {
             });
         },
     }).on("core.form.valid", function () {
+        var text = "",
+            url = "";
+
+        if (location.pathname.includes("/add")) {
+            text = "Item was added successfully.";
+            url = "add-submit";
+        } else if (location.pathname.includes("/edit")) {
+            text = "Item was edited successfully.";
+            url = "edit-submit/" + $("#collectionId").val();
+        }
+
         $.ajax({
             data: $("#" + formId).serialize(),
-            url: `${baseUrl}submit`,
+            url: `${baseUrl}` + url,
             type: "POST",
             success: function (status) {
                 Swal.fire({
                     icon: "success",
                     title: `Successfully!`,
-                    text: `Item was added successfully.`,
+                    text: text,
                     customClass: {
                         confirmButton: "btn btn-success",
                     },

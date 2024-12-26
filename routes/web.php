@@ -34,6 +34,6 @@ foreach ($subpages as $sub) {
 
 Route::get('add', [Action::class, 'add'])->name("action/add");
 Route::get('edit/{id}', [Action::class, 'edit'])->name("action/edit");
-Route::post('submit', [Action::class, "addSubmit"]);
-Route::post('edit', [Action::class, "editSubmit"]);
+Route::post('add-submit', [Action::class, "addSubmit"]);
+Route::post('edit-submit/{id}', [Action::class, "editSubmit"]);
 Route::resource("/data-table", Catalog::class);

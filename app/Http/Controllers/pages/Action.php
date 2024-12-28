@@ -77,11 +77,13 @@ class Action extends Controller
     {
         $item = Item::getItem(Collection::getCollection($id)->item);
         $otherCriteriaData = $this->setOtherCriteria($request);
-        $otherCriteria = OtherCriteria::updateRow($item->other_criteria, $otherCriteriaData);
+        $otherCriteria = OtherCriteria::updateData($item->other_criteria, $otherCriteriaData);
 
         if (!is_null($item)) {
+            $numericalValue = NumericalValue::getData($item->numerical_value);
+            $numericalValue->value = $request->currencyValue;
+            $numericalValue->save();
             $item->currency = $request->currency;
-            $item->numerical_value = NumericalValue::create(["value" => $request->currencyValue])->id;
             $item->other_criteria = $otherCriteria->id;
             $item->save();
         }
@@ -91,5 +93,7 @@ class Action extends Controller
             "country" => Country::getCode($request->country),
             "item" => $item->id
         ];
+
+        Collection::updateData($id, $data);
     }
 }

@@ -19,9 +19,7 @@ class Continent extends Model
 
     public static function getCode($continent)
     {
-        $result = Continent::where("continent_name", $continent)->pluck("code");
-
-        return $result[0];
+        return Continent::where("continent_name", $continent)->pluck("code")[0];
     }
 
     public static function getContinents()

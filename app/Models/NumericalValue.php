@@ -21,4 +21,9 @@ class NumericalValue extends Model
     {
         return NumericalValue::select("value")->where("id", $id)->get()[0];
     }
+
+    public static function getData($id)
+    {
+        return NumericalValue::select()->where("id", $id)->get()[0];
+    }
 }

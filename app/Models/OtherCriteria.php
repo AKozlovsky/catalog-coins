@@ -90,7 +90,7 @@ class OtherCriteria extends Model
         return OtherCriteria::select()->where("id", $id)->get()[0];
     }
 
-    public static function updateRow($id, $data)
+    public static function updateData($id, $data)
     {
         $otherCriteria = OtherCriteria::find($id);
 

@@ -473,4 +473,16 @@ class Collection extends Model
     {
         return Collection::select()->where("id", $id)->get()[0];
     }
+
+    public static function updateData($id, $data)
+    {
+        $collection = Collection::find($id);
+
+        if ($collection) {
+            $collection->update($data);
+            return $collection;
+        } else {
+            return Collection::create($data);
+        }
+    }
 }

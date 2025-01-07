@@ -26,14 +26,16 @@ function setButtonEdit(data, detailUrl) {
 }
 
 function setButtonDelete(data) {
-    return `<button class="btn btn-sm btn-icon delete-record" data-id="${data["id"]}" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+    return (
+        `<button class="btn btn-sm btn-icon delete-record" data-id="${data["id"]}" data-bs-toggle="modal" data-bs-placement="top" data-bs-target="#delete-${data["id"]}" title="Delete">
     <i class="mdi mdi-delete-outline mdi-20px mx-1"></i>
-    </button>`;
+    </button>` + setModalDelete(data)
+    );
 }
 
 function setModalPreview(data) {
     return (
-        `<div class="modal fade" id="preview-${data["id"]}" tabindex="-1" aria-hidden="true">
+        `<div class="modal fade" id="preview-${data["id"]}" tabindex="-1">
             <div class="modal-dialog modal-xl modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -185,14 +187,67 @@ function loadPhotos(data) {
 
     content += `</div>
                 <a class="carousel-control-prev" href="#photo-${data["id"]}" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-prev-icon"></span>
                     <span class="visually-hidden">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#photo-${data["id"]}" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-next-icon"></span>
                     <span class="visually-hidden">Next</span>
                 </a>
             </div>`;
 
     return content;
+}
+
+function setModalDelete(data) {
+    return `<div class="modal fade" id="delete-${data["id"]}" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to delete this record?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="delete-record" onclick="deleteRecord(${data["id"]})">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>`;
+}
+
+function deleteRecord(id) {
+    $("#delete-" + id).modal("hide");
+    $.ajax({
+        url: `${baseUrl}` + "delete/" + id,
+        type: "DELETE",
+        data: {
+            id: id,
+            _token: $('meta[name="csrf-token"]').attr("content"),
+        },
+        success: function () {
+            Swal.fire({
+                icon: "success",
+                title: `Successfully!`,
+                text: "Record has been deleted",
+                customClass: {
+                    confirmButton: "btn btn-success",
+                },
+            });
+            $(".datatable").DataTable().ajax.reload();
+        },
+        error: function (err) {
+            Swal.fire({
+                title: "Error!",
+                text: err,
+                icon: "error",
+                customClass: {
+                    confirmButton: "btn btn-success",
+                },
+            });
+        },
+    });
 }

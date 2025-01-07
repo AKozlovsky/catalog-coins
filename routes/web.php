@@ -37,3 +37,4 @@ Route::get('edit/{id}', [Action::class, 'edit'])->name("action/edit");
 Route::post('add-submit', [Action::class, "addSubmit"]);
 Route::post('edit-submit/{id}', [Action::class, "editSubmit"]);
 Route::resource("/data-table", Catalog::class);
+Route::delete("delete/{id}", [Action::class, "delete"]);

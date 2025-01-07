@@ -485,4 +485,9 @@ class Collection extends Model
             return Collection::create($data);
         }
     }
+
+    public static function deleteData($id)
+    {
+        return Collection::find($id)->delete();
+    }
 }

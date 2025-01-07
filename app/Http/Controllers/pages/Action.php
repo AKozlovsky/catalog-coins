@@ -96,4 +96,9 @@ class Action extends Controller
 
         Collection::updateData($id, $data);
     }
+
+    public function delete($id)
+    {
+        Collection::deleteData($id);
+    }
 }

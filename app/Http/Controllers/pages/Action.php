@@ -99,6 +99,10 @@ class Action extends Controller
 
     public function delete($id)
     {
+        $item = Item::getItem(Collection::getCollection($id)->item);
+        NumericalValue::deleteData($item->numerical_value);
+        OtherCriteria::deleteData($item->other_criteria);
+        Item::deleteData($item->id);
         Collection::deleteData($id);
     }
 }

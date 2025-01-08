@@ -101,4 +101,9 @@ class OtherCriteria extends Model
             return OtherCriteria::create($data);
         }
     }
+
+    public static function deleteData($id)
+    {
+        return OtherCriteria::find($id)->delete();
+    }
 }

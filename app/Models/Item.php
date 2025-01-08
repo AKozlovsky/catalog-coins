@@ -49,4 +49,9 @@ class Item extends Model
     {
         return Item::select()->where("id", $id)->get()[0];
     }
+
+    public static function deleteData($id)
+    {
+        return Item::find($id)->delete();
+    }
 }

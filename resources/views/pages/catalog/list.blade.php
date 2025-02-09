@@ -79,6 +79,7 @@
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
                                         <td style="display: none">{{ $row->price_by_krause }}</td>
+                                        <td style="display: none">{{ $row->photos }}</td>
                                     @break
 
                                     @case('reign_period')
@@ -99,6 +100,7 @@
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
                                         <td style="display: none">{{ $row->price_by_krause }}</td>
+                                        <td style="display: none">{{ $row->photos }}</td>
                                     @break
 
                                     @case('mintage_year')

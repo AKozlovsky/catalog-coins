@@ -21,4 +21,9 @@ class Photos extends Model
     {
         return Photos::select()->where("item", $item)->get();
     }
+
+    public static function deletePhotos($item)
+    {
+        return Photos::select()->where("item", $item)->delete();
+    }
 }

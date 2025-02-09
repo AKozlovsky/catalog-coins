@@ -37,6 +37,7 @@ class OtherCriteria extends Model
             "collections.id AS id",
             "continents.continent_name AS continent",
             "countries.country_name AS country",
+            "items.id AS item",
             "currencies.name AS currency",
             "currencies.symbol AS symbol",
             "numerical_values.value AS numerical_value",
@@ -102,7 +103,7 @@ class OtherCriteria extends Model
         }
     }
 
-    public static function deleteData($id)
+    public static function deleteOtherCriteria($id)
     {
         return OtherCriteria::find($id)->delete();
     }

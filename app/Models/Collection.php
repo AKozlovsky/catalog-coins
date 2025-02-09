@@ -486,7 +486,7 @@ class Collection extends Model
         }
     }
 
-    public static function deleteData($id)
+    public static function deleteCollection($id)
     {
         return Collection::find($id)->delete();
     }

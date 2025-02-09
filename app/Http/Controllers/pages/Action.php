@@ -11,6 +11,7 @@ use App\Models\Collection;
 use App\Models\Country;
 use App\Models\Item;
 use App\Models\OtherCriteria;
+use App\Models\Photos;
 
 class Action extends Controller
 {
@@ -100,9 +101,10 @@ class Action extends Controller
     public function delete($id)
     {
         $item = Item::getItem(Collection::getCollection($id)->item);
-        NumericalValue::deleteData($item->numerical_value);
-        OtherCriteria::deleteData($item->other_criteria);
-        Item::deleteData($item->id);
-        Collection::deleteData($id);
+        NumericalValue::deleteNumericalValue($item->numerical_value);
+        OtherCriteria::deleteOtherCriteria($item->other_criteria);
+        Photos::deletePhotos($item->id);
+        Item::deleteItem($item->id);
+        Collection::deleteCollection($id);
     }
 }

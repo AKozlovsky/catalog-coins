@@ -99,7 +99,7 @@ $(function () {
                                     }
                                 }
                             } else {
-                                output = data;
+                                output += data;
                             }
 
                             return output;

@@ -30,6 +30,7 @@ var columns = {
         { data: "metal" },
         { data: "quality" },
         { data: "price_by_krause" },
+        { data: "photos" },
         { data: "action" },
     ],
     reign_periods: [
@@ -50,6 +51,7 @@ var columns = {
         { data: "metal" },
         { data: "quality" },
         { data: "price_by_krause" },
+        { data: "photos" },
         { data: "action" },
     ],
     mintage_years: [

@@ -194,6 +194,8 @@ $(function () {
                     customClass: {
                         confirmButton: "btn btn-success",
                     },
+                }).then(function () {
+                    window.location = `${baseUrl}monarchs`;
                 });
             },
             error: function (err) {

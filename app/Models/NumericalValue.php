@@ -27,7 +27,7 @@ class NumericalValue extends Model
         return NumericalValue::select()->where("id", $id)->get()[0];
     }
 
-    public static function deleteData($id)
+    public static function deleteNumericalValue($id)
     {
         return NumericalValue::find($id)->delete();
     }

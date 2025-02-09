@@ -90,10 +90,12 @@ function addTabs(data) {
 function addHomeTab(data) {
     var result = `<div class="tab-pane fade show active" id="navs-pills-top-home-${data["id"]}" role="tabpanel">`;
 
-    if (data["photos"].length > 0) {
-        result += loadPhotos(data);
-    } else {
-        result += "No photos";
+    if (data.photos != undefined) {
+        if (data.photos.length > 0) {
+            result += loadPhotos(data);
+        } else {
+            result += "No photos";
+        }
     }
 
     result += `</div>`;

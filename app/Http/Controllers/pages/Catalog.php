@@ -64,12 +64,14 @@ class Catalog extends Controller
                 $title = "Monarchs";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["monarch"]);
+                $this->_getPhotos($data);
                 $type = "monarch";
                 break;
             case "reign-periods":
                 $title = "Reign Periods";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["reign_period_from"]);
+                $this->_getPhotos($data);
                 $type = "reign_period";
                 break;
             case "mintage-years":
@@ -143,7 +145,11 @@ class Catalog extends Controller
     private function _getPhotos(&$data)
     {
         foreach ($data as $key => $row) {
-            $data[$key]["photos"] = Photos::getPhotos($row["item"]);
+            if (Photos::getPhotos($row["item"])->count()) {
+                $data[$key]["photos"] = Photos::getPhotos($row["item"]);
+            } else {
+                $data[$key]["photos"] = "";
+            }
         }
     }
 }

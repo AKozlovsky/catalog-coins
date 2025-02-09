@@ -78,36 +78,42 @@ class Catalog extends Controller
                 $title = "Mintage Years";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["mintage_year"]);
+                $this->_getPhotos($data);
                 $type = "mintage_year";
                 break;
             case "avers":
                 $title = "Avers";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["avers"]);
+                $this->_getPhotos($data);
                 $type = "avers";
                 break;
             case "revers":
                 $title = "Revers";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["revers"]);
+                $this->_getPhotos($data);
                 $type = "revers";
                 break;
             case "coin-edges":
                 $title = "Coin Edges";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["coin_edge"]);
+                $this->_getPhotos($data);
                 $type = "coin_edge";
                 break;
             case "currencies":
                 $title = "Currencies";
                 $inputSelector = true;
-                $data = Currency::getData(["currency"]);
+                $data = Currency::getData(["name"]);
+                $this->_getPhotos($data);
                 $type = "currency";
                 break;
             case "centuries":
                 $title = "Centuries";
                 $inputSelector = true;
                 $data = OtherCriteria::getData(["century"]);
+                $this->_getPhotos($data);
                 $type = "century";
                 break;
             case "metals":

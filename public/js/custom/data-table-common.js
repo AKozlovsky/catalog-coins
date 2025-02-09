@@ -37,7 +37,7 @@ function setModalPreview(data) {
     return (
         `<div class="modal fade" id="preview-${data["id"]}" tabindex="-1">
             <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content p-md-5">
                     <div class="modal-header">
                         <h4 class="modal-title">Detail</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -106,54 +106,77 @@ function addHomeTab(data) {
 function addDetailsTab(data) {
     return `
     <div class="tab-pane fade" id="navs-pills-top-details-${data["id"]}" role="tabpanel">
-        <div class="table-responsive text-nowrap">
-            <table class="table">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Currency</th>
-                        <th>Monarch</th>
-                        <th>Reign Period From</th>
-                        <th>Reign Period To</th>
-                        <th>Mintage Year</th>
-                        <th>Avers</th>
-                    </tr>
-                </thead>
-                <tbody class="table-border-bottom-0">
-                    <tr>
-                        <td>${data["currency"]}</td>
-                        <td>${data["monarch"]}</td>
-                        <td>${data["reign_period_from"]}</td>
-                        <td>${data["reign_period_to"]}</td>
-                        <td>${data["mintage_year"]}</td>
-                        <td>${data["avers"]}</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Currency</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["currency"]}
+            </div>
         </div>
-        <hr>
-        <div class="table-responsive text-nowrap">
-            <table class="table">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Revers</th>
-                        <th>Coin Edge</th>
-                        <th>Century</th>
-                        <th>Metal</th>
-                        <th>Quality</th>
-                        <th>Krause Price</th>
-                    </tr>
-                </thead>
-                <tbody class="table-border-bottom-0">
-                    <tr>
-                        <td>${data["revers"]}</td>
-                        <td>${data["coin_edge"]}</td>
-                        <td>${data["century"]}</td>
-                        <td>${data["metal"]}</td>
-                        <td>${data["quality"]}</td>
-                        <td>${data["price_by_krause"]}</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Monarch</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["monarch"]}
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Reign Period From</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["reign_period_from"]}
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Reign Period To</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["reign_period_to"]}
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Mintage Year</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["mintage_year"]}
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Avers</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["avers"]}
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Revers</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["revers"]}
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Coin Edge</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["coin_edge"]}
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Century</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["century"]}
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Metal</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["metal"]}
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Quality</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["quality"]}
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
+            <h6 class="m-0 mb-2 mb-sm-0 me-5">Krause Price</h6>
+            <div class="d-flex flex-wrap gap-2">
+                ${data["price_by_krause"]}
+            </div>
         </div>
     </div>
     `;

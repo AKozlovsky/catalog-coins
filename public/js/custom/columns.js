@@ -72,6 +72,7 @@ var columns = {
         { data: "metal" },
         { data: "quality" },
         { data: "price_by_krause" },
+        { data: "photos" },
         { data: "action" },
     ],
     avers: [
@@ -92,6 +93,7 @@ var columns = {
         { data: "metal" },
         { data: "quality" },
         { data: "price_by_krause" },
+        { data: "photos" },
         { data: "action" },
     ],
     revers: [
@@ -112,6 +114,7 @@ var columns = {
         { data: "metal" },
         { data: "quality" },
         { data: "price_by_krause" },
+        { data: "photos" },
         { data: "action" },
     ],
     coin_edges: [
@@ -132,6 +135,7 @@ var columns = {
         { data: "metal" },
         { data: "quality" },
         { data: "price_by_krause" },
+        { data: "photos" },
         { data: "action" },
     ],
     currencies: [
@@ -152,6 +156,7 @@ var columns = {
         { data: "metal" },
         { data: "quality" },
         { data: "price_by_krause" },
+        { data: "photos" },
         { data: "action" },
     ],
     centuries: [
@@ -172,6 +177,7 @@ var columns = {
         { data: "metal" },
         { data: "quality" },
         { data: "price_by_krause" },
+        { data: "photos" },
         { data: "action" },
     ],
     metals: [
@@ -192,6 +198,7 @@ var columns = {
         { data: "century" },
         { data: "quality" },
         { data: "price_by_krause" },
+        { data: "photos" },
         { data: "action" },
     ],
     qualities: [
@@ -212,6 +219,7 @@ var columns = {
         { data: "metal" },
         { data: "century" },
         { data: "price_by_krause" },
+        { data: "photos" },
         { data: "action" },
     ],
     prices_by_krause: [
@@ -232,6 +240,7 @@ var columns = {
         { data: "metal" },
         { data: "century" },
         { data: "quality" },
+        { data: "photos" },
         { data: "action" },
     ],
 };

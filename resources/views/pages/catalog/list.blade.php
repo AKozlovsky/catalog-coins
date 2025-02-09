@@ -121,6 +121,7 @@
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
                                         <td style="display: none">{{ $row->price_by_krause }}</td>
+                                        <td style="display: none">{{ $row->photos }}</td>
                                     @break
 
                                     @case('avers')
@@ -141,6 +142,7 @@
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
                                         <td style="display: none">{{ $row->price_by_krause }}</td>
+                                        <td style="display: none">{{ $row->photos }}</td>
                                     @break
 
                                     @case('revers')
@@ -161,6 +163,7 @@
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
                                         <td style="display: none">{{ $row->price_by_krause }}</td>
+                                        <td style="display: none">{{ $row->photos }}</td>
                                     @break
 
                                     @case('coin_edge')
@@ -181,10 +184,11 @@
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
                                         <td style="display: none">{{ $row->price_by_krause }}</td>
+                                        <td style="display: none">{{ $row->photos }}</td>
                                     @break
 
                                     @case('currency')
-                                        <td>{{ $row->currency }}</td>
+                                        <td>{{ $row->name }}</td>
                                         <td>{{ $row->symbol }}</td>
                                         <td>{{ $row->continent }}</td>
                                         <td>{{ $row->country }}</td>
@@ -201,6 +205,7 @@
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
                                         <td style="display: none">{{ $row->price_by_krause }}</td>
+                                        <td style="display: none">{{ $row->photos }}</td>
                                     @break
 
                                     @case('century')
@@ -221,6 +226,7 @@
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
                                         <td style="display: none">{{ $row->price_by_krause }}</td>
+                                        <td style="display: none">{{ $row->photos }}</td>
                                     @break
 
                                     @case('metal')
@@ -241,6 +247,7 @@
                                         <td style="display: none">{{ $row->century }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
                                         <td style="display: none">{{ $row->price_by_krause }}</td>
+                                        <td style="display: none">{{ $row->photos }}</td>
                                     @break
 
                                     @case('quality')
@@ -261,6 +268,7 @@
                                         <td style="display: none">{{ $row->century }}</td>
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->price_by_krause }}</td>
+                                        <td style="display: none">{{ $row->photos }}</td>
                                     @break
 
                                     @case('price_by_krause')
@@ -281,6 +289,7 @@
                                         <td style="display: none">{{ $row->century }}</td>
                                         <td style="display: none">{{ $row->metal }}</td>
                                         <td style="display: none">{{ $row->quality }}</td>
+                                        <td style="display: none">{{ $row->photos }}</td>
                                     @break
 
                                     @default

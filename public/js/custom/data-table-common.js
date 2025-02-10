@@ -106,77 +106,95 @@ function addHomeTab(data) {
 function addDetailsTab(data) {
     return `
     <div class="tab-pane fade" id="navs-pills-top-details-${data["id"]}" role="tabpanel">
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Currency</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["currency"]}
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Monarch</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["monarch"]}
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Reign Period From</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["reign_period_from"]}
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Reign Period To</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["reign_period_to"]}
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Mintage Year</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["mintage_year"]}
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Avers</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["avers"]}
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Revers</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["revers"]}
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Coin Edge</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["coin_edge"]}
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Century</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["century"]}
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Metal</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["metal"]}
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Quality</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["quality"]}
-            </div>
-        </div>
-        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-between border-bottom pb-3 mb-3">
-            <h6 class="m-0 mb-2 mb-sm-0 me-5">Krause Price</h6>
-            <div class="d-flex flex-wrap gap-2">
-                ${data["price_by_krause"]}
-            </div>
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center justify-content-around">
+            <table>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-currency-usd"></i>
+                        <small class="text-muted" style="width: 150px">Currency</small>
+                        <p>${data["currency"]}</p>
+                    </td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-crown"></i>
+                        <small class="text-muted" style="width: 150px">Monarch</small>
+                        <p>${data["monarch"]}</p>
+                    </td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-sort-clock-ascending"></i>
+                        <small class="text-muted" style="width: 150px">Reign Period From</small>
+                        <p>${data["reign_period_from"]}</p>
+                    </td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-sort-clock-descending"></i>
+                        <small class="text-muted" style="width: 150px">Reign Period To</small>
+                        <p>${data["reign_period_to"]}</p>
+                    </td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-wrench-clock"></i>
+                        <small class="text-muted" style="width: 150px">Mintage Year</small>
+                        <p>${data["mintage_year"]}</p>
+                    </td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-hand-coin"></i>
+                        <small class="text-muted" style="width: 150px">Avers</small>
+                        <p>${data["avers"]}</p>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-hand-coin-outline"></i>
+                        <small class="text-muted" style="width: 150px">Revers</small>
+                        <p>${data["revers"]}</p>
+                    </td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-nut"></i>
+                        <small class="text-muted" style="width: 150px">Coin Edge</small>
+                        <p>${data["coin_edge"]}</p>
+                    </td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-timer-sand-complete"></i>
+                        <small class="text-muted" style="width: 150px">Century</small>
+                        <p>${data["century"]}</p>
+                    </td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-wheel-barrow"></i>
+                        <small class="text-muted" style="width: 150px">Metal</small>
+                        <p>${data["metal"]}</p>
+                    </td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-magnify"></i>
+                        <small class="text-muted" style="width: 150px">Quality</small>
+                        <p>${data["quality"]}</p>
+                    </td>
+                </tr>
+                <tr class="border-bottom">
+                    <td class="d-flex me-4 gap-2 mt-4">
+                        <i class="mdi mdi-bank"></i>
+                        <small class="text-muted" style="width: 150px">Krause Price</small>
+                        <p>${data["price_by_krause"]}</p>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
     `;

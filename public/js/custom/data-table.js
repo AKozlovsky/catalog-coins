@@ -6,7 +6,6 @@ $(function () {
         $("#input").val().substring(0, 1).toUpperCase() +
         $("#input").val().substring(1);
     var dt_table = $(".datatable"),
-        detailUrl = baseUrl + "edit/",
         controllers = ["continents", "countries"],
         controllers2 = [
             "monarchs",
@@ -22,6 +21,12 @@ $(function () {
             "prices-by-krause",
         ],
         controllers3 = ["reign-periods"];
+
+    if ($("#action").val() == "currencies") {
+        var detailUrl = baseUrl + "edit-currency/";
+    } else {
+        var detailUrl = baseUrl + "edit/";
+    }
 
     if (dt_table.length) {
         $(".datatable thead tr").clone(true).appendTo(".datatable thead");
@@ -111,7 +116,7 @@ $(function () {
                         searchable: false,
                         orderable: false,
                         render: function (data, type, full, meta) {
-                            return detail(full, detailUrl);
+                            return detail(full, detailUrl, $("#action").val());
                         },
                     },
                 ],

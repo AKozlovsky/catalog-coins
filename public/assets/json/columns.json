@@ -179,15 +179,6 @@
             "name": "Symbol"
         },
         {
-            "name": "Continent"
-        },
-        {
-            "name": "Country"
-        },
-        {
-            "name": "Value"
-        },
-        {
             "name": "Actions"
         }
     ],

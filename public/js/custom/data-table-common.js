@@ -1,11 +1,13 @@
-function detail(full, detailUrl) {
-    return (
-        '<div class="d-flex align-items-center">' +
-        setButtonPreview(full) +
-        setButtonEdit(full, detailUrl) +
-        setButtonDelete(full) +
-        "</div>"
-    );
+function detail(full, detailUrl, action) {
+    var html = '<div class="d-flex align-items-center">';
+
+    if (action != "currencies") {
+        html += setButtonPreview(full);
+    }
+
+    html += setButtonEdit(full, detailUrl) + setButtonDelete(full) + "</div>";
+
+    return html;
 }
 
 function setButtonPreview(data) {

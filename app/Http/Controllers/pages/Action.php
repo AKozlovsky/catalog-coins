@@ -107,4 +107,14 @@ class Action extends Controller
         Item::deleteItem($item->id);
         Collection::deleteCollection($id);
     }
+
+    public function editCurrency($id)
+    {
+        return view("pages.action.edit-currency", []);
+    }
+
+    public function addCurrency()
+    {
+        return view("pages.action.add-currency", []);
+    }
 }

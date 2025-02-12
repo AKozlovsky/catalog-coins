@@ -108,6 +108,11 @@
                     "url": "add",
                     "name": "Add",
                     "slug": "action/add"
+                },
+                {
+                    "url": "add-currency",
+                    "name": "Add Currency",
+                    "slug": "action/add-currency"
                 }
             ]
         }

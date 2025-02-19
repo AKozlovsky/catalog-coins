@@ -356,7 +356,10 @@ $(function () {
                         attr: {
                             "data-bs-toggle": "offcanvas",
                             "data-bs-target": "#offcanvasAddCoin",
-                            onclick: "location.href = '/add'",
+                            onclick:
+                                $("#action").val() == "currencies"
+                                    ? "location.href = '/add-currency'"
+                                    : "location.href = '/add'",
                         },
                     },
                 ],

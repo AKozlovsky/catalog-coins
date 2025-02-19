@@ -11,6 +11,7 @@ class Currency extends Model
     use HasFactory;
     protected $table = 'currencies';
     protected $primaryKey = 'id';
+    protected $fillable = ["name", "code", "symbol"];
 
     public function items()
     {

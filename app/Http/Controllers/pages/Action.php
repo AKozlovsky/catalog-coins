@@ -43,7 +43,8 @@ class Action extends Controller
             "currencyCode" => $currencyCode,
             "numericalValue" => $numericalValue,
             "otherCriteria" => $otherCriteria,
-            "collectionId" => $id
+            "collectionId" => $id,
+            "httpReferer" => $_SERVER["HTTP_REFERER"]
         ]);
     }
 
@@ -108,13 +109,24 @@ class Action extends Controller
         Collection::deleteCollection($id);
     }
 
-    public function editCurrency($id)
-    {
-        return view("pages.action.edit-currency", []);
-    }
-
     public function addCurrency()
     {
-        return view("pages.action.add-currency", []);
+        return view("pages.action.add-currency");
+    }
+
+    public function addCurrencySubmit(Request $request)
+    {
+        $data = [
+            "name" => $request->currencyName,
+            "code" => $request->currencyCode,
+            "symbol" => $request->currencySymbol
+        ];
+
+        Currency::create($data);
+    }
+
+    public function editCurrency($id)
+    {
+        return view("pages.action.edit-currency");
     }
 }

@@ -88,7 +88,9 @@ $(function () {
     // Form Add Validation
     var formId;
 
-    if (location.pathname.includes("/add")) {
+    if (location.pathname.includes("/add-currency")) {
+        formId = "formAddCurrency";
+    } else if (location.pathname.includes("/add")) {
         formId = "formAddItem";
     } else if (location.pathname.includes("/edit")) {
         formId = "formEditItem";
@@ -122,7 +124,28 @@ $(function () {
             currencyValue: {
                 validators: {
                     notEmpty: {
-                        message: "Please select a currency value",
+                        message: "Please enter a currency value",
+                    },
+                },
+            },
+            currencyName: {
+                validators: {
+                    notEmpty: {
+                        message: "Please enter a name of the currency",
+                    },
+                },
+            },
+            currencyCode: {
+                validators: {
+                    notEmpty: {
+                        message: "Please enter a code of the currency",
+                    },
+                },
+            },
+            currencySymbol: {
+                validators: {
+                    notEmpty: {
+                        message: "Please enter a symbol of the currency",
                     },
                 },
             },
@@ -172,14 +195,21 @@ $(function () {
         },
     }).on("core.form.valid", function () {
         var text = "",
-            url = "";
+            url = "",
+            redirectedUrl = "";
 
-        if (location.pathname.includes("/add")) {
+        if (location.pathname.includes("/add-currency")) {
+            text = "Currency was added successfully.";
+            url = "add-currency-submit";
+            redirectedUrl = `${baseUrl}currencies`;
+        } else if (location.pathname.includes("/add")) {
             text = "Item was added successfully.";
             url = "add-submit";
+            redirectedUrl = `${baseUrl}`;
         } else if (location.pathname.includes("/edit")) {
             text = "Item was edited successfully.";
             url = "edit-submit/" + $("#collectionId").val();
+            redirectedUrl = $("#httpReferer").val();
         }
 
         $.ajax({
@@ -195,7 +225,7 @@ $(function () {
                         confirmButton: "btn btn-success",
                     },
                 }).then(function () {
-                    window.location = `${baseUrl}monarchs`;
+                    window.location = redirectedUrl;
                 });
             },
             error: function (err) {

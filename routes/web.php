@@ -40,3 +40,4 @@ Route::resource("/data-table", Catalog::class);
 Route::delete("delete/{id}", [Action::class, "delete"]);
 Route::get('edit-currency/{id}', [Action::class, 'editCurrency'])->name("action/edit-currency");
 Route::get('add-currency', [Action::class, 'addCurrency'])->name("action/add-currency");
+Route::post('add-currency-submit', [Action::class, "addCurrencySubmit"]);

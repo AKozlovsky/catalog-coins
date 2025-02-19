@@ -220,4 +220,5 @@
     @if ($countryName)
         <input type="hidden" id="countryToSelect" value="{{ $countryName }}">
     @endif
+    <input type="hidden" id="httpReferer" value="{{ $httpReferer }}">
 @endsection

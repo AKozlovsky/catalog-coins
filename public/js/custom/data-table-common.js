@@ -266,8 +266,16 @@ function setModalDelete(data) {
 
 function deleteRecord(id) {
     $("#delete-" + id).modal("hide");
+    var url = `${baseUrl}`;
+
+    if ($("#action").val() == "currencies") {
+        url += "delete-currency/";
+    } else {
+        url += "delete/";
+    }
+
     $.ajax({
-        url: `${baseUrl}` + "delete/" + id,
+        url: url + id,
         type: "DELETE",
         data: {
             id: id,
@@ -281,8 +289,13 @@ function deleteRecord(id) {
                 customClass: {
                     confirmButton: "btn btn-success",
                 },
+            }).then(function () {
+                if (["continents", "countries"].includes($("#action").val())) {
+                    $(".datatable").DataTable().ajax.reload();
+                } else {
+                    window.location = `${baseUrl}` + $("#action").val();
+                }
             });
-            $(".datatable").DataTable().ajax.reload();
         },
         error: function (err) {
             Swal.fire({

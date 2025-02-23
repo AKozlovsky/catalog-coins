@@ -127,6 +127,26 @@ class Action extends Controller
 
     public function editCurrency($id)
     {
-        return view("pages.action.edit-currency");
+        return view("pages.action.edit-currency", ["currency" => Currency::find($id)]);
+    }
+
+    public function editCurrencySubmit($id, Request $request)
+    {
+        $currency = Currency::find($id);
+
+        if ($currency) {
+            $currency->update([
+                "name" => $request->currencyName,
+                "code" => $request->currencyCode,
+                "symbol" => $request->currencySymbol
+            ]);
+
+            return $currency;
+        }
+    }
+
+    public function deleteCurrency($id)
+    {
+        Currency::deleteCurrency($id);
     }
 }

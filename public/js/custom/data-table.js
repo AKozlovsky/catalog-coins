@@ -22,10 +22,12 @@ $(function () {
         ],
         controllers3 = ["reign-periods"];
 
+    var detailUrl = baseUrl;
+
     if ($("#action").val() == "currencies") {
-        var detailUrl = baseUrl + "edit-currency/";
+        detailUrl = "edit-currency/";
     } else {
-        var detailUrl = baseUrl + "edit/";
+        detailUrl = "edit/";
     }
 
     if (dt_table.length) {

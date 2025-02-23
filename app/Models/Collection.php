@@ -480,6 +480,7 @@ class Collection extends Model
 
         if ($collection) {
             $collection->update($data);
+
             return $collection;
         } else {
             return Collection::create($data);

@@ -92,6 +92,8 @@ $(function () {
         formId = "formAddCurrency";
     } else if (location.pathname.includes("/add")) {
         formId = "formAddItem";
+    } else if (location.pathname.includes("/edit-currency")) {
+        formId = "formEditCurrency";
     } else if (location.pathname.includes("/edit")) {
         formId = "formEditItem";
     }
@@ -206,6 +208,10 @@ $(function () {
             text = "Item was added successfully.";
             url = "add-submit";
             redirectedUrl = `${baseUrl}`;
+        } else if (location.pathname.includes("/edit-currency")) {
+            text = "Currency was edited successfully.";
+            url = "edit-currency-submit/" + $("#id").val();
+            redirectedUrl = `${baseUrl}currencies`;
         } else if (location.pathname.includes("/edit")) {
             text = "Item was edited successfully.";
             url = "edit-submit/" + $("#collectionId").val();
@@ -229,8 +235,17 @@ $(function () {
                 });
             },
             error: function (err) {
+                var title;
+
+                if (err.responseJSON.message.includes("Duplicate entry")) {
+                    title = "Duplicate Error!";
+                    err = "The field 'Code' should be unique.";
+                } else {
+                    title = "Error!";
+                }
+
                 Swal.fire({
-                    title: "Error!",
+                    title: title,
                     text: err,
                     icon: "error",
                     customClass: {

@@ -40,4 +40,9 @@ class Currency extends Model
     {
         return Currency::select("name")->where("code", $code)->get()[0]->name;
     }
+
+    public static function deleteCurrency($id)
+    {
+        return Currency::find($id)->delete();
+    }
 }

@@ -2,11 +2,10 @@
 
 use App\Http\Controllers\language\LanguageController;
 use App\Http\Controllers\pages\Action;
-use App\Http\Controllers\pages\Add;
 use App\Http\Controllers\pages\Base;
 use App\Http\Controllers\pages\Catalog;
-use App\Http\Controllers\pages\Detail;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\authentication\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,14 +31,20 @@ foreach ($subpages as $sub) {
     Route::get($sub, [Catalog::class, 'list'])->name("catalog/" . $sub);
 }
 
+// Add, edit, delete
 Route::get('add', [Action::class, 'add'])->name("action/add");
 Route::get('edit/{id}', [Action::class, 'edit'])->name("action/edit");
 Route::post('add-submit', [Action::class, "addSubmit"]);
 Route::post('edit-submit/{id}', [Action::class, "editSubmit"]);
 Route::resource("/data-table", Catalog::class);
 Route::delete("delete/{id}", [Action::class, "delete"]);
+
+// Currency
 Route::get('add-currency', [Action::class, 'addCurrency'])->name("action/add-currency");
 Route::get('edit-currency/{id}', [Action::class, 'editCurrency'])->name("action/edit-currency");
 Route::post('add-currency-submit', [Action::class, "addCurrencySubmit"]);
 Route::post('edit-currency-submit/{id}', [Action::class, "editCurrencySubmit"]);
 Route::delete("delete-currency/{id}", [Action::class, "deleteCurrency"]);
+
+// Authentication
+Route::get('/authentication/login', [Login::class, 'index'])->name('auth-login');

@@ -25,9 +25,9 @@ $(function () {
     var detailUrl = baseUrl;
 
     if ($("#action").val() == "currencies") {
-        detailUrl = "edit-currency/";
+        detailUrl += "edit-currency/";
     } else {
-        detailUrl = "edit/";
+        detailUrl += "edit/";
     }
 
     if (dt_table.length) {

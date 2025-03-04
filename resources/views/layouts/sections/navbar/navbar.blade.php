@@ -212,7 +212,7 @@
                 @else
                     <li>
                         <a class="dropdown-item"
-                            href="{{ Route::has('login') ? route('login') : url('authentication/login') }}">
+                            href="{{ Route::has('login') ? route('login') : url('auth/login') }}">
                             <i class='mdi mdi-login me-2'></i>
                             <span class="align-middle">Login</span>
                         </a>

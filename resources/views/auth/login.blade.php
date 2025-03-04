@@ -69,7 +69,7 @@
                                         Remember Me
                                     </label>
                                 </div>
-                                <a href="{{ url('auth/forgot-password-basic') }}" class="float-end mb-1">
+                                <a href="{{ url('auth/forgot-password') }}" class="float-end mb-1">
                                     <span>Forgot Password?</span>
                                 </a>
                             </div>
@@ -80,12 +80,18 @@
 
                         <p class="text-center">
                             <span>New on our platform?</span>
-                            <a href="{{ url('auth/register-basic') }}">
+                            <a href="{{ url('auth/register') }}">
                                 <span>Create an account</span>
                             </a>
                         </p>
                     </div>
                 </div>
+                <!-- /Login -->
+                <img alt="mask"
+                    src="{{ asset('assets/img/illustrations/auth-basic-login-mask-' . $configData['style'] . '.png') }}"
+                    class="authentication-image d-none d-lg-block"
+                    data-app-light-img="illustrations/auth-basic-login-mask-light.png"
+                    data-app-dark-img="illustrations/auth-basic-login-mask-dark.png" />
             </div>
         </div>
     </div>

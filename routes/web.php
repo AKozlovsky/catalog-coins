@@ -6,6 +6,8 @@ use App\Http\Controllers\pages\Base;
 use App\Http\Controllers\pages\Catalog;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authentication\Login;
+use App\Http\Controllers\authentication\Register;
+use App\Http\Controllers\authentication\ForgotPassword;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,4 +49,6 @@ Route::post('edit-currency-submit/{id}', [Action::class, "editCurrencySubmit"]);
 Route::delete("delete-currency/{id}", [Action::class, "deleteCurrency"]);
 
 // Authentication
-Route::get('/authentication/login', [Login::class, 'index'])->name('auth-login');
+Route::get('/auth/login', [Login::class, 'index']);
+Route::get('/auth/register', [Register::class, 'index']);
+Route::get('/auth/forgot-password', [ForgotPassword::class, 'index']);

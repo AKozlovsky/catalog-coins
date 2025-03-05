@@ -42,7 +42,8 @@
                         <h4 class="mb-2">Welcome to {{ config('variables.templateName') }}! 👋</h4>
                         <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
-                        <form id="formAuthentication" class="mb-3" action="{{ url('/') }}" method="GET">
+                        <form id="formAuthentication" class="mb-3" action="{{ url('/auth/login/authenticate') }}"
+                            method="GET">
                             <div class="form-floating form-floating-outline mb-3">
                                 <input type="text" class="form-control" id="email" name="email-username"
                                     placeholder="Enter your email or username" autofocus>

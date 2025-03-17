@@ -44,7 +44,8 @@
                         <h4 class="mb-2">Adventure starts here 🚀</h4>
                         <p class="mb-4">Make your app management easy and fun!</p>
 
-                        <form id="formAuthentication" class="mb-3" action="{{ url('/') }}" method="GET">
+                        <form id="formAuthentication" class="mb-3" action="{{ url('/auth/register/signup') }}"
+                            method="GET">
                             <div class="form-floating form-floating-outline mb-3">
                                 <input type="text" class="form-control" id="username" name="username"
                                     placeholder="Enter your username" autofocus>

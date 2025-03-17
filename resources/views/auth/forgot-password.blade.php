@@ -43,7 +43,7 @@
                     <div class="card-body mt-2">
                         <h4 class="mb-2">Forgot Password? 🔒</h4>
                         <p class="mb-4">Enter your email and we'll send you instructions to reset your password</p>
-                        <form id="formAuthentication" class="mb-3" action="{{ url('auth/reset-password-basic') }}"
+                        <form id="formAuthentication" class="mb-3" action="{{ url('auth/reset-password') }}"
                             method="GET">
                             <div class="form-floating form-floating-outline mb-3">
                                 <input type="text" class="form-control" id="email" name="email"
@@ -53,8 +53,7 @@
                             <button class="btn btn-primary d-grid w-100">Send Reset Link</button>
                         </form>
                         <div class="text-center">
-                            <a href="{{ url('auth/login') }}"
-                                class="d-flex align-items-center justify-content-center">
+                            <a href="{{ url('auth/login') }}" class="d-flex align-items-center justify-content-center">
                                 <i class="mdi mdi-chevron-left scaleX-n1-rtl mdi-24px"></i>
                                 Back to login
                             </a>

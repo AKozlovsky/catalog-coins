@@ -149,4 +149,22 @@ class Action extends Controller
     {
         Currency::deleteCurrency($id);
     }
+
+    public function test()
+    {
+        return view("pages.action.test");
+    }
+
+    public function submitForm(Request $request)
+    {
+        foreach ($request->file("files") as $file) {
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->storeAs('uploads/', $filename, 'public');
+
+            Photos::create([
+                "filename" => $filename,
+                "item" => 10
+            ]);
+        }
+    }
 }

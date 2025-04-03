@@ -1,8 +1,8 @@
 <?php
 // Variables
 return [
-    "creatorName" => "Pixinvent",
-    "creatorUrl" => "https://pixinvent.com",
+    "creatorName" => "Andrej Kozlovsky",
+    "creatorUrl" => "mailto:andytun3@gmail.com",
     "templateName" => "My Coins",
     "templateSuffix" => "Main Page",
     "templateVersion" => "1.3.0",

@@ -55,35 +55,61 @@ $(function () {
     }
 
     // Media upload
-    const previewTemplate = `<div class="dz-preview dz-file-preview">
-    <div class="dz-details">
-      <div class="dz-thumbnail">
-        <img data-dz-thumbnail>
-        <span class="dz-nopreview">No preview</span>
-        <div class="dz-success-mark"></div>
-        <div class="dz-error-mark"></div>
-        <div class="dz-error-message"><span data-dz-errormessage></span></div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-dz-uploadprogress></div>
+    const previewTemplate = `
+    <div class="dz-preview dz-file-preview">
+        <div class="dz-details">
+            <div class="dz-thumbnail">
+                <img data-dz-thumbnail>
+                <span class="dz-nopreview">No preview</span>
+                <div class="dz-success-mark"></div>
+                <div class="dz-error-mark"></div>
+                <div class="dz-error-message"><span data-dz-errormessage></span></div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-dz-uploadprogress></div>
+                </div>
+            </div>
+            <div class="dz-filename" data-dz-name></div>
+            <div class="dz-size" data-dz-size></div>
         </div>
-      </div>
-      <div class="dz-filename" data-dz-name></div>
-      <div class="dz-size" data-dz-size></div>
     </div>
-    </div>`;
+    `;
 
-    const dropzoneBasic = document.querySelector("#dropzone-basic");
+    Dropzone.autoDiscover = false;
+    var dropzone = document.querySelector("#formDropzone");
+    let dataTransfer = new DataTransfer();
 
-    if (dropzoneBasic) {
-        const myDropzone = new Dropzone(dropzoneBasic, {
-            previewTemplate: previewTemplate,
-            parallelUploads: 1,
-            maxFilesize: 5,
-            acceptedFiles: ".jpg,.jpeg,.png,.gif",
-            addRemoveLinks: true,
-            maxFiles: 1,
-        });
-    }
+    $("#formDropzone").dropzone({
+        previewTemplate: previewTemplate,
+        // url: "/form-submit",
+        addRemoveLinks: true,
+        // autoProcessQueue: false,
+        uploadMultiple: true,
+        parallelUploads: 100,
+        maxFiles: 100,
+        acceptedFiles: ".jpeg, .jpg, .png, .gif",
+        paramName: "file",
+        init: function () {
+            dropzone = this;
+
+            this.on("removedfile", function (file) {
+                for (var i = 0; i < dataTransfer.items.length; i++) {
+                    if (dataTransfer.items[i].getAsFile() == file) {
+                        dataTransfer.items.remove(i);
+                    }
+                }
+            });
+        },
+        success: function (file) {
+            dataTransfer.items.add(file);
+        },
+    });
+
+    $("#formSubmit").on("click", function (e) {
+        e.preventDefault();
+        dropzone.processQueue();
+        $("#files")[0].files = dataTransfer.files;
+        $("#formDropzone").trigger("submit");
+    });
 
     // Form Add Validation
     var formId;

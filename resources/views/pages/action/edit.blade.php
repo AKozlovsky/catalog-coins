@@ -11,6 +11,106 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/sweetalert2/sweetalert2.css') }}" />
 @endsection
 
+@section('page-style')
+    <style>
+        .h1 {
+            letter-spacing: -0.02em;
+        }
+
+        .dropzone {
+            overflow-y: auto;
+            border: 0;
+            background: transparent;
+        }
+
+        .dz-preview {
+            width: 100%;
+            margin: 0 !important;
+            height: 100%;
+            padding: 15px;
+            position: absolute !important;
+            top: 0;
+        }
+
+        .dz-photo {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #eae7e2;
+        }
+
+        .dz-drag-hover .dropzone-drag-area {
+            border-style: solid;
+            border-color: #86b7fe;
+            ;
+        }
+
+        .dz-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dz-image {
+            width: 90px !important;
+            height: 90px !important;
+            border-radius: 6px !important;
+        }
+
+        .dz-remove {
+            display: none !important;
+        }
+
+        .dz-delete {
+            width: 24px;
+            height: 24px;
+            background: rgba(0, 0, 0, 0.57);
+            position: absolute;
+            opacity: 0;
+            transition: all 0.2s ease;
+            top: 30px;
+            right: 30px;
+            border-radius: 100px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dz-delete>svg {
+            transform: scale(0.75);
+            cursor: pointer;
+        }
+
+        .dz-preview:hover .dz-delete,
+        .dz-preview:hover .dz-remove-image {
+            opacity: 1;
+        }
+
+        .dz-message {
+            height: 100%;
+            margin: 0 !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropzone-drag-area {
+            height: 300px;
+            position: relative;
+            padding: 0 !important;
+            border-radius: 10px;
+            border: 3px dashed #dbdeea;
+        }
+
+        .was-validated .form-control:valid {
+            border-color: #dee2e6 !important;
+            background-image: none;
+        }
+    </style>
+@endsection
+
 @section('vendor-script')
     <script src="{{ asset('assets/vendor/libs/select2/select2.js') }}"></script>
     <script src="{{ asset('assets/vendor/libs/dropzone/dropzone.js') }}"></script>
@@ -33,7 +133,6 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <h5 class="card-header">Edit item</h5>
                 <div class="card-body">
                     <form id="formEditItem" class="row g-3" method="POST">
                         @csrf
@@ -190,29 +289,36 @@
                                 <label for="price_by_krause">Krause Price</label>
                             </div>
                         </div>
+                        <div>
+                            <h1>Test</h1>
+                            <label class="form-label text-muted opacity-75 fw-medium" for="formImage">Image</label>
+                            <div class="dropzone-drag-area form-control" id="previews">
+                                <div class="dz-message text-muted opacity-50" data-dz-message>
+                                    <span>Drag file here to upload</span>
+                                </div>
+                                <div class="d-none" id="dzPreviewContainer">
+                                    <div class="dz-preview dz-file-preview">
+                                        <div class="dz-photo">
+                                            <img class="dz-thumbnail" data-dz-thumbnail>
+                                        </div>
+                                        <button class="dz-delete border-0 p-0" type="button" data-dz-remove>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="times">
+                                                <path fill="#FFFFFF"
+                                                    d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="invalid-feedback fw-bold">Please upload an image.</div>
+                        </div>
                         <div class="col-12">
                             <input type="hidden" id="collectionId" value="{{ $collectionId }}">
                             <button type="submit" name="submitButton" class="btn btn-primary data-submit">Edit</button>
                         </div>
                     </form>
                 </div>
-                {{-- <div class="card-body">
-                    <div class="col-12">
-                        <h6 class="mt-2">5. Media Upload</h6>
-                        <hr class="mt-0" />
-                    </div>
-                    <form action="/upload" class="dropzone needsclick" id="dropzone-basic">
-                        <div class="dz-message needsclick my-5">
-                            Drag and drop your image here
-                            <small class="text-muted d-block fs-6 my-2">or</small>
-                            <span class="needsclick btn btn-outline-primary d-inline" id="btnBrowse">Browse
-                                image</span>
-                        </div>
-                        <div class="fallback">
-                            <input name="file" type="file" />
-                        </div>
-                    </form>
-                </div> --}}
             </div>
         </div>
     </div>

@@ -38,18 +38,22 @@ foreach ($subpages as $sub) {
 
 // Add, edit, delete
 Route::get('add', [Action::class, 'add'])->name("action/add")->middleware('auth');
-Route::post('add-submit', [Action::class, "addSubmit"]);
+Route::post('add-submit', [Action::class, "addSubmit"])->middleware("auth");
 Route::get('edit/{id}', [Action::class, 'edit'])->name("action/edit")->middleware('auth');
-Route::post('edit-submit/{id}', [Action::class, "editSubmit"]);
-Route::resource("/data-table", Catalog::class);
-Route::delete("delete/{id}", [Action::class, "delete"]);
+Route::post('edit-submit/{id}', [Action::class, "editSubmit"])->middleware("auth");
+Route::resource("/data-table", Catalog::class)->middleware("auth");
+Route::delete("delete/{id}", [Action::class, "delete"])->middleware("auth");
+
+// Test
+Route::get("test", [Action::class, "test"])->name("action/test")->middleware('auth');
+Route::post('/form-submit', [Action::class, 'submitForm']);
 
 // Currency
 Route::get('add-currency', [Action::class, 'addCurrency'])->name("action/add-currency")->middleware('auth');
-Route::post('add-currency-submit', [Action::class, "addCurrencySubmit"]);
-Route::get('edit-currency/{id}', [Action::class, 'editCurrency'])->name("action/edit-currency");
-Route::post('edit-currency-submit/{id}', [Action::class, "editCurrencySubmit"]);
-Route::delete("delete-currency/{id}", [Action::class, "deleteCurrency"]);
+Route::post('add-currency-submit', [Action::class, "addCurrencySubmit"])->middleware("auth");
+Route::get('edit-currency/{id}', [Action::class, 'editCurrency'])->name("action/edit-currency")->middleware("auth");
+Route::post('edit-currency-submit/{id}', [Action::class, "editCurrencySubmit"])->middleware("auth");
+Route::delete("delete-currency/{id}", [Action::class, "deleteCurrency"])->middleware("auth");
 
 // Authentication
 Route::get('/auth/login', [Login::class, 'index'])->name('login');

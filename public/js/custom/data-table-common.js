@@ -222,8 +222,8 @@ function loadPhotos(data) {
             `<img class="d-block w-60 h-60" data-id="photo-` +
             element.filename +
             `" src="` +
-            assetsPath +
-            `photos/` +
+            uploadsPath +
+            `/` +
             element.filename +
             `" data-bs-toggle="modal" data-bs-placement="top" data-bs-target="#photo-${element.filename}"`;
 

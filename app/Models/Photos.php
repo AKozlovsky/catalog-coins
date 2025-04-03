@@ -11,6 +11,7 @@ class Photos extends Model
 
     protected $table = 'photos';
     protected $primaryKey = 'id';
+    protected $fillable = ["filename", "item"];
 
     public function items()
     {

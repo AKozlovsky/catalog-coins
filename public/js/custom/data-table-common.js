@@ -203,13 +203,9 @@ function addDetailsTab(data) {
 }
 
 function loadPhotos(data) {
-    var content = `<div id="photo-${data["id"]}" class="carousel carousel-dark slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#photo-${data["id"]}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#photo-${data["id"]}" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#photo-${data["id"]}" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">`;
+    var content = `
+        <div id="photo-${data["id"]}" class="carousel carousel-dark slide">
+        <div class="carousel-inner">`;
 
     data.photos.forEach((element, index) => {
         if (index == 0) {
@@ -230,7 +226,10 @@ function loadPhotos(data) {
         content += `" alt="` + index + ` slide" /></div>`;
     });
 
-    content += `</div>
+    content += `</div>`;
+
+    if (data.photos.length > 1) {
+        content += `
                 <a class="carousel-control-prev" href="#photo-${data["id"]}" role="button" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                     <span class="visually-hidden">Previous</span>
@@ -238,8 +237,10 @@ function loadPhotos(data) {
                 <a class="carousel-control-next" href="#photo-${data["id"]}" role="button" data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                     <span class="visually-hidden">Next</span>
-                </a>
-            </div>`;
+                </a>`;
+    }
+
+    content += `</div>`;
 
     return content;
 }

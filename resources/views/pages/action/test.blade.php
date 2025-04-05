@@ -20,7 +20,7 @@
 @endsection
 
 @section('content')
-    {{-- <form action="/form-submit" class="dropzone needsclick" id="formDropzone" method="post" enctype="multipart/form-data">
+    <form action="/form-submit" class="dropzone needsclick" id="formDropzone" method="post" enctype="multipart/form-data">
         @csrf
         <div class="col-12">
             <h6>Media Upload</h6>
@@ -40,7 +40,5 @@
             Submit Form
         </button>
         <input id="files" name="files[]" type="file" style="display: none" />
-    </form> --}}
-
-    <img src="{{ url('storage/uploads/1743712909_200365840 (1).jpg') }}" />
+    </form>
 @endsection

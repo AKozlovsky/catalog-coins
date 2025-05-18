@@ -36,17 +36,14 @@ foreach ($subpages as $sub) {
     Route::get($sub, [Catalog::class, 'list'])->name("catalog/" . $sub)->middleware('auth');
 }
 
-// Add, edit, delete
+// Add, edit, delete, upload
 Route::get('add', [Action::class, 'add'])->name("action/add")->middleware('auth');
 Route::post('add-submit', [Action::class, "addSubmit"])->middleware("auth");
 Route::get('edit/{id}', [Action::class, 'edit'])->name("action/edit")->middleware('auth');
 Route::post('edit-submit/{id}', [Action::class, "editSubmit"])->middleware("auth");
 Route::resource("/data-table", Catalog::class)->middleware("auth");
 Route::delete("delete/{id}", [Action::class, "delete"])->middleware("auth");
-
-// Test
-Route::get("test", [Action::class, "test"])->name("action/test")->middleware('auth');
-Route::post('/form-submit', [Action::class, 'submitForm']);
+Route::post('/upload-photo', [Action::class, 'uploadPhoto']);
 
 // Currency
 Route::get('add-currency', [Action::class, 'addCurrency'])->name("action/add-currency")->middleware('auth');

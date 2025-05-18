@@ -176,23 +176,6 @@
                         </div>
                     </form>
                 </div>
-                {{-- <div class="card-body">
-                    <div class="col-12">
-                        <h6 class="mt-2">5. Media Upload</h6>
-                        <hr class="mt-0" />
-                    </div>
-                    <form action="/upload" class="dropzone needsclick" id="dropzone-basic">
-                        <div class="dz-message needsclick my-5">
-                            Drag and drop your image here
-                            <small class="text-muted d-block fs-6 my-2">or</small>
-                            <span class="needsclick btn btn-outline-primary d-inline" id="btnBrowse">Browse
-                                image</span>
-                        </div>
-                        <div class="fallback">
-                            <input name="file" type="file" />
-                        </div>
-                    </form>
-                </div> --}}
             </div>
         </div>
     </div>

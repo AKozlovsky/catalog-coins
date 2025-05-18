@@ -80,9 +80,7 @@ $(function () {
 
     $("#formDropzone").dropzone({
         previewTemplate: previewTemplate,
-        // url: "/form-submit",
         addRemoveLinks: true,
-        // autoProcessQueue: false,
         uploadMultiple: true,
         parallelUploads: 100,
         maxFiles: 100,
@@ -108,7 +106,12 @@ $(function () {
         e.preventDefault();
         dropzone.processQueue();
         $("#files")[0].files = dataTransfer.files;
-        $("#formDropzone").trigger("submit");
+
+        if ($("#files")[0].length) {
+            $("#formDropzone").trigger("submit");
+        } else {
+            alert("Please upload an image.");
+        }
     });
 
     // Form Add Validation

@@ -44,7 +44,8 @@ class Action extends Controller
             "numericalValue" => $numericalValue,
             "otherCriteria" => $otherCriteria,
             "collectionId" => $id,
-            "httpReferer" => $_SERVER["HTTP_REFERER"]
+            "httpReferer" => $_SERVER["HTTP_REFERER"],
+            "itemId" => $item->id
         ]);
     }
 
@@ -150,12 +151,7 @@ class Action extends Controller
         Currency::deleteCurrency($id);
     }
 
-    public function test()
-    {
-        return view("pages.action.test");
-    }
-
-    public function submitForm(Request $request)
+    public function uploadPhoto(Request $request)
     {
         foreach ($request->file("files") as $file) {
             $filename = time() . '_' . $file->getClientOriginalName();
@@ -163,8 +159,10 @@ class Action extends Controller
 
             Photos::create([
                 "filename" => $filename,
-                "item" => 10
+                "item" => $request->item
             ]);
         }
+
+        // return redirect("home");
     }
 }

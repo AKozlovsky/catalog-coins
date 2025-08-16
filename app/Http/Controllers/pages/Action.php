@@ -44,7 +44,7 @@ class Action extends Controller
             "numericalValue" => $numericalValue,
             "otherCriteria" => $otherCriteria,
             "collectionId" => $id,
-            "httpReferer" => $_SERVER["HTTP_REFERER"],
+            "httpReferer" => isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : $_SERVER["HTTP_HOST"] . "/continents",
             "itemId" => $item->id
         ]);
     }
@@ -163,6 +163,19 @@ class Action extends Controller
             ]);
         }
 
-        // return redirect("home");
+        return redirect("edit/" . $request->collection);
+    }
+
+    public function getPhotos($id)
+    {
+        $collection = Collection::getCollection($id);
+        $item = Item::getItem($collection->item);
+
+        return Photos::getPhotoByItem($item->id);
+    }
+
+    public function deletePhoto($filename, $item)
+    {
+        Photos::deletePhoto($filename, $item);
     }
 }

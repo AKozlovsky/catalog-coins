@@ -97,6 +97,7 @@ class OtherCriteria extends Model
 
         if ($otherCriteria) {
             $otherCriteria->update($data);
+            
             return $otherCriteria;
         } else {
             return OtherCriteria::create($data);

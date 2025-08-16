@@ -113,11 +113,6 @@
                     "url": "add-currency",
                     "name": "Add Currency",
                     "slug": "action/add-currency"
-                },
-                {
-                    "url": "test",
-                    "name": "Test",
-                    "slug": "action/test"
                 }
             ]
         }

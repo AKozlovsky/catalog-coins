@@ -77,6 +77,8 @@ $(function () {
     Dropzone.autoDiscover = false;
     var dropzone = document.querySelector("#formDropzone");
     let dataTransfer = new DataTransfer();
+    var folderUpload = "http://127.0.0.1:8000/storage/uploads/";
+    var item = document.getElementsByName("item")[0].value;
 
     $("#formDropzone").dropzone({
         previewTemplate: previewTemplate,
@@ -84,16 +86,59 @@ $(function () {
         uploadMultiple: true,
         parallelUploads: 100,
         maxFiles: 100,
-        acceptedFiles: ".jpeg, .jpg, .png, .gif",
+        acceptedFiles: ".jpeg, .jpg, .png",
         paramName: "file",
         init: function () {
             dropzone = this;
-
+            $.ajax({
+                url: `${baseUrl}` + "get-photos/" + $("#collectionId").val(),
+                type: "GET",
+                success: function (data) {
+                    $.each(data, function (key, value) {
+                        let mockFile = { name: value.filename };
+                        dropzone.displayExistingFile(
+                            mockFile,
+                            folderUpload + value.filename
+                        );
+                    });
+                },
+                error: function (err) {
+                    console.log(err);
+                },
+            });
             this.on("removedfile", function (file) {
-                for (var i = 0; i < dataTransfer.items.length; i++) {
-                    if (dataTransfer.items[i].getAsFile() == file) {
-                        dataTransfer.items.remove(i);
-                    }
+                if (window.confirm("Chcete skutečně vymazat snímek?")) {
+                    $.ajax({
+                        url:
+                            `${baseUrl}` +
+                            "delete-photo/" +
+                            file.name +
+                            "/" +
+                            item,
+                        type: "DELETE",
+                        data: {
+                            _token: $('meta[name="csrf-token"]').attr(
+                                "content"
+                            ),
+                        },
+                        success: function () {},
+                        error: function (err) {
+                            console.log(err);
+                        },
+                    });
+                } else {
+                    let mockFile = { name: file.name };
+                    dropzone.displayExistingFile(
+                        mockFile,
+                        folderUpload + file.name
+                    );
+                }
+
+                if (document.querySelectorAll(".dz-preview").length) {
+                    document.querySelector(".dz-message").style.display =
+                        "none";
+                } else {
+                    document.querySelector(".dz-message").style.display = "";
                 }
             });
         },
@@ -107,7 +152,7 @@ $(function () {
         dropzone.processQueue();
         $("#files")[0].files = dataTransfer.files;
 
-        if ($("#files")[0].length) {
+        if ($("#files")[0].files.length) {
             $("#formDropzone").trigger("submit");
         } else {
             alert("Please upload an image.");

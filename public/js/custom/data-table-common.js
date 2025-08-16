@@ -59,7 +59,7 @@ function setModalPreview(data) {
                 </span>
             <p class="mb-0 card-title">${data["numerical_value"]}<span> ${data["symbol"]}</span></p>
         </div>` +
-        `<div class="card shadow-none">
+        `<br><div class="card shadow-none">
             <div class="card-body p-0">
                 <div class="tab-content p-0">` +
         addHomeTab(data) +
@@ -73,7 +73,8 @@ function setModalPreview(data) {
         </div>
         </div>
         </div>
-        </div>`
+        </div>` +
+        addFullImages(data)
     );
 }
 
@@ -93,7 +94,7 @@ function addHomeTab(data) {
     var result = `<div class="tab-pane fade show active" id="navs-pills-top-home-${data["id"]}" role="tabpanel">`;
 
     if (data.photos != undefined) {
-        if (data.photos.length > 0) {
+        if (data.photos.length) {
             result += loadPhotos(data);
         } else {
             result += "No photos";
@@ -221,7 +222,7 @@ function loadPhotos(data) {
             uploadsPath +
             `/` +
             element.filename +
-            `" data-bs-toggle="modal" data-bs-placement="top" data-bs-target="#photo-${element.filename}"`;
+            `" data-bs-placement="top" data-bs-target="#fullImage-${index}" data-bs-toggle="modal" data-bs-dismiss="modal"`;
 
         content += `" alt="` + index + ` slide" /></div>`;
     });
@@ -309,4 +310,32 @@ function deleteRecord(id) {
             });
         },
     });
+}
+
+function addFullImages(data) {
+    var result = ``;
+
+    if (data.photos != "" && data.photos.length) {
+        data.photos.forEach((element, index) => {
+            result +=
+                `<div class="modal fade" id="fullImage-${index}" aria-hidden="true" aria-labelledby="modalToggleLabel2" tabindex="-1" style="text-align: center">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-target="#preview-${data["id"]}" data-bs-toggle="modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img class="img-fluid" src="` +
+                uploadsPath +
+                `/` +
+                element.filename +
+                `" />
+                </div>
+              </div>
+            </div>
+          </div>`;
+        });
+    }
+
+    return result;
 }

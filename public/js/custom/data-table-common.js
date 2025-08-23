@@ -208,6 +208,10 @@ function loadPhotos(data) {
         <div id="photo-${data["id"]}" class="carousel carousel-dark slide">
         <div class="carousel-inner">`;
 
+    if (!(data.photos instanceof Object)) {
+        data.photos = JSON.parse(data.photos);
+    }
+
     data.photos.forEach((element, index) => {
         if (index == 0) {
             content += `<div class="carousel-item active" style="text-align: -webkit-center;">`;
@@ -224,7 +228,8 @@ function loadPhotos(data) {
             element.filename +
             `" data-bs-placement="top" data-bs-target="#fullImage-${index}" data-bs-toggle="modal" data-bs-dismiss="modal"`;
 
-        content += `" alt="` + index + ` slide" /></div>`;
+        content +=
+            `" alt="` + index + ` slide" style="cursor:pointer" /></div>`;
     });
 
     content += `</div>`;

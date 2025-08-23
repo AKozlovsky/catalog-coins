@@ -18,12 +18,12 @@ class Photos extends Model
         return $this->belongsTo('App\Models\Item');
     }
 
-    public static function getPhotoByItem($item)
+    public static function getPhotosByItem($item)
     {
         return Photos::select()->where("item", $item)->get();
     }
 
-    public static function deletePhotos($item)
+    public static function deletePhotosByItem($item)
     {
         return Photos::select()->where("item", $item)->delete();
     }

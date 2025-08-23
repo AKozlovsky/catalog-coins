@@ -151,8 +151,8 @@ class Catalog extends Controller
     private function _getPhotos(&$data)
     {
         foreach ($data as $key => $row) {
-            if (Photos::getPhotoByItem($row["item"])->count()) {
-                $data[$key]["photos"] = Photos::getPhotoByItem($row["item"]);
+            if (Photos::getPhotosByItem($row["item"])->count()) {
+                $data[$key]["photos"] = Photos::getPhotosByItem($row["item"]);
             } else {
                 $data[$key]["photos"] = "";
             }

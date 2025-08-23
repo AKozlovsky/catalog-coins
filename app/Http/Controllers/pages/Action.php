@@ -105,7 +105,7 @@ class Action extends Controller
         $item = Item::getItem(Collection::getCollection($id)->item);
         NumericalValue::deleteNumericalValue($item->numerical_value);
         OtherCriteria::deleteOtherCriteria($item->other_criteria);
-        Photos::deletePhotos($item->id);
+        Photos::deletePhotosByItem($item->id);
         Item::deleteItem($item->id);
         Collection::deleteCollection($id);
     }
@@ -171,7 +171,7 @@ class Action extends Controller
         $collection = Collection::getCollection($id);
         $item = Item::getItem($collection->item);
 
-        return Photos::getPhotoByItem($item->id);
+        return Photos::getPhotosByItem($item->id);
     }
 
     public function deletePhoto($filename, $item)
